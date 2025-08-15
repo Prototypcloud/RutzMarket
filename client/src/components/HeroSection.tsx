@@ -25,37 +25,38 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
           >
             <motion.h1 
-              className="text-4xl md:text-6xl font-bold mb-6"
+              className="text-4xl md:text-6xl font-bold mb-6 tracking-wide"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700 }}
             >
-              Rooted in Wisdom.
+              RÜTZ
               <br />
-              <span className="text-cream">Perfected by Science.</span>
+              <span className="text-cream text-2xl md:text-3xl font-normal tracking-widest">FROM NATURE'S ROOTS TO YOUR WELL-BEING</span>
             </motion.h1>
             
             <motion.p 
-              className="text-xl mb-8 text-cream leading-relaxed"
+              className="text-lg mb-8 text-cream/90 leading-relaxed max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
+              style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}
             >
-              Premium botanical extracts ethically sourced from Canadian First Nations communities 
-              using thousand-year-old traditional knowledge, refined with Fraunhofer's cutting-edge 
-              bio-based technologies.
+              Merging the science of nature with heritage craftsmanship to deliver pure, 
+              potent botanical innovations. Born from the union of modern biotechnological 
+              precision and nature's oldest wisdom.
             </motion.p>
             
             <motion.div 
-              className="bg-forest/20 rounded-lg p-4 mb-6 border-l-4 border-cream"
+              className="bg-forest/10 rounded-lg p-4 mb-6 border-l-4 border-sage"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <p className="text-cream/90 italic text-sm leading-relaxed">
-                "Leaders in applied research for sustainable bio-based products. We develop technologies 
-                for climate neutrality and shape tomorrow's innovations - combining scientific data 
-                with environmental responsibility." - <strong>Fraunhofer IVV Vision 2025</strong>
+              <p className="text-cream/90 text-sm leading-relaxed">
+                <em>"Rooted in tradition, refined by innovation."</em> - Our products are as pure as the roots 
+                they come from—crafted with care, backed by science, and inspired by nature's timeless cycles.
               </p>
             </motion.div>
 

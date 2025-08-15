@@ -51,13 +51,19 @@
   --tracking-normal: 0em;
   --spacing: 0.25rem;
   
-  /* Custom RÜTZ colors */
-  --forest: hsl(97, 61%, 20%);
-  --sage: hsl(87, 24%, 51%);
-  --earth: hsl(25, 62%, 53%);
-  --cream: hsl(60, 25%, 87%);
-  --natural: hsl(0, 0%, 99%);
-  --scientific: hsl(193, 36%, 48%);
+  /* RÜTZ Brand Colors */
+  --earth-green: hsl(146, 28%, 39%);      /* #4A7C59 - Primary brand color */
+  --botanical-gold: hsl(41, 31%, 60%);    /* #C8A165 - Premium accent */
+  --root-brown: hsl(18, 17%, 42%);        /* #7B5E57 - Heritage & stability */
+  --pure-white: hsl(0, 0%, 100%);         /* #FFFFFF - Clean backgrounds */
+  --slate-gray: hsl(0, 0%, 29%);          /* #4B4B4B - Text & neutrality */
+  
+  /* Legacy mappings for components */
+  --forest: hsl(146, 28%, 39%);           /* Maps to earth-green */
+  --sage: hsl(41, 31%, 60%);              /* Maps to botanical-gold */
+  --earth: hsl(18, 17%, 42%);             /* Maps to root-brown */
+  --cream: hsl(0, 0%, 100%);              /* Maps to pure-white */
+  --scientific: hsl(0, 0%, 29%);          /* Maps to slate-gray */
 }
 
 .dark {

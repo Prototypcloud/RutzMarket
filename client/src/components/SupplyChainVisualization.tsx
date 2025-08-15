@@ -46,13 +46,13 @@ export default function SupplyChainVisualization() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4">
-            From Sacred Harvest to Scientific Excellence
+          <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4 tracking-wide uppercase" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700 }}>
+            Nature Meets Science
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Experience the complete journey from Canadian First Nations traditional harvesting 
-            to Fraunhofer's revolutionary bio-based processing. Every step honors both 
-            indigenous wisdom and environmental sustainability.
+          <p className="text-slate-gray max-w-3xl mx-auto text-lg leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Follow our transparent journey from sustainable harvesting to precision extraction. 
+            <em>"Rooted in tradition, refined by innovation."</em> Every step combines heritage 
+            craftsmanship with modern biotechnological excellence.
           </p>
         </motion.div>
 

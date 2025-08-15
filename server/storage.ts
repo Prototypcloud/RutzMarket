@@ -234,28 +234,28 @@ export class MemStorage implements IStorage {
       {
         id: "step-1",
         stepNumber: 1,
-        title: "Indigenous Knowledge Partnership",
-        description: "Traditional protocols guide sustainable harvesting in Canadian boreal forests",
+        title: "Sustainable Sourcing",
+        description: "Ethical harvesting with complete transparency from root to extract",
         imageUrl: "https://images.unsplash.com/photo-1573160013751-d4e5ceed1b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-        details: "Working directly with First Nations communities in Canada's boreal forest, we follow traditional harvesting protocols including tobacco offerings, prayer ceremonies, and seasonal timing. Over 546 medicinal plant taxa are sustainably gathered using the 'THANKS' and 'NEEDS' principles, ensuring only one-third of available plants are harvested while maintaining root systems for regeneration.",
-        location: "Canadian Boreal Forest, First Nations territories",
-        certifications: ["Fair Trade", "Indigenous Partnership", "Traditional Knowledge Protocol"]
+        details: "Our botanical ingredients are sourced through ethical partnerships that honor traditional knowledge while ensuring environmental sustainability. Each harvest location is carefully selected for optimal growing conditions and sustainable practices that preserve ecosystems for future generations.",
+        location: "Certified organic farms and wild-harvest partners worldwide",
+        certifications: ["Organic Certified", "Fair Trade", "Sustainable Harvest"]
       },
       {
         id: "step-2",
         stepNumber: 2,
-        title: "Cold Chain Extraction",
-        description: "CO₂ extraction preserves bioactive compounds using Fraunhofer technology",
+        title: "Precision Extraction",
+        description: "Advanced biotechnology preserves nature's potency with heritage craftsmanship",
         imageUrl: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
-        details: "Advanced supercritical CO₂ extraction maintains the integrity of delicate bioactive compounds. Our Fraunhofer-developed process operates at optimal temperatures and pressures to maximize potency.",
+        details: "Our extraction processes merge heritage craftsmanship with cutting-edge biotechnology. Using supercritical CO₂ extraction, we preserve delicate bioactive compounds while achieving pharmaceutical-grade purity. Every step honors both traditional wisdom and modern innovation.",
         location: "Fraunhofer Institute, Germany",
         certifications: ["GMP Certified", "Fraunhofer Validated", "ISO 9001"]
       },
       {
         id: "step-3",
         stepNumber: 3,
-        title: "QA Lab Testing",
-        description: "Rigorous purity testing ensures safety and potency standards",
+        title: "Purity Validation",
+        description: "Every drop, every gram verified for maximum potency and transparency",
         imageUrl: "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
         details: "Every batch undergoes comprehensive testing for purity, potency, heavy metals, pesticides, and microbials. Our state-of-the-art laboratory ensures only the highest quality extracts reach our customers.",
         location: "Certified Testing Laboratory, Germany",

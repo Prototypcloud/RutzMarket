@@ -67,15 +67,13 @@ export default function ScientificCredibility() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4">
-            Fraunhofer IVV: Pioneering Bio-Based Innovation
+          <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4 tracking-wide uppercase" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700 }}>
+            Purity & Potency
           </h2>
-          <p className="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
-            <strong>Leaders in applied research for sustainable bio-based products.</strong> 
-            Fraunhofer IVV develops bio-based materials to replace fossil raw materials with 
-            plant-based alternatives, combining scientific data with environmental responsibility. 
-            Their AI-supported analysis and recyclable packaging innovations ensure RÜTZ extracts 
-            meet the highest standards of purity and sustainability.
+          <p className="text-slate-gray max-w-4xl mx-auto text-lg leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+            <strong>Every drop, every gram, from the source.</strong> Our botanical extracts undergo rigorous 
+            testing and precision extraction to preserve maximum potency while ensuring pharmaceutical-grade 
+            purity. Transparency in every step from harvest to final product.
           </p>
         </motion.div>
 
@@ -122,24 +120,24 @@ export default function ScientificCredibility() {
               <h3 className="text-2xl font-bold mb-4">Fraunhofer IVV Innovation</h3>
               <div className="space-y-4 text-left">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-cream rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-botanical-gold rounded-full mt-2"></div>
                   <div>
-                    <p className="font-semibold">AI-Supported Quality Control</p>
-                    <p className="text-sm text-cream">IR spectroscopy with artificial intelligence for product safety validation</p>
+                    <p className="font-semibold">Heritage Craftsmanship</p>
+                    <p className="text-sm text-cream/90">European botanical traditions meet modern biotechnological precision</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-cream rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-botanical-gold rounded-full mt-2"></div>
                   <div>
-                    <p className="font-semibold">Bio-Based Packaging</p>
-                    <p className="text-sm text-cream">Replacing fossil materials with plant-based, recyclable packaging solutions</p>
+                    <p className="font-semibold">Sustainable Innovation</p>
+                    <p className="text-sm text-cream/90">Ethical sourcing with eco-conscious packaging and clean production</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-cream rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-botanical-gold rounded-full mt-2"></div>
                   <div>
-                    <p className="font-semibold">Sustainable Circular Economy</p>
-                    <p className="text-sm text-cream">Resource-saving processes for climate neutrality and environmental protection</p>
+                    <p className="font-semibold">Complete Transparency</p>
+                    <p className="text-sm text-cream/90">Clear origin, processing, and efficacy information for every product</p>
                   </div>
                 </div>
               </div>

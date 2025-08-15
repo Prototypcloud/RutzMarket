@@ -66,8 +66,12 @@ export default {
         sage: "var(--sage)",
         earth: "var(--earth)",
         cream: "var(--cream)",
-        natural: "var(--natural)",
         scientific: "var(--scientific)",
+        "earth-green": "var(--earth-green)",
+        "botanical-gold": "var(--botanical-gold)",
+        "root-brown": "var(--root-brown)",
+        "pure-white": "var(--pure-white)",
+        "slate-gray": "var(--slate-gray)",
       },
       fontFamily: {
         sans: ["var(--font-sans)"],

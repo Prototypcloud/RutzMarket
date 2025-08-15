@@ -1,0 +1,29 @@
+RÜTZ — Chaga Product Matrix
+Segment	Format / Product	Polished description	Typical applications
+Ingredients	Standardized dry extract powder (β-glucans + triterpenes)	Free-flowing powder standardized to key actives.	Capsules, tablets, sachets, beverage premixes.
+Ingredients	Encapsulated extract (capsules/tablets/softgels)	Dose-ready actives in common oral formats.	Nutraceutical SKUs, clinical kits.
+Ingredients	Liposomal / nanoemulsion chaga extract	Water-dispersible, bioavailability-focused systems.	Shots, beverages, functional drops, softgels.
+Ingredients	Mycelium biomass powder (food-grade)	Controlled-fermentation biomass; clean-label.	Food fortification, smoothies, bakery.
+Ingredients	Mushroom complex blends (chaga + others)	Pre-balanced blends with companion fungi.	Multi-mushroom supplements, RTM mixes.
+Food & Beverage	Functional gummies / chewables with chaga	Pectin/gelatin formats; low-sugar options.	Nutraceutical confectionery.
+Food & Beverage	RTD chaga tea / infusion	Shelf-stable brewed or extract-based RTD.	Cans/bottles, café channels.
+Food & Beverage	Plant-based functional latte (with extract)	Oat/almond bases with standardized extract.	Barista SKUs, single-serve.
+Food & Beverage	Fermented beverage (kombucha/kefir) with chaga	Co-fermented with live cultures.	Refrigerated functional drinks.
+Food & Beverage	Non-dairy yogurt with chaga + probiotics	Spoonable or drinkable plant yogurt.	Retail cups, foodservice.
+Food & Beverage	Instant coffee / chaga blend (spray-dried)	Soluble coffee pre-blended with chaga.	Sticks, jars, vending.
+Food & Beverage	Bakery fortification (bread/crackers)	Heat-tolerant inclusion for dough systems.	Wholesale/retail bakery lines.
+Food & Beverage	Chocolate / confectionery with microencapsulated extract	Flavor-masked actives for cocoa systems.	Bars, bites, dragées.
+Topicals & Personal Care	Antioxidant face serum / cream	Cosmetic bases enriched with chaga actives.	Daily antioxidant skincare (no medical claims).
+Topicals & Personal Care	Shampoo / conditioner with chaga extract	Scalp-care and antioxidant positioning.	Mass/premium haircare.
+Topicals & Personal Care	Topical gel (calming / antioxidant)	Lightweight gel with soothing actives.	After-sun, post-shave, recovery.
+Biomedical / Care	Wound-care hydrogel with chaga actives	Bioactive hydrogel prototype (regulatory-dependent).	OTC/medical concept development.
+R&D Fractions	Purified triterpenoid fraction (e.g., inotodiol) for screening	Research-grade, enriched triterpenes.	Bioassays, method development.
+R&D Fractions	Polysaccharide fraction for immunology studies	Defined polysaccharide cuts for in-vitro/in-vivo work.	Immunology and mechanistic studies.
+Materials & Packaging	Natural pigment extract for inks/coatings (non-food)	Natural brown/amber pigment for non-food surfaces.	Specialty inks, coatings.
+Materials & Packaging	Antioxidant additive for bioplastics	Oxidation inhibitor compatible with polymers.	PLA/PHAs stabilization.
+Materials & Packaging	Biopolymer composite with spent chaga biomass	Fiber/filler valorization into composites.	Packaging parts, molded goods.
+Ingredients / Systems	Natural preservative system (food/cosmetics)	Antioxidant/antimicrobial system for shelf-life.	Clean-label preservation.
+R&D & Data	Custom extract libraries (parameter sweeps)	Solvent/time/temp matrices for SAR explorations.	Screening, formulation scouting.
+R&D & Data	Fermentation data pack / licensing (chaga mycelium)	Tech package + licensing for mycelial production.	Scale-up partners, CDMOs.
+Materials & Packaging	Prototype packaging with antioxidant liner	Active liner to slow oxidation.	Pouches, lids, sachets.
+R&D & Data	Shelf-life & sensory data pack for chaga products	Accelerated/real-time stability + sensory panels.	Claims support, QA/REG dossiers.

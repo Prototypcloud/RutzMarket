@@ -1,4 +1,4 @@
-import { type Product, type InsertProduct, type SupplyChainStep, type InsertSupplyChainStep, type ImpactMetrics, type InsertImpactMetrics, type CartItem, type InsertCartItem, type CommunityProject, type InsertCommunityProject, type LiveImpactUpdate, type InsertLiveImpactUpdate, type ImpactMilestone, type InsertImpactMilestone } from "@shared/schema";
+import { type Product, type InsertProduct, type SupplyChainStep, type InsertSupplyChainStep, type ImpactMetrics, type InsertImpactMetrics, type CartItem, type InsertCartItem, type CommunityProject, type InsertCommunityProject, type LiveImpactUpdate, type InsertLiveImpactUpdate, type ImpactMilestone, type InsertImpactMilestone, type UserPreferences, type InsertUserPreferences, type RecommendationResults, type InsertRecommendationResults } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
@@ -33,6 +33,12 @@ export interface IStorage {
   getImpactMilestones(projectId?: string): Promise<ImpactMilestone[]>;
   createImpactMilestone(milestone: InsertImpactMilestone): Promise<ImpactMilestone>;
   updateImpactMilestone(id: string, updates: Partial<InsertImpactMilestone>): Promise<ImpactMilestone | undefined>;
+
+  // Personalized Recommendations
+  getUserPreferences(sessionId: string): Promise<UserPreferences | undefined>;
+  saveUserPreferences(preferences: InsertUserPreferences): Promise<UserPreferences>;
+  generateRecommendations(sessionId: string, preferences: any): Promise<RecommendationResults>;
+  getRecommendations(sessionId: string): Promise<RecommendationResults | undefined>;
 }
 
 export class MemStorage implements IStorage {
@@ -43,6 +49,8 @@ export class MemStorage implements IStorage {
   private communityProjects: Map<string, CommunityProject>;
   private liveImpactUpdates: LiveImpactUpdate[];
   private impactMilestones: Map<string, ImpactMilestone>;
+  private userPreferences: Map<string, UserPreferences>;
+  private recommendationResults: Map<string, RecommendationResults>;
 
   constructor() {
     this.products = new Map();
@@ -51,6 +59,8 @@ export class MemStorage implements IStorage {
     this.communityProjects = new Map();
     this.liveImpactUpdates = [];
     this.impactMilestones = new Map();
+    this.userPreferences = new Map();
+    this.recommendationResults = new Map();
     this.initializeData();
   }
 
@@ -864,6 +874,153 @@ export class MemStorage implements IStorage {
       }
     });
     keysToDelete.forEach(key => this.cartItems.delete(key));
+  }
+
+  // Personalized Recommendations Implementation
+  async getUserPreferences(sessionId: string): Promise<UserPreferences | undefined> {
+    return Array.from(this.userPreferences.values()).find(pref => pref.sessionId === sessionId);
+  }
+
+  async saveUserPreferences(insertPreferences: InsertUserPreferences): Promise<UserPreferences> {
+    const id = randomUUID();
+    const preferences: UserPreferences = {
+      ...insertPreferences,
+      id,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
+    this.userPreferences.set(id, preferences);
+    return preferences;
+  }
+
+  async generateRecommendations(sessionId: string, preferences: any): Promise<RecommendationResults> {
+    // Save user preferences first
+    const savedPreferences = await this.saveUserPreferences({
+      sessionId,
+      healthGoals: preferences.healthGoals || [],
+      lifestyle: preferences.lifestyle || 'moderate',
+      dietaryRestrictions: preferences.dietaryRestrictions || [],
+      preferredFormats: preferences.preferredFormats || [],
+      budgetRange: preferences.budgetRange || 'medium',
+      experienceLevel: preferences.experienceLevel || 'beginner',
+      specificConcerns: preferences.specificConcerns || [],
+    });
+
+    // Generate recommendations based on preferences
+    const products = Array.from(this.products.values());
+    const recommendedProducts = this.calculateProductRecommendations(products, preferences);
+    
+    const id = randomUUID();
+    const recommendations: RecommendationResults = {
+      id,
+      sessionId,
+      userPreferencesId: savedPreferences.id,
+      recommendedProducts,
+      explanation: this.generateExplanation(preferences, recommendedProducts),
+      confidenceScore: "0.85",
+      createdAt: new Date(),
+    };
+
+    this.recommendationResults.set(sessionId, recommendations);
+    return recommendations;
+  }
+
+  async getRecommendations(sessionId: string): Promise<RecommendationResults | undefined> {
+    return this.recommendationResults.get(sessionId);
+  }
+
+  private calculateProductRecommendations(products: Product[], preferences: any) {
+    const scored = products.map(product => {
+      let score = 0.5; // Base score
+      let reason = "General botanical wellness support";
+      let priority = 3;
+
+      // Health goals matching
+      if (preferences.healthGoals?.includes('immune_support') && 
+          (product.plantMaterial.toLowerCase().includes('chaga') || 
+           product.plantMaterial.toLowerCase().includes('echinacea'))) {
+        score += 0.3;
+        reason = "Excellent for immune system support based on your goals";
+        priority = 1;
+      }
+
+      if (preferences.healthGoals?.includes('stress_relief') && 
+          (product.plantMaterial.toLowerCase().includes('ashwagandha') || 
+           product.plantMaterial.toLowerCase().includes('rhodiola'))) {
+        score += 0.3;
+        reason = "Perfect for stress management and adaptation";
+        priority = 1;
+      }
+
+      if (preferences.healthGoals?.includes('energy_boost') && 
+          (product.plantMaterial.toLowerCase().includes('ginseng') || 
+           product.plantMaterial.toLowerCase().includes('rhodiola'))) {
+        score += 0.25;
+        reason = "Natural energy enhancement without stimulants";
+        priority = 2;
+      }
+
+      // Format preferences
+      if (preferences.preferredFormats?.includes('tea') && 
+          product.productType.toLowerCase().includes('tea')) {
+        score += 0.15;
+      }
+
+      if (preferences.preferredFormats?.includes('capsules') && 
+          product.productType.toLowerCase().includes('capsule')) {
+        score += 0.15;
+      }
+
+      if (preferences.preferredFormats?.includes('powder') && 
+          product.productType.toLowerCase().includes('powder')) {
+        score += 0.15;
+      }
+
+      // Experience level adjustment
+      if (preferences.experienceLevel === 'beginner' && 
+          product.productType.toLowerCase().includes('tea')) {
+        score += 0.1;
+        reason += " - Great for beginners";
+      }
+
+      // Budget considerations
+      const price = parseFloat(product.price);
+      if (preferences.budgetRange === 'low' && price < 30) {
+        score += 0.1;
+      } else if (preferences.budgetRange === 'medium' && price >= 30 && price <= 80) {
+        score += 0.1;
+      } else if (preferences.budgetRange === 'high' && price > 80) {
+        score += 0.1;
+      }
+
+      return {
+        productId: product.id,
+        score: Math.min(score, 1.0),
+        reason,
+        priority
+      };
+    });
+
+    // Sort by score and return top recommendations
+    return scored
+      .sort((a, b) => b.score - a.score || a.priority - b.priority)
+      .slice(0, 6);
+  }
+
+  private generateExplanation(preferences: any, recommendations: any[]): string {
+    const goals = preferences.healthGoals || [];
+    const topRec = recommendations[0];
+    
+    let explanation = `Based on your health goals of ${goals.slice(0, 2).join(' and ')}, `;
+    explanation += `we've identified ${recommendations.length} botanical extracts that align with your needs. `;
+    
+    if (topRec && topRec.score > 0.8) {
+      explanation += `Our top recommendation has a ${Math.round(topRec.score * 100)}% compatibility match with your preferences.`;
+    } else {
+      explanation += `These recommendations are tailored to your experience level and preferred formats.`;
+    }
+
+    return explanation;
   }
 }
 

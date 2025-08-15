@@ -135,6 +135,47 @@ export const insertImpactMilestoneSchema = createInsertSchema(impactMilestones).
   createdAt: true,
 });
 
+// Personalized Recommendation Engine Tables
+export const userPreferences = pgTable("user_preferences", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  sessionId: text("session_id").notNull(),
+  healthGoals: jsonb("health_goals").$type<string[]>(),
+  lifestyle: text("lifestyle"), // active, moderate, sedentary
+  dietaryRestrictions: jsonb("dietary_restrictions").$type<string[]>(),
+  preferredFormats: jsonb("preferred_formats").$type<string[]>(), // tea, capsules, powder, etc.
+  budgetRange: text("budget_range"), // low, medium, high
+  experienceLevel: text("experience_level"), // beginner, intermediate, advanced
+  specificConcerns: jsonb("specific_concerns").$type<string[]>(),
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
+
+export const recommendationResults = pgTable("recommendation_results", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  sessionId: text("session_id").notNull(),
+  userPreferencesId: varchar("user_preferences_id").references(() => userPreferences.id),
+  recommendedProducts: jsonb("recommended_products").$type<{
+    productId: string;
+    score: number;
+    reason: string;
+    priority: number;
+  }[]>(),
+  explanation: text("explanation").notNull(),
+  confidenceScore: decimal("confidence_score", { precision: 3, scale: 2 }).notNull(),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+export const insertUserPreferencesSchema = createInsertSchema(userPreferences).omit({
+  id: true,
+  createdAt: true,
+  updatedAt: true,
+});
+
+export const insertRecommendationResultsSchema = createInsertSchema(recommendationResults).omit({
+  id: true,
+  createdAt: true,
+});
+
 export type Product = typeof products.$inferSelect;
 export type InsertProduct = z.infer<typeof insertProductSchema>;
 export type SupplyChainStep = typeof supplyChainSteps.$inferSelect;
@@ -149,3 +190,7 @@ export type LiveImpactUpdate = typeof liveImpactUpdates.$inferSelect;
 export type InsertLiveImpactUpdate = z.infer<typeof insertLiveImpactUpdateSchema>;
 export type ImpactMilestone = typeof impactMilestones.$inferSelect;
 export type InsertImpactMilestone = z.infer<typeof insertImpactMilestoneSchema>;
+export type UserPreferences = typeof userPreferences.$inferSelect;
+export type InsertUserPreferences = z.infer<typeof insertUserPreferencesSchema>;
+export type RecommendationResults = typeof recommendationResults.$inferSelect;
+export type InsertRecommendationResults = z.infer<typeof insertRecommendationResultsSchema>;

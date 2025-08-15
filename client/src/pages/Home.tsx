@@ -7,6 +7,7 @@ import BrandPromise from "@/components/BrandPromise";
 import SupplyChainVisualization from "@/components/SupplyChainVisualization";
 import CommunityImpact from "@/components/CommunityImpact";
 import CommunityImpactTracker from "@/components/CommunityImpactTracker";
+import PersonalizedRecommendationEngine from "@/components/PersonalizedRecommendationEngine";
 import ScientificCredibility from "@/components/ScientificCredibility";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
@@ -55,6 +56,11 @@ export default function Home() {
       <div className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <CommunityImpactTracker />
+        </div>
+      </div>
+      <div className="py-16 bg-white dark:bg-gray-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <PersonalizedRecommendationEngine />
         </div>
       </div>
       <ScientificCredibility />

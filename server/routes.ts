@@ -227,6 +227,49 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Personalized Recommendations API
+  app.post("/api/recommendations", async (req, res) => {
+    try {
+      const sessionId = (req as any).sessionID || "anonymous";
+      const preferences = req.body;
+      
+      const recommendations = await storage.generateRecommendations(sessionId, preferences);
+      res.json(recommendations);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to generate recommendations" });
+    }
+  });
+
+  app.get("/api/recommendations", async (req, res) => {
+    try {
+      const sessionId = (req as any).sessionID || "anonymous";
+      const recommendations = await storage.getRecommendations(sessionId);
+      
+      if (!recommendations) {
+        return res.status(404).json({ message: "No recommendations found" });
+      }
+      
+      res.json(recommendations);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch recommendations" });
+    }
+  });
+
+  app.get("/api/user-preferences", async (req, res) => {
+    try {
+      const sessionId = (req as any).sessionID || "anonymous";
+      const preferences = await storage.getUserPreferences(sessionId);
+      
+      if (!preferences) {
+        return res.status(404).json({ message: "No preferences found" });
+      }
+      
+      res.json(preferences);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch user preferences" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }

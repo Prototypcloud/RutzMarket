@@ -35,6 +35,7 @@ import {
   Plus,
   X
 } from 'lucide-react';
+import { Logo } from '@/components/ui/logo';
 
 interface Product {
   id: string;
@@ -572,6 +573,11 @@ const PersonalizedRecommendationEngine: React.FC = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto p-6 space-y-6">
+      {/* RÜTZ Logo */}
+      <div className="flex justify-center mb-6">
+        <Logo size="md" />
+      </div>
+      
       {/* Progress Header */}
       <div className="flex items-center justify-center space-x-4 mb-8">
         {[1, 2, 3].map((step) => (

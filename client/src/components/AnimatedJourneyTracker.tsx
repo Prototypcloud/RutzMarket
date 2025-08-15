@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { useQuery } from '@tanstack/react-query';
 import { 
-  Seedling, 
+  Sprout, 
   Search, 
   BookOpen, 
   Crown, 
@@ -54,7 +54,7 @@ interface UserProgress {
 }
 
 const stageIcons = {
-  Explorer: Seedling,
+  Explorer: Sprout,
   Seeker: Search,
   Advocate: BookOpen,
   Guardian: Crown,

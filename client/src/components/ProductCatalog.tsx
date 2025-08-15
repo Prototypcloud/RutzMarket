@@ -9,6 +9,7 @@ import { productCategories } from "@/lib/data";
 import { useCartStore } from "@/lib/cartStore";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "wouter";
+import { Logo } from "@/components/ui/logo";
 import type { Product } from "@shared/schema";
 
 interface ProductCatalogProps {
@@ -144,6 +145,11 @@ export default function ProductCatalog({ showAllProducts, activeFilter = "all" }
                   </div>
                   
                   <CardContent className="p-6">
+                    {/* RÜTZ Logo */}
+                    <div className="flex justify-between items-start mb-3">
+                      <Logo size="sm" showText={false} className="text-sm" />
+                    </div>
+                    
                     <Link href={`/products/${product.id}`}>
                       <h3 className="text-xl font-semibold text-forest mb-2 cursor-pointer hover:text-sage transition-colors">
                         {product.name}

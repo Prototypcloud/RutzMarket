@@ -4,6 +4,7 @@ import ProductCatalog from "@/components/ProductCatalog";
 import Footer from "@/components/Footer";
 import CartSidebar from "@/components/CartSidebar";
 import { productCategories } from "@/lib/data";
+import { Logo } from "@/components/ui/logo";
 import { motion } from "framer-motion";
 
 export default function Products() {
@@ -20,6 +21,11 @@ export default function Products() {
         transition={{ duration: 0.6 }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* RÜTZ Logo */}
+          <div className="flex justify-center mb-8">
+            <Logo size="lg" />
+          </div>
+          
           <div className="text-center mb-12">
             <motion.h1 
               className="text-4xl md:text-5xl font-bold text-forest mb-4"

@@ -11,6 +11,7 @@ import { useCartStore } from "@/lib/cartStore";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
 import { Star, ShoppingCart, QrCode, Leaf, Beaker, Heart, MapPin } from "lucide-react";
+import { Logo } from "@/components/ui/logo";
 import type { Product } from "@shared/schema";
 
 export default function ProductDetail() {
@@ -103,6 +104,11 @@ export default function ProductDetail() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
+              {/* RÜTZ Logo */}
+              <div className="flex justify-between items-start mb-4">
+                <Logo size="md" showText={false} />
+              </div>
+              
               <div>
                 <h1 className="text-3xl font-bold text-forest mb-2">{product.name}</h1>
                 <div className="flex items-center space-x-2 mb-3">

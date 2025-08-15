@@ -36,8 +36,8 @@ const InteractivePlantGrid: React.FC = () => {
       name: "Chaga Mushroom",
       scientificName: "Inonotus obliquus",
       origin: "Canadian Boreal Forests",
-      icon: "🍄",
-      image: "https://images.unsplash.com/photo-1585756150923-9e36ff9b7fb4?w=400&h=300&fit=crop",
+      icon: "⚫",
+      image: "https://images.unsplash.com/photo-1509927083803-4bd519298ac4?w=400&h=300&fit=crop",
       description: "Sacred medicine from birch trees, harvested by indigenous communities for immune system support and longevity.",
       traditionalUse: "Used by northern indigenous peoples as a warming tea for vitality during harsh winters.",
       color: "from-amber-600 to-orange-700",
@@ -160,14 +160,7 @@ const InteractivePlantGrid: React.FC = () => {
     setSelectedPlant(null);
   };
 
-  // Orbital animation variants
-  const getOrbitalPosition = (index: number, total: number, radius: number = 200) => {
-    const angle = (index / total) * 2 * Math.PI;
-    return {
-      x: Math.cos(angle) * radius,
-      y: Math.sin(angle) * radius,
-    };
-  };
+
 
   return (
     <div className="relative">
@@ -297,48 +290,69 @@ const InteractivePlantGrid: React.FC = () => {
                 </Badge>
               </div>
 
-              {/* Orbital Products */}
-              <div className="relative h-96 flex items-center justify-center">
-                <AnimatePresence>
-                  {selectedPlant.products.map((product, index) => {
-                    const position = getOrbitalPosition(index, selectedPlant.products.length, 150);
-                    return (
+              {/* Product Carousel */}
+              <div className="relative h-48 overflow-hidden bg-gradient-to-r from-transparent via-rutz-cream/10 to-transparent rounded-lg">
+                <div className="absolute inset-0 flex items-center">
+                  <motion.div
+                    className="flex space-x-4"
+                    animate={{ x: ["0%", "-100%"] }}
+                    transition={{
+                      duration: selectedPlant.products.length * 3,
+                      repeat: Infinity,
+                      ease: "linear"
+                    }}
+                    style={{ width: `${selectedPlant.products.length * 200}px` }}
+                  >
+                    {/* First set of products */}
+                    {selectedPlant.products.map((product, index) => (
                       <motion.div
-                        key={product.id}
-                        initial={{ scale: 0, x: 0, y: 0 }}
-                        animate={{ 
-                          scale: 1,
-                          x: position.x, 
-                          y: position.y,
-                          rotate: 360
-                        }}
-                        transition={{
-                          duration: 0.8,
-                          delay: index * 0.1,
-                          rotate: {
-                            duration: 15 + index * 2,
-                            repeat: Infinity,
-                            ease: "linear"
-                          }
-                        }}
-                        className="absolute"
-                        whileHover={{ scale: 1.2, zIndex: 10 }}
-                        data-testid={`product-${product.id}`}
+                        key={`first-${product.id}`}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="flex-shrink-0"
+                        whileHover={{ scale: 1.1, zIndex: 10 }}
+                        data-testid={`carousel-product-${product.id}`}
                       >
-                        <Card className="border-rutz-gold/40 hover:border-rutz-gold bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all">
-                          <CardContent className="p-3 text-center min-w-[100px]">
-                            <div className="text-2xl mb-1">{product.icon}</div>
-                            <h4 className="font-semibold text-rutz-forest text-xs mb-1">{product.name}</h4>
-                            <Badge variant="secondary" className="text-xs">
+                        <Card className="w-40 h-32 shadow-lg border-2 border-rutz-gold/30 hover:border-rutz-gold bg-white/95 backdrop-blur-sm">
+                          <CardContent className="p-3 flex flex-col items-center justify-center h-full">
+                            <div className="text-3xl mb-2">{product.icon}</div>
+                            <div className="text-sm text-center font-medium text-rutz-forest line-clamp-2 mb-1">
+                              {product.name}
+                            </div>
+                            <Badge variant="outline" className="text-xs border-rutz-gold/50 text-rutz-sage">
                               {product.sector}
                             </Badge>
-                            <p className="text-xs text-rutz-sage mt-1">{product.type}</p>
                           </CardContent>
                         </Card>
                       </motion.div>
-                    );
-                  })}
-                </AnimatePresence>
+                    ))}
+                    {/* Duplicate set for seamless loop */}
+                    {selectedPlant.products.map((product, index) => (
+                      <motion.div
+                        key={`second-${product.id}`}
+                        className="flex-shrink-0"
+                        whileHover={{ scale: 1.1, zIndex: 10 }}
+                      >
+                        <Card className="w-40 h-32 shadow-lg border-2 border-rutz-gold/30 hover:border-rutz-gold bg-white/95 backdrop-blur-sm">
+                          <CardContent className="p-3 flex flex-col items-center justify-center h-full">
+                            <div className="text-3xl mb-2">{product.icon}</div>
+                            <div className="text-sm text-center font-medium text-rutz-forest line-clamp-2 mb-1">
+                              {product.name}
+                            </div>
+                            <Badge variant="outline" className="text-xs border-rutz-gold/50 text-rutz-sage">
+                              {product.sector}
+                            </Badge>
+                          </CardContent>
+                        </Card>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                </div>
+                
+                {/* Gradient overlays for smooth fade effect */}
+                <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
               </div>
 
               {/* Plant Description */}

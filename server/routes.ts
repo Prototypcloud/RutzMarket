@@ -120,6 +120,48 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Community Impact Tracking Routes
+  app.get("/api/community-projects", async (req, res) => {
+    try {
+      const projects = await storage.getCommunityProjects();
+      res.json(projects);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch community projects" });
+    }
+  });
+
+  app.get("/api/community-projects/:id", async (req, res) => {
+    try {
+      const project = await storage.getCommunityProject(req.params.id);
+      if (!project) {
+        return res.status(404).json({ message: "Project not found" });
+      }
+      res.json(project);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch project" });
+    }
+  });
+
+  app.get("/api/live-updates", async (req, res) => {
+    try {
+      const limit = req.query.limit ? parseInt(req.query.limit as string) : 20;
+      const updates = await storage.getLiveImpactUpdates(limit);
+      res.json(updates);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch live updates" });
+    }
+  });
+
+  app.get("/api/impact-milestones", async (req, res) => {
+    try {
+      const projectId = req.query.projectId as string;
+      const milestones = await storage.getImpactMilestones(projectId);
+      res.json(milestones);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch milestones" });
+    }
+  });
+
   // Cart API
   app.get("/api/cart", async (req, res) => {
     try {

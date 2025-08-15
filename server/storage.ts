@@ -1,4 +1,4 @@
-import { type Product, type InsertProduct, type SupplyChainStep, type InsertSupplyChainStep, type ImpactMetrics, type InsertImpactMetrics, type CartItem, type InsertCartItem } from "@shared/schema";
+import { type Product, type InsertProduct, type SupplyChainStep, type InsertSupplyChainStep, type ImpactMetrics, type InsertImpactMetrics, type CartItem, type InsertCartItem, type CommunityProject, type InsertCommunityProject, type LiveImpactUpdate, type InsertLiveImpactUpdate, type ImpactMilestone, type InsertImpactMilestone } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
@@ -20,6 +20,19 @@ export interface IStorage {
   updateCartItem(id: string, quantity: number): Promise<CartItem | undefined>;
   removeFromCart(id: string): Promise<boolean>;
   clearCart(sessionId: string): Promise<void>;
+
+  // Community Impact Tracking
+  getCommunityProjects(): Promise<CommunityProject[]>;
+  getCommunityProject(id: string): Promise<CommunityProject | undefined>;
+  createCommunityProject(project: InsertCommunityProject): Promise<CommunityProject>;
+  updateCommunityProject(id: string, updates: Partial<InsertCommunityProject>): Promise<CommunityProject | undefined>;
+  
+  getLiveImpactUpdates(limit?: number): Promise<LiveImpactUpdate[]>;
+  createLiveImpactUpdate(update: InsertLiveImpactUpdate): Promise<LiveImpactUpdate>;
+  
+  getImpactMilestones(projectId?: string): Promise<ImpactMilestone[]>;
+  createImpactMilestone(milestone: InsertImpactMilestone): Promise<ImpactMilestone>;
+  updateImpactMilestone(id: string, updates: Partial<InsertImpactMilestone>): Promise<ImpactMilestone | undefined>;
 }
 
 export class MemStorage implements IStorage {
@@ -27,11 +40,17 @@ export class MemStorage implements IStorage {
   private supplyChainSteps: Map<string, SupplyChainStep>;
   private impactMetrics!: ImpactMetrics;
   private cartItems: Map<string, CartItem>;
+  private communityProjects: Map<string, CommunityProject>;
+  private liveImpactUpdates: LiveImpactUpdate[];
+  private impactMilestones: Map<string, ImpactMilestone>;
 
   constructor() {
     this.products = new Map();
     this.supplyChainSteps = new Map();
     this.cartItems = new Map();
+    this.communityProjects = new Map();
+    this.liveImpactUpdates = [];
+    this.impactMilestones = new Map();
     this.initializeData();
   }
 
@@ -472,6 +491,302 @@ export class MemStorage implements IStorage {
       clinicalTrials: 23,
       patents: 12
     };
+
+    // Initialize community projects
+    this.initializeCommunityProjects();
+    this.initializeLiveUpdates();
+    this.initializeMilestones();
+  }
+
+  private initializeCommunityProjects() {
+    const projects: CommunityProject[] = [
+      {
+        id: "proj-001",
+        name: "Kenora First Nation School",
+        description: "Building a new elementary school for 120 children in Kenora First Nation community, featuring traditional learning spaces and modern technology.",
+        location: "Kenora, Ontario, Canada",
+        community: "Kenora First Nation",
+        category: "education",
+        status: "active",
+        progress: 75,
+        fundingGoal: "450000.00",
+        currentFunding: "337500.00",
+        startDate: new Date("2024-03-15"),
+        targetCompletionDate: new Date("2025-06-30"),
+        completionDate: null,
+        beneficiaries: 120,
+        createdAt: new Date("2024-03-01"),
+        lastUpdated: new Date("2024-08-15"),
+      },
+      {
+        id: "proj-002", 
+        name: "Sustainable Chaga Harvesting Program",
+        description: "Training program for sustainable Chaga mushroom harvesting techniques with 25 indigenous families, preserving traditional knowledge while ensuring ecosystem health.",
+        location: "Thunder Bay, Ontario, Canada",
+        community: "Ojibwe Nation",
+        category: "environment",
+        status: "active",
+        progress: 60,
+        fundingGoal: "125000.00",
+        currentFunding: "75000.00",
+        startDate: new Date("2024-05-01"),
+        targetCompletionDate: new Date("2025-04-30"),
+        completionDate: null,
+        beneficiaries: 25,
+        createdAt: new Date("2024-04-15"),
+        lastUpdated: new Date("2024-08-14"),
+      },
+      {
+        id: "proj-003",
+        name: "Traditional Medicine Center",
+        description: "Community health center integrating traditional indigenous medicine with modern healthcare, serving 500+ community members.",
+        location: "Winnipeg, Manitoba, Canada",
+        community: "Dakota Nation",
+        category: "healthcare",
+        status: "planning",
+        progress: 25,
+        fundingGoal: "750000.00",
+        currentFunding: "187500.00",
+        startDate: new Date("2025-01-15"),
+        targetCompletionDate: new Date("2026-12-31"),
+        completionDate: null,
+        beneficiaries: 500,
+        createdAt: new Date("2024-07-01"),
+        lastUpdated: new Date("2024-08-10"),
+      },
+      {
+        id: "proj-004",
+        name: "Indigenous Language Preservation",
+        description: "Digital archive and education program preserving Cree language and traditional plant knowledge for future generations.",
+        location: "Saskatchewan, Canada",
+        community: "Plains Cree Nation",
+        category: "education",
+        status: "completed",
+        progress: 100,
+        fundingGoal: "95000.00",
+        currentFunding: "95000.00",
+        startDate: new Date("2023-09-01"),
+        targetCompletionDate: new Date("2024-08-31"),
+        completionDate: new Date("2024-08-20"),
+        beneficiaries: 200,
+        createdAt: new Date("2023-08-15"),
+        lastUpdated: new Date("2024-08-20"),
+      }
+    ];
+
+    projects.forEach(project => {
+      this.communityProjects.set(project.id, project);
+    });
+  }
+
+  private initializeLiveUpdates() {
+    this.liveImpactUpdates = [
+      {
+        id: "update-001",
+        projectId: "proj-001",
+        updateType: "progress",
+        title: "School Construction 75% Complete",
+        description: "Foundation completed, walls erected, and roofing installation in progress. Expected completion ahead of schedule.",
+        previousValue: "65.00",
+        newValue: "75.00",
+        impactMetric: "progress",
+        isPublic: true,
+        createdAt: new Date("2024-08-15T14:30:00Z"),
+      },
+      {
+        id: "update-002",
+        projectId: "proj-002",
+        updateType: "funding",
+        title: "Additional Funding Secured",
+        description: "Community fundraising event raised additional $15,000 for sustainable harvesting equipment.",
+        previousValue: "60000.00",
+        newValue: "75000.00",
+        impactMetric: "currentFunding",
+        isPublic: true,
+        createdAt: new Date("2024-08-14T10:15:00Z"),
+      },
+      {
+        id: "update-003",
+        projectId: "proj-004",
+        updateType: "completion",
+        title: "Language Archive Project Completed",
+        description: "Successfully digitized 500+ traditional plant knowledge recordings and created interactive learning platform.",
+        previousValue: "95.00",
+        newValue: "100.00", 
+        impactMetric: "progress",
+        isPublic: true,
+        createdAt: new Date("2024-08-20T16:45:00Z"),
+      },
+      {
+        id: "update-004",
+        projectId: "proj-003",
+        updateType: "milestone",
+        title: "Site Planning Approved",
+        description: "Traditional Medicine Center site plans approved by community council and local authorities.",
+        previousValue: "15.00",
+        newValue: "25.00",
+        impactMetric: "progress", 
+        isPublic: true,
+        createdAt: new Date("2024-08-10T09:20:00Z"),
+      },
+      {
+        id: "update-005",
+        projectId: "proj-001",
+        updateType: "milestone",
+        title: "Traditional Learning Space Dedicated",
+        description: "Elder Mary Sinclair blessed the new traditional learning space with sacred ceremony.",
+        previousValue: null,
+        newValue: null,
+        impactMetric: null,
+        isPublic: true,
+        createdAt: new Date("2024-08-12T11:00:00Z"),
+      }
+    ];
+  }
+
+  private initializeMilestones() {
+    const milestones: ImpactMilestone[] = [
+      {
+        id: "mile-001",
+        projectId: "proj-001", 
+        title: "Foundation Complete",
+        description: "School foundation and basement construction finished",
+        targetDate: new Date("2024-06-30"),
+        achievedDate: new Date("2024-06-25"),
+        isAchieved: true,
+        celebrationMessage: "Foundation blessed by community elders in traditional ceremony",
+        impactValue: 25,
+        createdAt: new Date("2024-03-15"),
+      },
+      {
+        id: "mile-002",
+        projectId: "proj-001",
+        title: "Roof Installation",
+        description: "Complete roofing system installation for weather protection",
+        targetDate: new Date("2024-09-15"),
+        achievedDate: null,
+        isAchieved: false,
+        celebrationMessage: null,
+        impactValue: 50,
+        createdAt: new Date("2024-03-15"),
+      },
+      {
+        id: "mile-003",
+        projectId: "proj-002",
+        title: "First Harvest Training",
+        description: "Complete first sustainable harvesting training with 10 families",
+        targetDate: new Date("2024-10-31"),
+        achievedDate: null,
+        isAchieved: false,
+        celebrationMessage: null,
+        impactValue: 40,
+        createdAt: new Date("2024-05-01"),
+      },
+      {
+        id: "mile-004",
+        projectId: "proj-004",
+        title: "Archive Launch",
+        description: "Launch digital platform for community use",
+        targetDate: new Date("2024-08-15"),
+        achievedDate: new Date("2024-08-20"),
+        isAchieved: true,
+        celebrationMessage: "Over 200 community members registered on launch day",
+        impactValue: 100,
+        createdAt: new Date("2023-09-01"),
+      }
+    ];
+
+    milestones.forEach(milestone => {
+      this.impactMilestones.set(milestone.id, milestone);
+    });
+  }
+
+  // Community Impact Tracking Methods
+  async getCommunityProjects(): Promise<CommunityProject[]> {
+    return Array.from(this.communityProjects.values()).sort((a, b) => 
+      new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime()
+    );
+  }
+
+  async getCommunityProject(id: string): Promise<CommunityProject | undefined> {
+    return this.communityProjects.get(id);
+  }
+
+  async createCommunityProject(insertProject: InsertCommunityProject): Promise<CommunityProject> {
+    const id = randomUUID();
+    const now = new Date();
+    const project: CommunityProject = {
+      ...insertProject,
+      id,
+      createdAt: now,
+      lastUpdated: now,
+    };
+    this.communityProjects.set(id, project);
+    return project;
+  }
+
+  async updateCommunityProject(id: string, updates: Partial<InsertCommunityProject>): Promise<CommunityProject | undefined> {
+    const project = this.communityProjects.get(id);
+    if (!project) return undefined;
+
+    const updatedProject: CommunityProject = {
+      ...project,
+      ...updates,
+      lastUpdated: new Date(),
+    };
+    
+    this.communityProjects.set(id, updatedProject);
+    return updatedProject;
+  }
+
+  async getLiveImpactUpdates(limit: number = 20): Promise<LiveImpactUpdate[]> {
+    return this.liveImpactUpdates
+      .filter(update => update.isPublic)
+      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+      .slice(0, limit);
+  }
+
+  async createLiveImpactUpdate(insertUpdate: InsertLiveImpactUpdate): Promise<LiveImpactUpdate> {
+    const id = randomUUID();
+    const update: LiveImpactUpdate = {
+      ...insertUpdate,
+      id,
+      createdAt: new Date(),
+    };
+    this.liveImpactUpdates.unshift(update);
+    return update;
+  }
+
+  async getImpactMilestones(projectId?: string): Promise<ImpactMilestone[]> {
+    const milestones = Array.from(this.impactMilestones.values());
+    if (projectId) {
+      return milestones.filter(m => m.projectId === projectId);
+    }
+    return milestones.sort((a, b) => new Date(b.targetDate).getTime() - new Date(a.targetDate).getTime());
+  }
+
+  async createImpactMilestone(insertMilestone: InsertImpactMilestone): Promise<ImpactMilestone> {
+    const id = randomUUID();
+    const milestone: ImpactMilestone = {
+      ...insertMilestone,
+      id,
+      createdAt: new Date(),
+    };
+    this.impactMilestones.set(id, milestone);
+    return milestone;
+  }
+
+  async updateImpactMilestone(id: string, updates: Partial<InsertImpactMilestone>): Promise<ImpactMilestone | undefined> {
+    const milestone = this.impactMilestones.get(id);
+    if (!milestone) return undefined;
+
+    const updatedMilestone: ImpactMilestone = {
+      ...milestone,
+      ...updates,
+    };
+    
+    this.impactMilestones.set(id, updatedMilestone);
+    return updatedMilestone;
   }
 
   async getProducts(): Promise<Product[]> {

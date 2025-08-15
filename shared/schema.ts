@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, integer, decimal, jsonb, boolean } from "drizzle-orm/pg-core";
+import { pgTable, text, varchar, integer, decimal, jsonb, boolean, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -57,6 +57,52 @@ export const cartItems = pgTable("cart_items", {
   sessionId: text("session_id").notNull(),
 });
 
+// Community Impact Tracking Tables
+export const communityProjects = pgTable("community_projects", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  name: text("name").notNull(),
+  description: text("description").notNull(),
+  location: text("location").notNull(),
+  community: text("community").notNull(),
+  category: text("category").notNull(), // education, infrastructure, healthcare, environment
+  status: text("status").notNull().default("active"), // planning, active, completed
+  progress: integer("progress").notNull().default(0), // 0-100 percentage
+  fundingGoal: decimal("funding_goal", { precision: 10, scale: 2 }).notNull(),
+  currentFunding: decimal("current_funding", { precision: 10, scale: 2 }).notNull().default("0.00"),
+  startDate: timestamp("start_date").notNull(),
+  targetCompletionDate: timestamp("target_completion_date"),
+  completionDate: timestamp("completion_date"),
+  beneficiaries: integer("beneficiaries").notNull().default(0),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+  lastUpdated: timestamp("last_updated").notNull().defaultNow(),
+});
+
+export const liveImpactUpdates = pgTable("live_impact_updates", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  projectId: varchar("project_id").references(() => communityProjects.id),
+  updateType: text("update_type").notNull(), // progress, funding, milestone, completion
+  title: text("title").notNull(),
+  description: text("description").notNull(),
+  previousValue: decimal("previous_value", { precision: 10, scale: 2 }),
+  newValue: decimal("new_value", { precision: 10, scale: 2 }),
+  impactMetric: text("impact_metric"), // schools_built, families_supported, trees_planted, etc.
+  isPublic: boolean("is_public").notNull().default(true),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export const impactMilestones = pgTable("impact_milestones", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  projectId: varchar("project_id").references(() => communityProjects.id),
+  title: text("title").notNull(),
+  description: text("description").notNull(),
+  targetDate: timestamp("target_date").notNull(),
+  achievedDate: timestamp("achieved_date"),
+  isAchieved: boolean("is_achieved").notNull().default(false),
+  celebrationMessage: text("celebration_message"),
+  impactValue: integer("impact_value").notNull().default(0),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
 export const insertProductSchema = createInsertSchema(products).omit({
   id: true,
 });
@@ -73,6 +119,22 @@ export const insertCartItemSchema = createInsertSchema(cartItems).omit({
   id: true,
 });
 
+export const insertCommunityProjectSchema = createInsertSchema(communityProjects).omit({
+  id: true,
+  createdAt: true,
+  lastUpdated: true,
+});
+
+export const insertLiveImpactUpdateSchema = createInsertSchema(liveImpactUpdates).omit({
+  id: true,
+  createdAt: true,
+});
+
+export const insertImpactMilestoneSchema = createInsertSchema(impactMilestones).omit({
+  id: true,
+  createdAt: true,
+});
+
 export type Product = typeof products.$inferSelect;
 export type InsertProduct = z.infer<typeof insertProductSchema>;
 export type SupplyChainStep = typeof supplyChainSteps.$inferSelect;
@@ -81,3 +143,9 @@ export type ImpactMetrics = typeof impactMetrics.$inferSelect;
 export type InsertImpactMetrics = z.infer<typeof insertImpactMetricsSchema>;
 export type CartItem = typeof cartItems.$inferSelect;
 export type InsertCartItem = z.infer<typeof insertCartItemSchema>;
+export type CommunityProject = typeof communityProjects.$inferSelect;
+export type InsertCommunityProject = z.infer<typeof insertCommunityProjectSchema>;
+export type LiveImpactUpdate = typeof liveImpactUpdates.$inferSelect;
+export type InsertLiveImpactUpdate = z.infer<typeof insertLiveImpactUpdateSchema>;
+export type ImpactMilestone = typeof impactMilestones.$inferSelect;
+export type InsertImpactMilestone = z.infer<typeof insertImpactMilestoneSchema>;

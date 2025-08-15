@@ -2,10 +2,11 @@
 export const navigationItems = [
   { name: 'Products', href: '/products' },
   { name: 'Plant Explorer', href: '/plant-explorer' },
-  { name: 'Sourcing', href: '#sourcing' },
-  { name: 'Science', href: '#science' },
-  { name: 'Impact', href: '#impact' },
-  { name: 'About', href: '#about' }
+  { name: 'AI Pairing', href: '/plant-pairing' },
+  { name: 'Sourcing', href: '/sourcing' },
+  { name: 'Science', href: '/science' },
+  { name: 'Impact', href: '/impact' },
+  { name: 'About', href: '/about' }
 ];
 
 export const productCategories = [

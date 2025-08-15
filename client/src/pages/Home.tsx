@@ -47,7 +47,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <TrustIndicators />
-      <ProductCatalog showAllProducts={false} />
+      <ProductCatalog showAllProducts={true} />
       <PlantExplorerFeature />
       <IndigenousPartnership />
       <BrandPromise />

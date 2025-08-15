@@ -538,6 +538,72 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // =================== GLOBAL INDIGENOUS PLANTS ===================
+
+  // Get all global indigenous plants
+  app.get("/api/global-indigenous-plants", async (req, res) => {
+    try {
+      const plants = await storage.getGlobalIndigenousPlants();
+      res.json(plants);
+    } catch (error) {
+      console.error("Error fetching global indigenous plants:", error);
+      res.status(500).json({ message: "Failed to fetch global indigenous plants" });
+    }
+  });
+
+  // Get a specific global indigenous plant
+  app.get("/api/global-indigenous-plants/:id", async (req, res) => {
+    try {
+      const { id } = req.params;
+      const plant = await storage.getGlobalIndigenousPlant(id);
+      
+      if (!plant) {
+        return res.status(404).json({ message: "Plant not found" });
+      }
+      
+      res.json(plant);
+    } catch (error) {
+      console.error("Error fetching global indigenous plant:", error);
+      res.status(500).json({ message: "Failed to fetch global indigenous plant" });
+    }
+  });
+
+  // Get plants by region
+  app.get("/api/global-indigenous-plants/region/:region", async (req, res) => {
+    try {
+      const { region } = req.params;
+      const plants = await storage.getPlantsByRegion(region);
+      res.json(plants);
+    } catch (error) {
+      console.error("Error fetching plants by region:", error);
+      res.status(500).json({ message: "Failed to fetch plants by region" });
+    }
+  });
+
+  // Get plants by indigenous tribe
+  app.get("/api/global-indigenous-plants/tribe/:tribe", async (req, res) => {
+    try {
+      const { tribe } = req.params;
+      const plants = await storage.getPlantsByTribe(tribe);
+      res.json(plants);
+    } catch (error) {
+      console.error("Error fetching plants by tribe:", error);
+      res.status(500).json({ message: "Failed to fetch plants by tribe" });
+    }
+  });
+
+  // Search plants with filters
+  app.post("/api/global-indigenous-plants/search", async (req, res) => {
+    try {
+      const filters = req.body;
+      const plants = await storage.searchPlants(filters);
+      res.json(plants);
+    } catch (error) {
+      console.error("Error searching plants:", error);
+      res.status(500).json({ message: "Failed to search plants" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }

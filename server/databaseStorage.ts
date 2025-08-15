@@ -34,6 +34,8 @@ import {
   type ImpactAction,
   type JourneyStage,
   type UserJourneyProgress,
+  type GlobalIndigenousPlant,
+  type InsertGlobalIndigenousPlant,
   products,
   supplyChainSteps,
   impactMetrics,
@@ -58,6 +60,7 @@ import {
   userAddresses,
   quizQuestions,
   userQuizAttempts,
+  globalIndigenousPlants,
 } from "@shared/schema";
 import { db } from "./db";
 import { eq, desc, and, or, gte, lte, sql, inArray } from "drizzle-orm";
@@ -209,7 +212,7 @@ export class DatabaseStorage implements IStorage {
   }
 
   async saveUserPreferences(preferences: InsertUserPreferences): Promise<UserPreferences> {
-    const [saved] = await db.insert(userPreferences).values([preferences]).returning();
+    const [saved] = await db.insert(userPreferences).values(preferences).returning();
     return saved;
   }
 
@@ -249,7 +252,7 @@ export class DatabaseStorage implements IStorage {
         (recommendedProducts.reduce((sum, p) => sum + p.score, 0) / recommendedProducts.length).toFixed(2) : "0.50"
     };
 
-    const [result] = await db.insert(recommendationResults).values([recommendation]).returning();
+    const [result] = await db.insert(recommendationResults).values(recommendation).returning();
     return result;
   }
 
@@ -704,6 +707,147 @@ export class DatabaseStorage implements IStorage {
     explanation += "Each product has been carefully selected based on quality, efficacy, and community impact.";
     
     return explanation;
+  }
+
+  // Global Indigenous Plants Implementation  
+  async getGlobalIndigenousPlants(): Promise<GlobalIndigenousPlant[]> {
+    return await db.select().from(globalIndigenousPlants);
+  }
+
+  async getGlobalIndigenousPlant(id: string): Promise<GlobalIndigenousPlant | undefined> {
+    const [plant] = await db.select().from(globalIndigenousPlants).where(eq(globalIndigenousPlants.id, id));
+    return plant;
+  }
+
+  async getPlantsByRegion(region: string): Promise<GlobalIndigenousPlant[]> {
+    return await db.select().from(globalIndigenousPlants).where(eq(globalIndigenousPlants.region, region));
+  }
+
+  async getPlantsByTribe(tribe: string): Promise<GlobalIndigenousPlant[]> {
+    return await db.select().from(globalIndigenousPlants).where(
+      sql`${globalIndigenousPlants.indigenousTribesOrGroup} ILIKE ${'%' + tribe + '%'}`
+    );
+  }
+
+  async searchPlants(filters: {
+    searchTerm?: string;
+    region?: string;
+    country?: string;
+    tribe?: string;
+    productForm?: string;
+    ceremonialUse?: boolean;
+    veterinaryUse?: boolean;
+  }): Promise<GlobalIndigenousPlant[]> {
+    let query = db.select().from(globalIndigenousPlants);
+    const conditions = [];
+
+    if (filters.searchTerm) {
+      const searchPattern = `%${filters.searchTerm.toLowerCase()}%`;
+      conditions.push(
+        or(
+          sql`LOWER(${globalIndigenousPlants.plantName}) LIKE ${searchPattern}`,
+          sql`LOWER(${globalIndigenousPlants.scientificName}) LIKE ${searchPattern}`,
+          sql`LOWER(${globalIndigenousPlants.traditionalUses}) LIKE ${searchPattern}`,
+          sql`LOWER(${globalIndigenousPlants.indigenousTribesOrGroup}) LIKE ${searchPattern}`
+        )
+      );
+    }
+
+    if (filters.region) {
+      conditions.push(eq(globalIndigenousPlants.region, filters.region));
+    }
+
+    if (filters.country) {
+      conditions.push(
+        sql`LOWER(${globalIndigenousPlants.countryOfOrigin}) LIKE ${'%' + filters.country.toLowerCase() + '%'}`
+      );
+    }
+
+    if (filters.tribe) {
+      conditions.push(
+        sql`LOWER(${globalIndigenousPlants.indigenousTribesOrGroup}) LIKE ${'%' + filters.tribe.toLowerCase() + '%'}`
+      );
+    }
+
+    if (filters.productForm) {
+      conditions.push(
+        sql`LOWER(${globalIndigenousPlants.popularProductForm}) LIKE ${'%' + filters.productForm.toLowerCase() + '%'}`
+      );
+    }
+
+    if (filters.ceremonialUse) {
+      conditions.push(sql`${globalIndigenousPlants.associatedCeremony} IS NOT NULL`);
+    }
+
+    if (filters.veterinaryUse) {
+      conditions.push(sql`${globalIndigenousPlants.veterinaryUse} IS NOT NULL`);
+    }
+
+    if (conditions.length > 0) {
+      query = query.where(and(...conditions)) as any;
+    }
+
+    return await query;
+  }
+
+  async advanceJourneyStage(userId: string, data: { progress: number; status: string; xpEarned: number }): Promise<UserJourneyProgress> {
+    const [existing] = await db
+      .select()
+      .from(userJourneyProgress)
+      .where(eq(userJourneyProgress.userId, userId))
+      .limit(1);
+
+    // Get the exploration stage ID
+    const [explorationStage] = await db
+      .select()
+      .from(journeyStages)
+      .where(eq(journeyStages.name, "exploration"))
+      .limit(1);
+
+    if (existing) {
+      const [updated] = await db
+        .update(userJourneyProgress)
+        .set({
+          progressToNext: data.progress,
+          totalXp: existing.totalXp + data.xpEarned,
+          lastUpdated: new Date()
+        })
+        .where(eq(userJourneyProgress.userId, userId))
+        .returning();
+      return updated;
+    } else {
+      const [created] = await db
+        .insert(userJourneyProgress)
+        .values({
+          userId,
+          currentStageId: explorationStage?.id || "exploration-stage",
+          progressToNext: data.progress,
+          totalXp: data.xpEarned,
+          level: 1
+        })
+        .returning();
+      return created;
+    }
+  }
+
+  async canAdvanceJourneyStage(userId: string): Promise<{ canAdvance: boolean; nextStage?: JourneyStage }> {
+    const [progress] = await db
+      .select()
+      .from(userJourneyProgress)
+      .where(eq(userJourneyProgress.userId, userId))
+      .limit(1);
+
+    if (!progress || progress.progressToNext < 100) {
+      return { canAdvance: false };
+    }
+
+    const [nextStage] = await db
+      .select()
+      .from(journeyStages)
+      .where(eq(journeyStages.name, "mastery"))
+      .limit(1);
+
+    return { canAdvance: true, nextStage };
   }
 }
 

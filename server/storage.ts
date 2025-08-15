@@ -34,6 +34,8 @@ import {
   type ImpactAction,
   type JourneyStage,
   type UserJourneyProgress,
+  type GlobalIndigenousPlant,
+  type InsertGlobalIndigenousPlant,
   products,
   supplyChainSteps,
   impactMetrics,
@@ -43,6 +45,7 @@ import {
   impactMilestones,
   userPreferences,
   recommendationResults,
+  globalIndigenousPlants,
   users,
   orders,
   orderItems,
@@ -148,6 +151,21 @@ export interface IStorage {
   getUserJourneyProgress(userId: string): Promise<UserJourneyProgress | undefined>;
   updateUserLevel(userId: string, xp: number): Promise<UserJourneyProgress>;
   checkStageProgression(userId: string): Promise<{ canAdvance: boolean; nextStage?: JourneyStage }>;
+
+  // Global Indigenous Plants
+  getGlobalIndigenousPlants(): Promise<GlobalIndigenousPlant[]>;
+  getGlobalIndigenousPlant(id: string): Promise<GlobalIndigenousPlant | undefined>;
+  getPlantsByRegion(region: string): Promise<GlobalIndigenousPlant[]>;
+  getPlantsByTribe(tribe: string): Promise<GlobalIndigenousPlant[]>;
+  searchPlants(filters: {
+    searchTerm?: string;
+    region?: string;
+    country?: string;
+    tribe?: string;
+    productForm?: string;
+    ceremonialUse?: boolean;
+    veterinaryUse?: boolean;
+  }): Promise<GlobalIndigenousPlant[]>;
 }
 
 export class MemStorage implements IStorage {
@@ -160,6 +178,7 @@ export class MemStorage implements IStorage {
   private impactMilestones: Map<string, ImpactMilestone>;
   private userPreferences: Map<string, UserPreferences>;
   private recommendationResults: Map<string, RecommendationResults>;
+  private globalIndigenousPlants: Map<string, GlobalIndigenousPlant>;
 
   constructor() {
     this.products = new Map();
@@ -170,7 +189,9 @@ export class MemStorage implements IStorage {
     this.impactMilestones = new Map();
     this.userPreferences = new Map();
     this.recommendationResults = new Map();
+    this.globalIndigenousPlants = new Map();
     this.initializeData();
+    this.initializeGlobalIndigenousPlants();
   }
 
   private initializeData() {
@@ -1130,6 +1151,446 @@ export class MemStorage implements IStorage {
     }
 
     return explanation;
+  }
+
+  // Initialize Global Indigenous Plants Data from PDF
+  private initializeGlobalIndigenousPlants() {
+    const plantsData: GlobalIndigenousPlant[] = [
+      // North American Indigenous Plants
+      {
+        id: "echinacea-purpurea",
+        plantName: "Purple Coneflower",
+        scientificName: "Echinacea purpurea",
+        region: "North America",
+        countryOfOrigin: "United States, Canada",
+        traditionalUses: "Immune system support, wound healing, respiratory infections, snake bites",
+        popularProductForm: "Tinctures, capsules, dried root powder",
+        timeframe: "Traditional use for over 400 years",
+        indigenousTribesOrGroup: "Plains Indians, Cherokee, Lakota, Dakota",
+        associatedCeremony: "Healing ceremonies, purification rituals",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "goldenseal",
+        plantName: "Goldenseal",
+        scientificName: "Hydrastis canadensis",
+        region: "North America",
+        countryOfOrigin: "Eastern United States, Southern Canada",
+        traditionalUses: "Digestive disorders, eye infections, respiratory ailments, skin conditions",
+        popularProductForm: "Root powder, tinctures, eye drops",
+        timeframe: "Used traditionally for over 300 years",
+        indigenousTribesOrGroup: "Cherokee, Iroquois, Kickapoo",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "american-ginseng",
+        plantName: "American Ginseng",
+        scientificName: "Panax quinquefolius",
+        region: "North America",
+        countryOfOrigin: "Eastern United States, Southern Canada",
+        traditionalUses: "Energy enhancement, stress adaptation, digestive support, respiratory health",
+        popularProductForm: "Root extracts, capsules, teas",
+        timeframe: "Traditional use for over 500 years",
+        indigenousTribesOrGroup: "Ojibwe, Menominee, Potawatomi",
+        associatedCeremony: "Medicine lodge ceremonies, seasonal rituals",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "white-willow",
+        plantName: "White Willow",
+        scientificName: "Salix alba",
+        region: "North America",
+        countryOfOrigin: "Northern United States, Canada",
+        traditionalUses: "Pain relief, fever reduction, inflammation, headaches",
+        popularProductForm: "Bark extracts, teas, capsules",
+        timeframe: "Traditional use for over 400 years",
+        indigenousTribesOrGroup: "Chippewa, Cree, Blackfoot",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "bloodroot",
+        plantName: "Bloodroot",
+        scientificName: "Sanguinaria canadensis",
+        region: "North America",
+        countryOfOrigin: "Eastern United States, Eastern Canada",
+        traditionalUses: "Respiratory conditions, skin lesions, dental health, wound healing",
+        popularProductForm: "Root tinctures, topical preparations",
+        timeframe: "Traditional use for over 300 years",
+        indigenousTribesOrGroup: "Algonquin, Huron, Delaware",
+        associatedCeremony: "Purification rituals, healing ceremonies",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+
+      // South American Indigenous Plants
+      {
+        id: "cat-claw",
+        plantName: "Cat's Claw",
+        scientificName: "Uncaria tomentosa",
+        region: "South America",
+        countryOfOrigin: "Peru, Brazil, Colombia, Ecuador",
+        traditionalUses: "Immune system modulation, arthritis, digestive disorders, viral infections",
+        popularProductForm: "Bark extracts, capsules, teas",
+        timeframe: "Traditional use for over 2000 years",
+        indigenousTribesOrGroup: "Asháninka, Shipibo, Aguaruna, Cashibo",
+        associatedCeremony: "Healing rituals, shamanic ceremonies",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "maca-root",
+        plantName: "Maca",
+        scientificName: "Lepidium meyenii",
+        region: "South America",
+        countryOfOrigin: "Peru (Andes Mountains)",
+        traditionalUses: "Energy enhancement, hormonal balance, fertility, endurance",
+        popularProductForm: "Root powder, capsules, extracts",
+        timeframe: "Traditional cultivation for over 3000 years",
+        indigenousTribesOrGroup: "Quechua, Inca descendants",
+        associatedCeremony: "Harvest festivals, fertility rituals",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "dragon-blood",
+        plantName: "Dragon's Blood",
+        scientificName: "Croton lechleri",
+        region: "South America",
+        countryOfOrigin: "Peru, Ecuador, Brazil, Colombia",
+        traditionalUses: "Wound healing, gastrointestinal disorders, antimicrobial applications",
+        popularProductForm: "Resin extracts, topical gels, liquid preparations",
+        timeframe: "Traditional use for over 1500 years",
+        indigenousTribesOrGroup: "Shipibo, Awajún, Achuar, Cocama",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "guarana",
+        plantName: "Guarana",
+        scientificName: "Paullinia cupana",
+        region: "South America",
+        countryOfOrigin: "Brazil (Amazon Basin)",
+        traditionalUses: "Energy enhancement, cognitive function, weight management, cardiovascular health",
+        popularProductForm: "Seed extracts, energy drinks, capsules",
+        timeframe: "Traditional use for over 1000 years",
+        indigenousTribesOrGroup: "Guaraní, Satéré-Mawé",
+        associatedCeremony: "Harvest ceremonies, energy rituals",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "camu-camu",
+        plantName: "Camu Camu",
+        scientificName: "Myrciaria dubia",
+        region: "South America",
+        countryOfOrigin: "Peru, Brazil (Amazon rainforest)",
+        traditionalUses: "Vitamin C source, immune support, antioxidant protection, mood enhancement",
+        popularProductForm: "Fruit powder, capsules, vitamin supplements",
+        timeframe: "Traditional use for over 800 years",
+        indigenousTribesOrGroup: "Shipibo, Yagua, Cocama",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+
+      // Caribbean Indigenous Plants
+      {
+        id: "soursop",
+        plantName: "Soursop",
+        scientificName: "Annona muricata",
+        region: "Caribbean",
+        countryOfOrigin: "Caribbean Islands, Central America",
+        traditionalUses: "Cancer support, immune enhancement, parasitic infections, digestive health",
+        popularProductForm: "Leaf teas, fruit extracts, capsules",
+        timeframe: "Traditional use for over 600 years",
+        indigenousTribesOrGroup: "Taíno, Arawak, Carib",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "caribbean-vervain",
+        plantName: "Caribbean Vervain",
+        scientificName: "Stachytarpheta jamaicensis",
+        region: "Caribbean",
+        countryOfOrigin: "Jamaica, Haiti, Dominican Republic",
+        traditionalUses: "Respiratory conditions, fever reduction, digestive disorders, wound healing",
+        popularProductForm: "Leaf teas, tinctures, poultices",
+        timeframe: "Traditional use for over 400 years",
+        indigenousTribesOrGroup: "Maroons, Rastafari communities",
+        associatedCeremony: "Healing prayers, spiritual cleansing",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "bissy-nut",
+        plantName: "Bissy Nut",
+        scientificName: "Cola acuminata",
+        region: "Caribbean",
+        countryOfOrigin: "Jamaica, originally from West Africa",
+        traditionalUses: "Digestive issues, energy enhancement, mental clarity, nausea relief",
+        popularProductForm: "Ground nuts, teas, tinctures",
+        timeframe: "Traditional use for over 300 years in Caribbean",
+        indigenousTribesOrGroup: "Jamaican Maroons, Afro-Caribbean communities",
+        associatedCeremony: "Healing rituals, community gatherings",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+
+      // Australian Indigenous Plants
+      {
+        id: "tea-tree",
+        plantName: "Tea Tree",
+        scientificName: "Melaleuca alternifolia",
+        region: "Australia",
+        countryOfOrigin: "Eastern Australia",
+        traditionalUses: "Antimicrobial applications, skin conditions, respiratory issues, wound healing",
+        popularProductForm: "Essential oils, topical creams, soaps",
+        timeframe: "Traditional use for over 40,000 years",
+        indigenousTribesOrGroup: "Bundjalung Aboriginal peoples",
+        associatedCeremony: "Healing smoke ceremonies, medicinal preparation rituals",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "eucalyptus",
+        plantName: "Eucalyptus",
+        scientificName: "Eucalyptus globulus",
+        region: "Australia",
+        countryOfOrigin: "Southeastern Australia",
+        traditionalUses: "Respiratory conditions, antiseptic applications, fever reduction, muscle pain",
+        popularProductForm: "Essential oils, chest rubs, inhalants",
+        timeframe: "Traditional use for over 40,000 years",
+        indigenousTribesOrGroup: "Various Aboriginal tribes across Australia",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "lemon-myrtle",
+        plantName: "Lemon Myrtle",
+        scientificName: "Backhousia citriodora",
+        region: "Australia",
+        countryOfOrigin: "Subtropical rainforests of Queensland",
+        traditionalUses: "Antimicrobial, digestive health, respiratory support, culinary seasoning",
+        popularProductForm: "Essential oils, dried leaves, food seasonings",
+        timeframe: "Traditional use for over 40,000 years",
+        indigenousTribesOrGroup: "Yuggera, Bundjalung peoples",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "kakadu-plum",
+        plantName: "Kakadu Plum",
+        scientificName: "Terminalia ferdinandiana",
+        region: "Australia",
+        countryOfOrigin: "Northern Australia",
+        traditionalUses: "High vitamin C source, antioxidant support, immune enhancement, skin health",
+        popularProductForm: "Fruit extracts, vitamin supplements, skincare products",
+        timeframe: "Traditional use for over 40,000 years",
+        indigenousTribesOrGroup: "Yolŋu, Larrakia, Tiwi peoples",
+        associatedCeremony: "Seasonal harvest ceremonies, Dreamtime stories",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+
+      // New Zealand Indigenous Plants
+      {
+        id: "manuka",
+        plantName: "Manuka",
+        scientificName: "Leptospermum scoparium",
+        region: "New Zealand",
+        countryOfOrigin: "New Zealand",
+        traditionalUses: "Wound healing, digestive health, antimicrobial applications, skin conditions",
+        popularProductForm: "Honey, essential oils, topical preparations",
+        timeframe: "Traditional use for over 700 years",
+        indigenousTribesOrGroup: "Māori people",
+        associatedCeremony: "Rongoā Māori (traditional healing), ceremonial preparations",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "kawakawa",
+        plantName: "Kawakawa",
+        scientificName: "Piper excelsum",
+        region: "New Zealand",
+        countryOfOrigin: "New Zealand",
+        traditionalUses: "Pain relief, digestive disorders, respiratory conditions, skin healing",
+        popularProductForm: "Leaf extracts, teas, topical balms",
+        timeframe: "Traditional use for over 700 years",
+        indigenousTribesOrGroup: "Māori people",
+        associatedCeremony: "Rongoā Māori healing practices, ceremonial teas",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "horopito",
+        plantName: "Horopito",
+        scientificName: "Pseudowintera colorata",
+        region: "New Zealand",
+        countryOfOrigin: "New Zealand",
+        traditionalUses: "Antimicrobial applications, digestive health, respiratory support, skin conditions",
+        popularProductForm: "Leaf extracts, capsules, topical preparations",
+        timeframe: "Traditional use for over 700 years",
+        indigenousTribesOrGroup: "Māori people",
+        associatedCeremony: "Traditional healing ceremonies, plant blessing rituals",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+
+      // African Indigenous Plants
+      {
+        id: "african-potato",
+        plantName: "African Potato",
+        scientificName: "Hypoxis hemerocallidea",
+        region: "Africa",
+        countryOfOrigin: "Southern Africa (South Africa, Zimbabwe)",
+        traditionalUses: "Immune system support, prostate health, HIV/AIDS support, inflammatory conditions",
+        popularProductForm: "Root extracts, capsules, tinctures",
+        timeframe: "Traditional use for over 1000 years",
+        indigenousTribesOrGroup: "Zulu, Xhosa, Sotho peoples",
+        associatedCeremony: "Traditional healing rituals, ancestral medicine ceremonies",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "sutherlandia",
+        plantName: "Sutherlandia",
+        scientificName: "Sutherlandia frutescens",
+        region: "Africa",
+        countryOfOrigin: "Southern Africa",
+        traditionalUses: "Cancer support, immune enhancement, diabetes management, stress adaptation",
+        popularProductForm: "Leaf extracts, teas, capsules",
+        timeframe: "Traditional use for over 800 years",
+        indigenousTribesOrGroup: "Khoi, San, Nama peoples",
+        associatedCeremony: "Healing ceremonies, spiritual cleansing rituals",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "buchu",
+        plantName: "Buchu",
+        scientificName: "Barosma betulina",
+        region: "Africa",
+        countryOfOrigin: "South Africa (Western Cape)",
+        traditionalUses: "Urinary tract health, kidney support, digestive disorders, antimicrobial applications",
+        popularProductForm: "Leaf extracts, teas, capsules",
+        timeframe: "Traditional use for over 1000 years",
+        indigenousTribesOrGroup: "Khoi (Khoikhoi), San peoples",
+        associatedCeremony: "Traditional cleansing ceremonies, healing rituals",
+        veterinaryUse: "Traditional veterinary applications for livestock urinary health",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "kanna",
+        plantName: "Kanna",
+        scientificName: "Sceletium tortuosum",
+        region: "Africa",
+        countryOfOrigin: "South Africa (Karoo region)",
+        traditionalUses: "Mood enhancement, anxiety relief, stress management, cognitive support",
+        popularProductForm: "Dried plant material, extracts, tinctures",
+        timeframe: "Traditional use for over 1000 years",
+        indigenousTribesOrGroup: "San, Khoi peoples",
+        associatedCeremony: "Spiritual ceremonies, meditation rituals, social gatherings",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: "devils-claw",
+        plantName: "Devil's Claw",
+        scientificName: "Harpagophytum procumbens",
+        region: "Africa",
+        countryOfOrigin: "Southern Africa (Namibia, Botswana, South Africa)",
+        traditionalUses: "Arthritis relief, anti-inflammatory, digestive health, pain management",
+        popularProductForm: "Root extracts, capsules, teas",
+        timeframe: "Traditional use for over 800 years",
+        indigenousTribesOrGroup: "San, Nama, Herero peoples",
+        veterinaryUse: "Traditional use for livestock joint health and inflammation",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }
+    ];
+
+    plantsData.forEach(plant => {
+      this.globalIndigenousPlants.set(plant.id, plant);
+    });
+  }
+
+  // Global Indigenous Plants Implementation
+  async getGlobalIndigenousPlants(): Promise<GlobalIndigenousPlant[]> {
+    return Array.from(this.globalIndigenousPlants.values());
+  }
+
+  async getGlobalIndigenousPlant(id: string): Promise<GlobalIndigenousPlant | undefined> {
+    return this.globalIndigenousPlants.get(id);
+  }
+
+  async getPlantsByRegion(region: string): Promise<GlobalIndigenousPlant[]> {
+    return Array.from(this.globalIndigenousPlants.values())
+      .filter(plant => plant.region.toLowerCase() === region.toLowerCase());
+  }
+
+  async getPlantsByTribe(tribe: string): Promise<GlobalIndigenousPlant[]> {
+    return Array.from(this.globalIndigenousPlants.values())
+      .filter(plant => plant.indigenousTribesOrGroup.toLowerCase().includes(tribe.toLowerCase()));
+  }
+
+  async searchPlants(filters: {
+    searchTerm?: string;
+    region?: string;
+    country?: string;
+    tribe?: string;
+    productForm?: string;
+    ceremonialUse?: boolean;
+    veterinaryUse?: boolean;
+  }): Promise<GlobalIndigenousPlant[]> {
+    let results = Array.from(this.globalIndigenousPlants.values());
+
+    if (filters.searchTerm) {
+      const term = filters.searchTerm.toLowerCase();
+      results = results.filter(plant =>
+        plant.plantName.toLowerCase().includes(term) ||
+        plant.scientificName.toLowerCase().includes(term) ||
+        plant.traditionalUses.toLowerCase().includes(term) ||
+        plant.indigenousTribesOrGroup.toLowerCase().includes(term)
+      );
+    }
+
+    if (filters.region) {
+      results = results.filter(plant => 
+        plant.region.toLowerCase() === filters.region.toLowerCase()
+      );
+    }
+
+    if (filters.country) {
+      results = results.filter(plant => 
+        plant.countryOfOrigin.toLowerCase().includes(filters.country.toLowerCase())
+      );
+    }
+
+    if (filters.tribe) {
+      results = results.filter(plant => 
+        plant.indigenousTribesOrGroup.toLowerCase().includes(filters.tribe.toLowerCase())
+      );
+    }
+
+    if (filters.productForm) {
+      results = results.filter(plant => 
+        plant.popularProductForm.toLowerCase().includes(filters.productForm.toLowerCase())
+      );
+    }
+
+    if (filters.ceremonialUse) {
+      results = results.filter(plant => Boolean(plant.associatedCeremony));
+    }
+
+    if (filters.veterinaryUse) {
+      results = results.filter(plant => Boolean(plant.veterinaryUse));
+    }
+
+    return results;
   }
 }
 

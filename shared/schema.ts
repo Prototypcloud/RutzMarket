@@ -453,3 +453,29 @@ export type UserPreferences = typeof userPreferences.$inferSelect;
 export type InsertUserPreferences = z.infer<typeof insertUserPreferencesSchema>;
 export type RecommendationResults = typeof recommendationResults.$inferSelect;
 export type InsertRecommendationResults = z.infer<typeof insertRecommendationResultsSchema>;
+
+// Global Indigenous Plants Database
+export const globalIndigenousPlants = pgTable("global_indigenous_plants", {
+  id: text("id").primaryKey().default(sql`gen_random_uuid()`),
+  plantName: text("plant_name").notNull(),
+  scientificName: text("scientific_name").notNull(),
+  region: text("region").notNull(), // North America, South America, Caribbean, Australia, New Zealand, Africa
+  countryOfOrigin: text("country_of_origin").notNull(),
+  traditionalUses: text("traditional_uses").notNull(),
+  popularProductForm: text("popular_product_form").notNull(),
+  timeframe: text("timeframe").notNull(),
+  associatedCeremony: text("associated_ceremony"),
+  veterinaryUse: text("veterinary_use"),
+  indigenousTribesOrGroup: text("indigenous_tribes_or_group").notNull(),
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
+
+export const insertGlobalIndigenousPlantSchema = createInsertSchema(globalIndigenousPlants).omit({
+  id: true,
+  createdAt: true,
+  updatedAt: true,
+});
+
+export type GlobalIndigenousPlant = typeof globalIndigenousPlants.$inferSelect;
+export type InsertGlobalIndigenousPlant = z.infer<typeof insertGlobalIndigenousPlantSchema>;

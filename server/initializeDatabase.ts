@@ -60,53 +60,184 @@ export async function initializeDatabase() {
       inStock: true
     },
     {
-      name: "Turmeric Extract",
-      description: "Premium curcumin with 95% bioavailability. Anti-inflammatory powerhouse backed by heritage craftsmanship. Sustainably sourced from indigenous communities in Kerala, India.",
-      shortDescription: "Premium curcumin with 95% bioavailability and anti-inflammatory properties",
-      price: "49.99",
-      origin: "Kerala, India",
-      category: "Extract Powders",
-      sector: "Nutraceuticals / Supplements",
-      plantMaterial: "Turmeric",
-      productType: "Standardized extract powder",
-      rating: "4.9",
+      name: "Labrador Tea Premium Blend",
+      description: "Wild-crafted Labrador tea leaves from pristine northern Canadian bogs, traditionally used by Inuit and First Nations for respiratory wellness. German-processed standardized herbal tea blend.",
+      shortDescription: "Traditional respiratory wellness tea from boreal regions",
+      price: "24.99",
+      origin: "Boreal / Subarctic Canada",
+      category: "Herbal Teas",
+      sector: "Herbal teas, antioxidant botanical extracts",
+      plantMaterial: "Labrador tea",
+      productType: "Standardized herbal tea blend",
+      rating: "4.8",
       reviewCount: 127,
-      imageUrl: "https://images.unsplash.com/photo-1615485925600-97e5e2e9e6a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      qrCode: "RUTZ-TUR-001",
-      scientificName: "Curcuma longa",
-      extractionMethod: "CO2 Supercritical Extraction",
-      bioactiveCompounds: ["Curcumin", "Demethoxycurcumin", "Bisdemethoxycurcumin"] as string[],
-      certifications: ["Organic", "Fair Trade", "Heritage Validated"] as string[],
-      sustainabilityStory: "Harvested by traditional farming cooperatives in Kerala using ancient cultivation methods passed down through generations.",
-      communityImpact: "Every purchase supports 50 farming families and funds clean water projects in rural Kerala.",
+      imageUrl: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      qrCode: "RUTZ-LAB-001",
+      scientificName: "Rhododendron groenlandicum",
+      extractionMethod: "Traditional drying + standardized preparation",
+      bioactiveCompounds: ["Ledol", "Grayanotoxins", "Essential oils", "Flavonoids"] as string[],
+      certifications: ["Wild-Harvested", "Traditional Processing", "Sustainably Sourced"] as string[],
+      sustainabilityStory: "Sustainably wild-harvested from certified boreal regions using traditional methods that preserve ecosystem integrity.",
+      communityImpact: "Supporting Inuit and Cree communities in northern Canada with fair trade practices and traditional knowledge preservation programs.",
       researchPapers: [
-        { title: "Bioavailability Enhancement of Curcumin via CO2 Extraction", url: "#", year: 2023 },
-        { title: "Anti-inflammatory Properties of Indigenous Turmeric Varieties", url: "#", year: 2024 }
+        { title: "Antioxidant Properties of Labrador Tea Flavonoids", url: "#", year: 2023 },
+        { title: "Traditional Uses and Modern Applications of Rhododendron groenlandicum", url: "#", year: 2024 }
       ],
       inStock: true
     },
     {
-      name: "Ashwagandha Root Extract",
-      description: "Adaptogenic herb for stress relief and vitality. Traditional Ayurvedic wisdom meets modern extraction techniques for optimal bioactivity.",
-      shortDescription: "Adaptogenic herb for stress relief and vitality with traditional Ayurvedic wisdom",
-      price: "39.99",
-      origin: "Rajasthan, India",
+      name: "Devil's Club Root Extract",
+      description: "Sacred Northwest Coast medicine processed with German precision. Traditional blood sugar support and immune system enhancement. Sustainably harvested from BC coastal forests.",
+      shortDescription: "Traditional blood sugar and immune support from Northwest Coast",
+      price: "79.99",
+      origin: "Northwest Coast / Interior BC–Yukon",
       category: "Extract Powders",
-      sector: "Nutraceuticals / Supplements",
-      plantMaterial: "Ashwagandha",
-      productType: "Standardized extract powder",
-      rating: "4.8",
+      sector: "Antidiabetic supplements, antimicrobial extracts",
+      plantMaterial: "Devil's club",
+      productType: "Standardized root extract powder",
+      rating: "4.7",
       reviewCount: 93,
-      imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-      qrCode: "RUTZ-ASH-002",
-      scientificName: "Withania somnifera",
-      extractionMethod: "Hydroalcoholic Extraction",
-      bioactiveCompounds: ["Withanolides", "Alkaloids", "Saponins"] as string[],
-      certifications: ["Organic", "Fair Trade", "Ayurvedic Validated"] as string[],
-      sustainabilityStory: "Wild-harvested by indigenous communities using sustainable practices that preserve root systems.",
-      communityImpact: "Supports traditional knowledge keepers and funds educational programs in rural Rajasthan.",
+      imageUrl: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      qrCode: "RUTZ-DEV-002",
+      scientificName: "Oplopanax horridus",
+      extractionMethod: "Hydroalcoholic extraction + standardization",
+      bioactiveCompounds: ["Polyynes (falcarindiol)", "Lignans", "Saponins"] as string[],
+      certifications: ["Sustainably Sourced", "Lab Verified", "Indigenous Partnership"] as string[],
+      sustainabilityStory: "Sustainably harvested with traditional protocols that ensure plant regeneration and forest ecosystem preservation.",
+      communityImpact: "Revenue sharing with Northwest Coast First Nations and supporting traditional medicine preservation programs.",
       researchPapers: [
-        { title: "Adaptogenic Properties of Standardized Ashwagandha Extract", url: "#", year: 2023 }
+        { title: "Antimycobacterial Properties of Oplopanax horridus Extracts", url: "#", year: 2023 },
+        { title: "Blood Sugar Support: Traditional and Modern Applications", url: "#", year: 2024 }
+      ],
+      inStock: true
+    },
+    {
+      name: "Bearberry Leaf Capsules",
+      description: "Premium uva-ursi leaf extract standardized for arbutin content. Traditional urinary health support from across Canada, processed with German precision for optimal bioavailability.",
+      shortDescription: "Traditional urinary tract health support capsules",
+      price: "39.99",
+      origin: "Across Canada (dry sites)",
+      category: "Capsules",
+      sector: "Urinary tract health capsules",
+      plantMaterial: "Bearberry (kinnikinnick)",
+      productType: "Standardized leaf extract capsules",
+      rating: "4.6",
+      reviewCount: 84,
+      imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      qrCode: "RUTZ-BEA-003",
+      scientificName: "Arctostaphylos uva-ursi",
+      extractionMethod: "Standardized extraction (20% arbutin)",
+      bioactiveCompounds: ["Arbutin", "Hydroquinone", "Tannins", "Flavonoids"] as string[],
+      certifications: ["Wild-Harvested", "Standardized", "Third-Party Tested"] as string[],
+      sustainabilityStory: "Sustainably harvested from dry sites across Canada using traditional methods that preserve root systems and habitat.",
+      communityImpact: "Supporting indigenous harvesting cooperatives and traditional knowledge preservation programs.",
+      researchPapers: [
+        { title: "Urinary Antiseptic Properties of Arctostaphylos uva-ursi", url: "#", year: 2023 },
+        { title: "Traditional Indigenous Uses and Modern Applications", url: "#", year: 2024 }
+      ],
+      inStock: true
+    },
+    {
+      name: "Sweetgrass Aromatherapy Oil",
+      description: "Sacred sweetgrass essential oil extracted with reverence for traditional protocols. Aromatic and ceremonial applications from Prairie, Boreal and Eastern woodlands.",
+      shortDescription: "Sacred aromatherapy oil for ceremonial and therapeutic use",
+      price: "54.99",
+      origin: "Prairie / Boreal / Eastern woodlands",
+      category: "Essential Oils",
+      sector: "Aromatherapy oils, ceremonial incense",
+      plantMaterial: "Sweetgrass",
+      productType: "Pure essential oil",
+      rating: "4.9",
+      reviewCount: 67,
+      imageUrl: "https://images.unsplash.com/photo-1595572882861-ee47ac7ae1a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      qrCode: "RUTZ-SWE-004",
+      scientificName: "Hierochloe odorata",
+      extractionMethod: "Steam distillation + ceremonial protocols",
+      bioactiveCompounds: ["Coumarin", "Phytol", "Essential oil compounds"] as string[],
+      certifications: ["Ceremonially Harvested", "Pure Essential Oil", "Ethically Sourced"] as string[],
+      sustainabilityStory: "Ceremonially harvested with traditional protocols that honor the plant spirit and ensure sustainable regeneration.",
+      communityImpact: "Harvested with ceremony by Prairie First Nations and supports traditional ceremony preservation programs.",
+      researchPapers: [
+        { title: "Aromatic Properties and Traditional Uses of Sweetgrass", url: "#", year: 2023 },
+        { title: "Natural Insect Repellent Properties of Hierochloe odorata", url: "#", year: 2024 }
+      ],
+      inStock: true
+    },
+    {
+      name: "Eastern White Cedar Tea",
+      description: "Vitamin C-rich needle tea blend, traditionally used to prevent scurvy. Hand-harvested from eastern Canadian forests and processed to preserve natural vitamin content.",
+      shortDescription: "Traditional vitamin C-rich needle tea for immune support",
+      price: "19.99",
+      origin: "Eastern Canada",
+      category: "Herbal Teas",
+      sector: "Herbal teas, vitamin C-rich beverage powders",
+      plantMaterial: "Eastern white cedar",
+      productType: "Traditional herbal tea blend",
+      rating: "4.4",
+      reviewCount: 156,
+      imageUrl: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      qrCode: "RUTZ-CED-005",
+      scientificName: "Thuja occidentalis",
+      extractionMethod: "Traditional drying + preparation",
+      bioactiveCompounds: ["Vitamin C", "Thujone", "Essential oils"] as string[],
+      certifications: ["Wild-Harvested", "Traditional Processing", "Sustainably Sourced"] as string[],
+      sustainabilityStory: "Hand-harvested from eastern Canadian forests using traditional methods that ensure tree health and ecosystem preservation.",
+      communityImpact: "Harvested by Haudenosaunee and Algonquin communities with revenue sharing and traditional knowledge programs.",
+      researchPapers: [
+        { title: "Vitamin C Content and Bioavailability in Thuja occidentalis", url: "#", year: 2023 },
+        { title: "Traditional Scurvy Prevention: Indigenous Wisdom", url: "#", year: 2024 }
+      ],
+      inStock: true
+    },
+    {
+      name: "Wild Rose Hip Powder",
+      description: "Hand-harvested rose hips from Canadian wilderness areas, freeze-dried to preserve vitamin C and natural compounds. Traditional superfood for immune support.",
+      shortDescription: "Vitamin C-rich superfood powder from Canadian wilderness",
+      price: "34.99",
+      origin: "Prairie and Boreal Regions",
+      category: "Superfood Powders",
+      sector: "Antioxidant powders, functional food blends",
+      plantMaterial: "Wild Rose",
+      productType: "Freeze-dried fruit powder",
+      rating: "4.9",
+      reviewCount: 203,
+      imageUrl: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      qrCode: "RUTZ-ROS-006",
+      scientificName: "Rosa acicularis",
+      extractionMethod: "Freeze-drying + milling",
+      bioactiveCompounds: ["Vitamin C", "Flavonoids", "Carotenoids", "Pectin"] as string[],
+      certifications: ["Wild-Harvested", "Organic", "Freeze-Dried"] as string[],
+      sustainabilityStory: "Sustainably harvested from pristine Canadian wilderness areas using methods that support plant regeneration.",
+      communityImpact: "Harvested by local indigenous youth programs with proceeds supporting education and cultural preservation.",
+      researchPapers: [
+        { title: "Antioxidant Properties of Canadian Wild Rose Hips", url: "#", year: 2023 },
+        { title: "Traditional Food Source: Nutritional Analysis", url: "#", year: 2024 }
+      ],
+      inStock: true
+    },
+    {
+      name: "Cloudberry Antioxidant Powder",
+      description: "Rare Arctic cloudberries freeze-dried to concentrate natural antioxidants. Traditional Inuit superfruit from pristine tundra regions, processed with German technology.",
+      shortDescription: "Rare Arctic superfruit with concentrated antioxidants",
+      price: "69.99",
+      origin: "Arctic / Subarctic",
+      category: "Superfood Powders",
+      sector: "Antioxidant powders, functional food blends",
+      plantMaterial: "Cloudberry",
+      productType: "Freeze-dried fruit powder",
+      rating: "4.8",
+      reviewCount: 89,
+      imageUrl: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      qrCode: "RUTZ-CLD-007",
+      scientificName: "Rubus chamaemorus",
+      extractionMethod: "Freeze-drying + concentration",
+      bioactiveCompounds: ["Vitamin C", "Ellagic acid", "Anthocyanins", "Omega fatty acids"] as string[],
+      certifications: ["Wild-Harvested", "Arctic Pure", "Freeze-Dried"] as string[],
+      sustainabilityStory: "Harvested from pristine Arctic tundra using traditional Inuit methods that respect the delicate ecosystem.",
+      communityImpact: "Harvested by Inuit communities in Nunavut with revenue sharing and support for traditional lifestyle preservation.",
+      researchPapers: [
+        { title: "Antioxidant Properties of Arctic Cloudberries", url: "#", year: 2023 },
+        { title: "Traditional Arctic Foods: Nutritional Powerhouses", url: "#", year: 2024 }
       ],
       inStock: true
     }
@@ -172,10 +303,10 @@ export async function initializeDatabase() {
   // Initialize community projects
   const communityProjectsData: InsertCommunityProject[] = [
     {
-      name: "Kerala Clean Water Initiative",
-      description: "Providing clean water access to farming communities in Kerala through well construction and water purification systems.",
-      location: "Kerala, India",
-      community: "Turmeric Farming Cooperatives",
+      name: "Northern Ontario Clean Water Initiative",
+      description: "Providing clean water access to indigenous communities in Northern Ontario through well construction and water purification systems.",
+      location: "Northern Ontario, Canada",
+      community: "Cree and Ojibwe First Nations",
       category: "infrastructure",
       status: "active",
       progress: 75,
@@ -186,10 +317,10 @@ export async function initializeDatabase() {
       beneficiaries: 250
     },
     {
-      name: "Siberian Forest Conservation",
-      description: "Protecting and restoring Chaga mushroom habitats through sustainable forestry practices and community education.",
-      location: "Siberia, Russia",
-      community: "Indigenous Siberian Communities",
+      name: "Boreal Forest Conservation",
+      description: "Protecting and restoring Canadian boreal forest habitats through sustainable forestry practices and indigenous community education.",
+      location: "Boreal Canada",
+      community: "Indigenous Canadian Communities",
       category: "environment",
       status: "active",
       progress: 60,
@@ -206,28 +337,28 @@ export async function initializeDatabase() {
   // Initialize learning modules
   const learningModulesData: InsertLearningModule[] = [
     {
-      title: "Introduction to Adaptogenic Herbs",
-      description: "Learn the fundamentals of adaptogenic plants and their health benefits",
-      plantMaterial: "Ashwagandha",
+      title: "Introduction to Traditional Canadian Plant Medicine",
+      description: "Learn the fundamentals of Indigenous Canadian plant medicines and their traditional uses",
+      plantMaterial: "Labrador tea",
       difficulty: "beginner",
       estimatedTime: 15,
       xpReward: 100,
       content: {
         sections: [
           {
-            title: "What are Adaptogens?",
+            title: "What is Traditional Plant Medicine?",
             type: "text" as const,
-            content: "Adaptogens are natural substances that help your body adapt to stress and promote balance..."
+            content: "Traditional plant medicine encompasses the knowledge and practices of Indigenous peoples in using plants for healing..."
           },
           {
             title: "Traditional Use Video",
             type: "video" as const,
-            content: "Traditional preparation and uses of Ashwagandha by indigenous healers"
+            content: "Traditional preparation and uses of Labrador tea by Inuit and Cree healers"
           },
           {
             title: "Knowledge Check",
             type: "quiz" as const,
-            content: "Basic quiz about adaptogenic properties"
+            content: "Basic quiz about traditional plant medicine principles"
           }
         ]
       },

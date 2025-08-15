@@ -44,7 +44,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}
             >
-              We unite indigenous heritage and German scientific precision to create the world's most trusted botanical extracts—while giving back to the communities and ecosystems that inspire them.
+              We unite Indigenous Canadian plant wisdom and German scientific precision to create the world's most trusted botanical extracts—while giving back to the First Nations communities and boreal ecosystems that inspire them.
             </motion.p>
             
             <motion.div 
@@ -54,7 +54,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.5 }}
             >
               <p className="text-cream/90 text-sm leading-relaxed">
-                <em>"From the untouched landscapes where indigenous communities have gathered medicinal plants for generations, to the advanced research labs of Fraunhofer."</em> - Every extract is ethically sourced through respectful partnerships with local gatherers.
+                <em>"From the pristine Canadian wilderness where Indigenous Nations have gathered medicinal plants for millennia, to the advanced research labs of Fraunhofer."</em> - Every extract is ethically sourced through respectful partnerships with Indigenous Canadian communities.
               </p>
             </motion.div>
 

@@ -1,4 +1,66 @@
-import { type Product, type InsertProduct, type SupplyChainStep, type InsertSupplyChainStep, type ImpactMetrics, type InsertImpactMetrics, type CartItem, type InsertCartItem, type CommunityProject, type InsertCommunityProject, type LiveImpactUpdate, type InsertLiveImpactUpdate, type ImpactMilestone, type InsertImpactMilestone, type UserPreferences, type InsertUserPreferences, type RecommendationResults, type InsertRecommendationResults } from "@shared/schema";
+import {
+  type Product,
+  type InsertProduct,
+  type SupplyChainStep,
+  type InsertSupplyChainStep,
+  type ImpactMetrics,
+  type InsertImpactMetrics,
+  type CartItem,
+  type InsertCartItem,
+  type CommunityProject,
+  type InsertCommunityProject,
+  type LiveImpactUpdate,
+  type InsertLiveImpactUpdate,
+  type ImpactMilestone,
+  type InsertImpactMilestone,
+  type UserPreferences,
+  type InsertUserPreferences,
+  type RecommendationResults,
+  type InsertRecommendationResults,
+  type User,
+  type InsertUser,
+  type Order,
+  type InsertOrder,
+  type OrderItem,
+  type Inventory,
+  type InsertInventory,
+  type InventoryMovement,
+  type LearningModule,
+  type InsertLearningModule,
+  type UserLearningProgress,
+  type Badge,
+  type InsertBadge,
+  type UserBadge,
+  type ImpactAction,
+  type JourneyStage,
+  type UserJourneyProgress,
+  products,
+  supplyChainSteps,
+  impactMetrics,
+  cartItems,
+  communityProjects,
+  liveImpactUpdates,
+  impactMilestones,
+  userPreferences,
+  recommendationResults,
+  users,
+  orders,
+  orderItems,
+  inventory,
+  inventoryMovements,
+  learningModules,
+  userLearningProgress,
+  badges,
+  userBadges,
+  impactActions,
+  journeyStages,
+  userJourneyProgress,
+  userAddresses,
+  quizQuestions,
+  userQuizAttempts,
+} from "@shared/schema";
+import { db } from "./db";
+import { eq, desc, and, or, gte, lte, sql, inArray } from "drizzle-orm";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
@@ -39,6 +101,53 @@ export interface IStorage {
   saveUserPreferences(preferences: InsertUserPreferences): Promise<UserPreferences>;
   generateRecommendations(sessionId: string, preferences: any): Promise<RecommendationResults>;
   getRecommendations(sessionId: string): Promise<RecommendationResults | undefined>;
+
+  // User Account Management
+  createUser(user: InsertUser): Promise<User>;
+  getUser(id: string): Promise<User | undefined>;
+  getUserByEmail(email: string): Promise<User | undefined>;
+  updateUser(id: string, updates: Partial<InsertUser>): Promise<User | undefined>;
+  getUserWithProgress(id: string): Promise<User & { progress: UserJourneyProgress | null; badges: UserBadge[] } | undefined>;
+
+  // Order Management
+  createOrder(order: InsertOrder): Promise<Order>;
+  getOrder(id: string): Promise<Order | undefined>;
+  getUserOrders(userId: string): Promise<Order[]>;
+  updateOrderStatus(id: string, status: string): Promise<Order | undefined>;
+  getOrderWithItems(id: string): Promise<(Order & { items: (OrderItem & { product: Product })[] }) | undefined>;
+
+  // Real-time Inventory Management
+  getInventory(productId: string): Promise<Inventory | undefined>;
+  updateInventory(productId: string, updates: Partial<InsertInventory>): Promise<Inventory | undefined>;
+  checkAvailability(productId: string, quantity: number): Promise<boolean>;
+  reserveStock(productId: string, quantity: number, orderId: string): Promise<boolean>;
+  releaseStock(productId: string, quantity: number, orderId: string): Promise<boolean>;
+  getLowStockProducts(): Promise<(Inventory & { product: Product })[]>;
+  getInventoryMovements(productId?: string, limit?: number): Promise<InventoryMovement[]>;
+
+  // Gamified Learning Experience
+  getLearningModules(): Promise<LearningModule[]>;
+  getLearningModule(id: string): Promise<LearningModule | undefined>;
+  getUserLearningProgress(userId: string): Promise<UserLearningProgress[]>;
+  updateLearningProgress(userId: string, moduleId: string, progress: number): Promise<UserLearningProgress>;
+  completeLearningModule(userId: string, moduleId: string, xpEarned: number): Promise<UserLearningProgress>;
+
+  // Digital Badges & Achievements
+  getBadges(): Promise<Badge[]>;
+  getUserBadges(userId: string): Promise<(UserBadge & { badge: Badge })[]>;
+  awardBadge(userId: string, badgeId: string): Promise<UserBadge>;
+  checkBadgeEligibility(userId: string): Promise<Badge[]>;
+
+  // Community Impact Reward System
+  recordImpactAction(action: Omit<ImpactAction, 'id' | 'createdAt'>): Promise<ImpactAction>;
+  getUserImpactActions(userId: string): Promise<ImpactAction[]>;
+  calculateUserImpact(userId: string): Promise<{ totalImpact: number; totalXp: number; totalLoyaltyPoints: number }>;
+
+  // User Journey Progression
+  getJourneyStages(): Promise<JourneyStage[]>;
+  getUserJourneyProgress(userId: string): Promise<UserJourneyProgress | undefined>;
+  updateUserLevel(userId: string, xp: number): Promise<UserJourneyProgress>;
+  checkStageProgression(userId: string): Promise<{ canAdvance: boolean; nextStage?: JourneyStage }>;
 }
 
 export class MemStorage implements IStorage {
@@ -1024,4 +1133,7 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+// Import the new database storage
+import { DatabaseStorage } from "./databaseStorage";
+
+export const storage = new DatabaseStorage();

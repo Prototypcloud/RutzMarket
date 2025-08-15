@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertCartItemSchema } from "@shared/schema";
+import { insertCartItemSchema, insertUserSchema, insertOrderSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Products API with filtering
@@ -267,6 +267,274 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(preferences);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch user preferences" });
+    }
+  });
+
+  // =================== USER ACCOUNT MANAGEMENT ===================
+
+  // Get user profile with progress and badges
+  app.get("/api/users/:userId", async (req, res) => {
+    try {
+      const { userId } = req.params;
+      const user = await storage.getUserWithProgress(userId);
+      
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+      
+      res.json(user);
+    } catch (error) {
+      console.error("Error fetching user:", error);
+      res.status(500).json({ message: "Failed to fetch user" });
+    }
+  });
+
+  // Update user profile
+  app.put("/api/users/:userId", async (req, res) => {
+    try {
+      const { userId } = req.params;
+      const updateData = req.body;
+      
+      const updatedUser = await storage.updateUser(userId, updateData);
+      
+      if (!updatedUser) {
+        return res.status(404).json({ message: "User not found" });
+      }
+      
+      res.json(updatedUser);
+    } catch (error) {
+      console.error("Error updating user:", error);
+      res.status(500).json({ message: "Failed to update user" });
+    }
+  });
+
+  // Get user orders
+  app.get("/api/users/:userId/orders", async (req, res) => {
+    try {
+      const { userId } = req.params;
+      const orders = await storage.getUserOrders(userId);
+      
+      res.json(orders);
+    } catch (error) {
+      console.error("Error fetching user orders:", error);
+      res.status(500).json({ message: "Failed to fetch orders" });
+    }
+  });
+
+  // Get user badges
+  app.get("/api/users/:userId/badges", async (req, res) => {
+    try {
+      const { userId } = req.params;
+      const badges = await storage.getUserBadges(userId);
+      
+      res.json(badges);
+    } catch (error) {
+      console.error("Error fetching user badges:", error);
+      res.status(500).json({ message: "Failed to fetch badges" });
+    }
+  });
+
+  // Get user learning progress
+  app.get("/api/users/:userId/learning", async (req, res) => {
+    try {
+      const { userId } = req.params;
+      const progress = await storage.getUserLearningProgress(userId);
+      
+      res.json(progress);
+    } catch (error) {
+      console.error("Error fetching learning progress:", error);
+      res.status(500).json({ message: "Failed to fetch learning progress" });
+    }
+  });
+
+  // Get user journey progress
+  app.get("/api/users/:userId/journey", async (req, res) => {
+    try {
+      const { userId } = req.params;
+      const journey = await storage.getUserJourneyProgress(userId);
+      
+      res.json(journey);
+    } catch (error) {
+      console.error("Error fetching journey progress:", error);
+      res.status(500).json({ message: "Failed to fetch journey progress" });
+    }
+  });
+
+  // Create new user
+  app.post("/api/users", async (req, res) => {
+    try {
+      const userData = insertUserSchema.parse(req.body);
+      const user = await storage.createUser(userData);
+      
+      res.status(201).json(user);
+    } catch (error) {
+      console.error("Error creating user:", error);
+      res.status(500).json({ message: "Failed to create user" });
+    }
+  });
+
+  // =================== ORDER MANAGEMENT ===================
+
+  // Get order details
+  app.get("/api/orders/:orderId", async (req, res) => {
+    try {
+      const { orderId } = req.params;
+      const order = await storage.getOrderWithItems(orderId);
+      
+      if (!order) {
+        return res.status(404).json({ message: "Order not found" });
+      }
+      
+      res.json(order);
+    } catch (error) {
+      console.error("Error fetching order:", error);
+      res.status(500).json({ message: "Failed to fetch order" });
+    }
+  });
+
+  // Create new order
+  app.post("/api/orders", async (req, res) => {
+    try {
+      const orderData = insertOrderSchema.parse(req.body);
+      const order = await storage.createOrder(orderData);
+      
+      res.status(201).json(order);
+    } catch (error) {
+      console.error("Error creating order:", error);
+      res.status(500).json({ message: "Failed to create order" });
+    }
+  });
+
+  // Update order status
+  app.put("/api/orders/:orderId/status", async (req, res) => {
+    try {
+      const { orderId } = req.params;
+      const { status } = req.body;
+      
+      const updatedOrder = await storage.updateOrderStatus(orderId, status);
+      
+      if (!updatedOrder) {
+        return res.status(404).json({ message: "Order not found" });
+      }
+      
+      res.json(updatedOrder);
+    } catch (error) {
+      console.error("Error updating order status:", error);
+      res.status(500).json({ message: "Failed to update order status" });
+    }
+  });
+
+  // =================== LEARNING & GAMIFICATION ===================
+
+  // Get all learning modules
+  app.get("/api/learning/modules", async (req, res) => {
+    try {
+      const modules = await storage.getLearningModules();
+      res.json(modules);
+    } catch (error) {
+      console.error("Error fetching learning modules:", error);
+      res.status(500).json({ message: "Failed to fetch learning modules" });
+    }
+  });
+
+  // Get all badges
+  app.get("/api/badges", async (req, res) => {
+    try {
+      const badges = await storage.getBadges();
+      res.json(badges);
+    } catch (error) {
+      console.error("Error fetching badges:", error);
+      res.status(500).json({ message: "Failed to fetch badges" });
+    }
+  });
+
+  // Update learning progress
+  app.put("/api/users/:userId/learning/:moduleId", async (req, res) => {
+    try {
+      const { userId, moduleId } = req.params;
+      const { progress, status, xpEarned } = req.body;
+      
+      const updatedProgress = await storage.updateLearningProgress(userId, moduleId, {
+        progress,
+        status,
+        xpEarned: xpEarned || 0
+      });
+      
+      res.json(updatedProgress);
+    } catch (error) {
+      console.error("Error updating learning progress:", error);
+      res.status(500).json({ message: "Failed to update learning progress" });
+    }
+  });
+
+  // Award badge to user
+  app.post("/api/users/:userId/badges/:badgeId", async (req, res) => {
+    try {
+      const { userId, badgeId } = req.params;
+      
+      const userBadge = await storage.awardBadge(userId, badgeId);
+      
+      res.status(201).json(userBadge);
+    } catch (error) {
+      console.error("Error awarding badge:", error);
+      res.status(500).json({ message: "Failed to award badge" });
+    }
+  });
+
+  // Check if user can advance journey stage
+  app.get("/api/users/:userId/journey/can-advance", async (req, res) => {
+    try {
+      const { userId } = req.params;
+      const canAdvance = await storage.canAdvanceJourneyStage(userId);
+      
+      res.json(canAdvance);
+    } catch (error) {
+      console.error("Error checking journey advancement:", error);
+      res.status(500).json({ message: "Failed to check journey advancement" });
+    }
+  });
+
+  // Advance user journey stage
+  app.post("/api/users/:userId/journey/advance", async (req, res) => {
+    try {
+      const { userId } = req.params;
+      const result = await storage.advanceJourneyStage(userId);
+      
+      res.json(result);
+    } catch (error) {
+      console.error("Error advancing journey stage:", error);
+      res.status(500).json({ message: "Failed to advance journey stage" });
+    }
+  });
+
+  // =================== INVENTORY MANAGEMENT ===================
+
+  // Get inventory status for products
+  app.get("/api/inventory", async (req, res) => {
+    try {
+      const inventory = await storage.getInventory();
+      res.json(inventory);
+    } catch (error) {
+      console.error("Error fetching inventory:", error);
+      res.status(500).json({ message: "Failed to fetch inventory" });
+    }
+  });
+
+  // Update inventory for product
+  app.put("/api/inventory/:productId", async (req, res) => {
+    try {
+      const { productId } = req.params;
+      const { currentStock, reservedStock } = req.body;
+      
+      const updatedInventory = await storage.updateInventory(productId, {
+        currentStock,
+        reservedStock
+      });
+      
+      res.json(updatedInventory);
+    } catch (error) {
+      console.error("Error updating inventory:", error);
+      res.status(500).json({ message: "Failed to update inventory" });
     }
   });
 

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { ArrowRight, Leaf } from "lucide-react";
+import heroImage from "@assets/image_1755283743930.png";
 
 export default function HeroSection() {
   return (
@@ -90,7 +91,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <motion.img
-              src="@assets/image_1755283743930.png"
+              src={heroImage}
               alt="Indigenous ceremonial gathering in pristine Canadian wilderness - honoring traditional plant wisdom"
               className="rounded-xl shadow-2xl w-full h-auto"
               whileHover={{ scale: 1.02 }}

@@ -2,10 +2,12 @@
 export const navigationItems = [
   { name: 'Products', href: '/products' },
   { name: 'Plant Explorer', href: '/plant-explorer' },
-  { name: 'AI Pairing', href: '/plant-pairing' },
-  { name: 'Sourcing', href: '/sourcing' },
+  { name: 'Plant Orbit', href: '/plant-orbit' },
+  { name: 'AI Recommendations', href: '/plant-recommendations' },
+  { name: 'Learning Hub', href: '/learning-hub' },
+  { name: 'Your Journey', href: '/journey' },
+  { name: 'Impact Rewards', href: '/impact-rewards' },
   { name: 'Science', href: '/science' },
-  { name: 'Impact', href: '/impact' },
   { name: 'About', href: '/about' }
 ];
 

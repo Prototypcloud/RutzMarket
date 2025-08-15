@@ -90,8 +90,8 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <motion.img
-              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-              alt="Indigenous knowledge keeper harvesting traditional medicinal plants in Canadian boreal forest"
+              src="@assets/image_1755283743930.png"
+              alt="Indigenous ceremonial gathering in pristine Canadian wilderness - honoring traditional plant wisdom"
               className="rounded-xl shadow-2xl w-full h-auto"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}

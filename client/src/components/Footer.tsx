@@ -25,7 +25,7 @@ export default function Footer() {
               R<span className="text-sage">Ü</span>TZ
               <span className="text-sm ml-2">🌿</span>
             </div>
-            <p className="text-cream mb-4">Rooted in Wisdom. Perfected by Science.</p>
+            <p className="text-cream mb-4">Rooted in Wisdom. Perfected by Science. Every extract gives back to the communities and ecosystems that inspire them.</p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
                 const IconComponent = socialIcons[social.icon as keyof typeof socialIcons];

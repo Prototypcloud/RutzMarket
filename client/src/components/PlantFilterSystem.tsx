@@ -95,6 +95,19 @@ const PlantFilterSystem: React.FC = () => {
     setSelectedProductType("");
   };
 
+  // Handle filter changes to avoid empty strings
+  const handlePlantChange = (value: string) => {
+    setSelectedPlant(value === "all" ? "" : value);
+  };
+
+  const handleSectorChange = (value: string) => {
+    setSelectedSector(value === "all" ? "" : value);
+  };
+
+  const handleProductTypeChange = (value: string) => {
+    setSelectedProductType(value === "all" ? "" : value);
+  };
+
   const activeFiltersCount = [selectedPlant, selectedSector, selectedProductType].filter(Boolean).length;
 
   return (
@@ -145,12 +158,12 @@ const PlantFilterSystem: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="space-y-2">
               <label className="text-sm font-medium text-rutz-forest">Plant Material</label>
-              <Select value={selectedPlant} onValueChange={setSelectedPlant}>
+              <Select value={selectedPlant || "all"} onValueChange={handlePlantChange}>
                 <SelectTrigger data-testid="select-plant-material">
                   <SelectValue placeholder="Select plant material" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="" data-testid="plant-option-all">All Plants</SelectItem>
+                  <SelectItem value="all" data-testid="plant-option-all">All Plants</SelectItem>
                   {filterData?.plantMaterials.map((plant) => (
                     <SelectItem key={plant} value={plant} data-testid={`plant-option-${plant}`}>
                       {getPlantIcon(plant)} {plant}
@@ -162,12 +175,12 @@ const PlantFilterSystem: React.FC = () => {
 
             <div className="space-y-2">
               <label className="text-sm font-medium text-rutz-forest">Application Sector</label>
-              <Select value={selectedSector} onValueChange={setSelectedSector}>
+              <Select value={selectedSector || "all"} onValueChange={handleSectorChange}>
                 <SelectTrigger data-testid="select-sector">
                   <SelectValue placeholder="Select sector" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="" data-testid="sector-option-all">All Sectors</SelectItem>
+                  <SelectItem value="all" data-testid="sector-option-all">All Sectors</SelectItem>
                   {filterData?.sectors.map((sector) => (
                     <SelectItem key={sector} value={sector} data-testid={`sector-option-${sector}`}>
                       {sector}
@@ -179,12 +192,12 @@ const PlantFilterSystem: React.FC = () => {
 
             <div className="space-y-2">
               <label className="text-sm font-medium text-rutz-forest">Product Type</label>
-              <Select value={selectedProductType} onValueChange={setSelectedProductType}>
+              <Select value={selectedProductType || "all"} onValueChange={handleProductTypeChange}>
                 <SelectTrigger data-testid="select-product-type">
                   <SelectValue placeholder="Select product type" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="" data-testid="product-type-option-all">All Types</SelectItem>
+                  <SelectItem value="all" data-testid="product-type-option-all">All Types</SelectItem>
                   {filterData?.productTypes.map((type) => (
                     <SelectItem key={type} value={type} data-testid={`product-type-option-${type}`}>
                       {type}

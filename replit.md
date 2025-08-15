@@ -1,6 +1,6 @@
 # Overview
 
-RÜTZ is a premium botanical extracts e-commerce platform with the brand essence "From Nature's Roots to Your Well-Being." The application merges the science of nature with heritage craftsmanship to deliver pure, potent botanical innovations. Built with the new RÜTZ brand identity featuring earth-green primary colors, botanical gold accents, and Inter typography that emphasizes trustworthy & scientific, premium & minimalist, and natural & authentic brand personality.
+RÜTZ is a premium botanical extracts e-commerce platform with the brand essence "Rooted in Wisdom. Perfected by Science." The application unites indigenous heritage and German scientific precision to create trusted botanical extracts, featuring ethical sourcing through respectful partnerships with local communities and Fraunhofer research validation. Built with expanded brand identity featuring earth-green colors, botanical gold accents, indigenous partnership seals, and scientific credibility elements that emphasize heritage, scientific excellence, sustainability, fairness, and integrity.
 
 # User Preferences
 

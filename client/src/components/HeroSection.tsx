@@ -33,7 +33,7 @@ export default function HeroSection() {
             >
               RÜTZ
               <br />
-              <span className="text-cream text-2xl md:text-3xl font-normal tracking-widest">FROM NATURE'S ROOTS TO YOUR WELL-BEING</span>
+              <span className="text-cream text-2xl md:text-3xl font-normal tracking-widest">ROOTED IN WISDOM. PERFECTED BY SCIENCE.</span>
             </motion.h1>
             
             <motion.p 
@@ -43,9 +43,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}
             >
-              Merging the science of nature with heritage craftsmanship to deliver pure, 
-              potent botanical innovations. Born from the union of modern biotechnological 
-              precision and nature's oldest wisdom.
+              We unite indigenous heritage and German scientific precision to create the world's most trusted botanical extracts—while giving back to the communities and ecosystems that inspire them.
             </motion.p>
             
             <motion.div 
@@ -55,8 +53,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.5 }}
             >
               <p className="text-cream/90 text-sm leading-relaxed">
-                <em>"Rooted in tradition, refined by innovation."</em> - Our products are as pure as the roots 
-                they come from—crafted with care, backed by science, and inspired by nature's timeless cycles.
+                <em>"From the untouched landscapes where indigenous communities have gathered medicinal plants for generations, to the advanced research labs of Fraunhofer."</em> - Every extract is ethically sourced through respectful partnerships with local gatherers.
               </p>
             </motion.div>
 

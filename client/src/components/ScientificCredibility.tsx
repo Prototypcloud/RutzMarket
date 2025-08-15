@@ -68,11 +68,10 @@ export default function ScientificCredibility() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4 tracking-wide uppercase" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700 }}>
-            Purity & Potency
+            Scientific Excellence
           </h2>
           <p className="text-slate-gray max-w-4xl mx-auto text-lg leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
-            <strong>Every drop, every gram, from the source.</strong> Our botanical extracts undergo rigorous 
-            testing and precision extraction to preserve maximum potency while ensuring pharmaceutical-grade 
+            <strong>Grounded in Fraunhofer's century of research and innovation.</strong> From lab-tested potency to clinically proven benefits—our scientists refine nature's gifts into potent, safe, and proven formulations for preventive health and healing. 
             purity. Transparency in every step from harvest to final product.
           </p>
         </motion.div>

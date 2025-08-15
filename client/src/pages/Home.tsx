@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ProductCatalog from "@/components/ProductCatalog";
 import PlantExplorerFeature from "@/components/PlantExplorerFeature";
+import IndigenousPartnership from "@/components/IndigenousPartnership";
+import BrandPromise from "@/components/BrandPromise";
 import SupplyChainVisualization from "@/components/SupplyChainVisualization";
 import CommunityImpact from "@/components/CommunityImpact";
 import ScientificCredibility from "@/components/ScientificCredibility";
@@ -45,6 +47,8 @@ export default function Home() {
       <TrustIndicators />
       <ProductCatalog showAllProducts={false} />
       <PlantExplorerFeature />
+      <IndigenousPartnership />
+      <BrandPromise />
       <SupplyChainVisualization />
       <CommunityImpact />
       <ScientificCredibility />

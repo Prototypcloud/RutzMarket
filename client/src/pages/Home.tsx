@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ProductCatalog from "@/components/ProductCatalog";
+import PlantExplorerFeature from "@/components/PlantExplorerFeature";
 import SupplyChainVisualization from "@/components/SupplyChainVisualization";
 import CommunityImpact from "@/components/CommunityImpact";
 import ScientificCredibility from "@/components/ScientificCredibility";
@@ -43,6 +44,7 @@ export default function Home() {
       <HeroSection />
       <TrustIndicators />
       <ProductCatalog showAllProducts={false} />
+      <PlantExplorerFeature />
       <SupplyChainVisualization />
       <CommunityImpact />
       <ScientificCredibility />

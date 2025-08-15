@@ -4,13 +4,75 @@ import { storage } from "./storage";
 import { insertCartItemSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Products API
+  // Products API with filtering
   app.get("/api/products", async (req, res) => {
     try {
+      const { sector, plantMaterial, productType } = req.query;
       const products = await storage.getProducts();
-      res.json(products);
+      
+      let filteredProducts = products;
+      
+      if (sector) {
+        filteredProducts = filteredProducts.filter(p => p.sector === sector);
+      }
+      
+      if (plantMaterial) {
+        filteredProducts = filteredProducts.filter(p => p.plantMaterial === plantMaterial);
+      }
+      
+      if (productType) {
+        filteredProducts = filteredProducts.filter(p => p.productType === productType);
+      }
+      
+      res.json(filteredProducts);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch products" });
+    }
+  });
+
+  // Get unique values for filtering
+  app.get("/api/products/filters", async (req, res) => {
+    try {
+      const products = await storage.getProducts();
+      
+      const sectors = Array.from(new Set(products.map(p => p.sector)));
+      const plantMaterials = Array.from(new Set(products.map(p => p.plantMaterial)));
+      const productTypes = Array.from(new Set(products.map(p => p.productType)));
+      
+      res.json({
+        sectors: sectors.sort(),
+        plantMaterials: plantMaterials.sort(),
+        productTypes: productTypes.sort()
+      });
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch filters" });
+    }
+  });
+
+  // Get products grouped by plant material
+  app.get("/api/products/by-plant/:plantMaterial", async (req, res) => {
+    try {
+      const { plantMaterial } = req.params;
+      const products = await storage.getProducts();
+      
+      const plantProducts = products.filter(p => p.plantMaterial === plantMaterial);
+      
+      // Group by sector
+      const groupedBySector = plantProducts.reduce((acc, product) => {
+        if (!acc[product.sector]) {
+          acc[product.sector] = [];
+        }
+        acc[product.sector].push(product);
+        return acc;
+      }, {} as Record<string, typeof products>);
+      
+      res.json({
+        plantMaterial,
+        totalProducts: plantProducts.length,
+        sectors: groupedBySector
+      });
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch plant products" });
     }
   });
 

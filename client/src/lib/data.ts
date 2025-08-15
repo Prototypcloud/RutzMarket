@@ -1,6 +1,7 @@
 // Static data and utility functions for the RÜTZ application
 export const navigationItems = [
   { name: 'Products', href: '/products' },
+  { name: 'Plant Explorer', href: '/plant-explorer' },
   { name: 'Sourcing', href: '#sourcing' },
   { name: 'Science', href: '#science' },
   { name: 'Impact', href: '#impact' },

@@ -11,6 +11,9 @@ export const products = pgTable("products", {
   price: decimal("price", { precision: 10, scale: 2 }).notNull(),
   origin: text("origin").notNull(),
   category: text("category").notNull(),
+  sector: text("sector").notNull(), // Nutraceuticals/Supplements, Functional Foods & Beverages, etc.
+  plantMaterial: text("plant_material").notNull(), // Chaga, Turmeric, Ashwagandha, etc.
+  productType: text("product_type").notNull(), // Extract powder, capsules, RTD tea, etc.
   rating: decimal("rating", { precision: 2, scale: 1 }).notNull(),
   reviewCount: integer("review_count").notNull(),
   imageUrl: text("image_url").notNull(),

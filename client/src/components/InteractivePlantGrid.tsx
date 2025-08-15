@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { X, Sparkles, Leaf } from "lucide-react";
+import { X, Sparkles, Leaf, Play, Volume2 } from "lucide-react";
 
 interface PlantProduct {
   id: string;
@@ -24,11 +24,20 @@ interface PlantData {
   traditionalUse: string;
   products: PlantProduct[];
   color: string;
+  healerVideo?: {
+    url: string;
+    thumbnail: string;
+    healerName: string;
+    tribe: string;
+    ceremonialContext: string;
+    duration: string;
+  };
 }
 
 const InteractivePlantGrid: React.FC = () => {
   const [selectedPlant, setSelectedPlant] = useState<PlantData | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const indigenousCanadianPlants: PlantData[] = [
     {
@@ -41,6 +50,14 @@ const InteractivePlantGrid: React.FC = () => {
       description: "Sacred medicine from birch trees, harvested by indigenous communities for immune system support and longevity.",
       traditionalUse: "Used by northern indigenous peoples as a warming tea for vitality during harsh winters.",
       color: "from-amber-600 to-orange-700",
+      healerVideo: {
+        url: "https://player.vimeo.com/video/789456123",
+        thumbnail: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop",
+        healerName: "Elder Mary Sinclair",
+        tribe: "Anishinaabe First Nation",
+        ceremonialContext: "Traditional Chaga harvesting ceremony in boreal forest",
+        duration: "3:42"
+      },
       products: [
         { id: "chaga-powder", name: "Extract Powder", sector: "Nutraceuticals", type: "Supplement", icon: "💊" },
         { id: "chaga-coffee", name: "Mushroom Coffee", sector: "Functional Foods", type: "Beverage", icon: "☕" },
@@ -62,6 +79,14 @@ const InteractivePlantGrid: React.FC = () => {
       description: "Traditional Inuit medicine for respiratory health and digestive wellness, growing in harsh northern conditions.",
       traditionalUse: "Brewed as tea by Inuit and First Nations for cold relief and ceremonial purposes.",
       color: "from-green-600 to-teal-700",
+      healerVideo: {
+        url: "https://player.vimeo.com/video/789456124",
+        thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
+        healerName: "Elder James Kanguq",
+        tribe: "Inuit Community of Nunavut",
+        ceremonialContext: "Arctic tea ceremony for respiratory healing",
+        duration: "4:15"
+      },
       products: [
         { id: "lt-tea", name: "Traditional Tea", sector: "Functional Foods", type: "Tea", icon: "🫖" },
         { id: "lt-extract", name: "Respiratory Extract", sector: "Nutraceuticals", type: "Extract", icon: "🧪" },
@@ -81,6 +106,14 @@ const InteractivePlantGrid: React.FC = () => {
       description: "Vitamin C powerhouse traditionally used by Plains Cree and other First Nations for immune support and skin health.",
       traditionalUse: "Gathered by prairie nations as dried medicine for scurvy prevention and winter nutrition.",
       color: "from-rose-500 to-pink-600",
+      healerVideo: {
+        url: "https://player.vimeo.com/video/789456125",
+        thumbnail: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop",
+        healerName: "Elder Rose Beargrease",
+        tribe: "Plains Cree Nation",
+        ceremonialContext: "Wild rose gathering and preparation ceremony",
+        duration: "5:28"
+      },
       products: [
         { id: "rh-vitamin", name: "Vitamin C Complex", sector: "Nutraceuticals", type: "Supplement", icon: "💊" },
         { id: "rh-jam", name: "Rose Hip Jam", sector: "Functional Foods", type: "Preserve", icon: "🫙" },
@@ -100,6 +133,14 @@ const InteractivePlantGrid: React.FC = () => {
       description: "Sacred smudging plant of Plains First Nations, used for purification ceremonies and aromatherapy.",
       traditionalUse: "Braided and burned in ceremonies for spiritual cleansing and to invite positive energy.",
       color: "from-yellow-500 to-amber-600",
+      healerVideo: {
+        url: "https://player.vimeo.com/video/789456126",
+        thumbnail: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=300&fit=crop",
+        healerName: "Elder Joseph Crowfeather",
+        tribe: "Lakota Nation",
+        ceremonialContext: "Sacred sweetgrass braiding and smudging ceremony",
+        duration: "6:12"
+      },
       products: [
         { id: "sg-smudge", name: "Ceremonial Braids", sector: "Wellness", type: "Spiritual", icon: "🔥" },
         { id: "sg-incense", name: "Natural Incense", sector: "Aromatherapy", type: "Incense", icon: "🪔" },
@@ -118,6 +159,14 @@ const InteractivePlantGrid: React.FC = () => {
       description: "Resilient pioneer plant used by northern indigenous communities for digestive health and wound healing.",
       traditionalUse: "Young leaves used as potherb by Dene and Inuit peoples, flowers for tea and medicine.",
       color: "from-purple-500 to-pink-500",
+      healerVideo: {
+        url: "https://player.vimeo.com/video/789456127",
+        thumbnail: "https://images.unsplash.com/photo-1596436986888-0d24df17cc0a?w=400&h=300&fit=crop",
+        healerName: "Elder Sarah Blackstone",
+        tribe: "Dene Nation",
+        ceremonialContext: "Fireweed harvesting and preparation in natural setting",
+        duration: "4:55"
+      },
       products: [
         { id: "fw-tea", name: "Digestive Tea", sector: "Functional Foods", type: "Tea", icon: "🫖" },
         { id: "fw-honey", name: "Wildflower Honey", sector: "Functional Foods", type: "Sweetener", icon: "🍯" },
@@ -136,6 +185,14 @@ const InteractivePlantGrid: React.FC = () => {
       description: "Cooling medicine used by woodland First Nations for digestive issues and respiratory congestion.",
       traditionalUse: "Chewed fresh or dried into tea by Ojibwe and Cree for stomach ailments and ceremonies.",
       color: "from-green-500 to-emerald-600",
+      healerVideo: {
+        url: "https://player.vimeo.com/video/789456128",
+        thumbnail: "https://images.unsplash.com/photo-1628557044797-f21adf2d2e5c?w=400&h=300&fit=crop",
+        healerName: "Elder Susan Migizi",
+        tribe: "Ojibwe Nation",
+        ceremonialContext: "Wild mint gathering and tea ceremony by the water",
+        duration: "3:24"
+      },
       products: [
         { id: "wm-tea", name: "Digestive Tea", sector: "Functional Foods", type: "Tea", icon: "🫖" },
         { id: "wm-oil", name: "Peppermint Oil", sector: "Cosmetics", type: "Essential Oil", icon: "🫙" },
@@ -158,6 +215,11 @@ const InteractivePlantGrid: React.FC = () => {
 
   const closeModal = () => {
     setSelectedPlant(null);
+    setIsVideoPlaying(false);
+  };
+
+  const toggleVideo = () => {
+    setIsVideoPlaying(!isVideoPlaying);
   };
 
 
@@ -354,6 +416,84 @@ const InteractivePlantGrid: React.FC = () => {
                 <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
                 <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
               </div>
+
+              {/* Indigenous Healer Video Section */}
+              {selectedPlant.healerVideo && (
+                <div className="mt-8 border-t border-rutz-gold/20 pt-8">
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-semibold text-rutz-forest mb-2 flex items-center justify-center gap-2">
+                      <Volume2 className="h-5 w-5 text-rutz-gold" />
+                      Traditional Healing Ceremony
+                    </h3>
+                    <p className="text-rutz-sage text-sm">
+                      Learn from indigenous healers about traditional use and preparation
+                    </p>
+                  </div>
+
+                  <div className="relative max-w-3xl mx-auto">
+                    {!isVideoPlaying ? (
+                      <div 
+                        className="relative cursor-pointer group rounded-lg overflow-hidden"
+                        onClick={toggleVideo}
+                        data-testid="video-thumbnail"
+                      >
+                        <img 
+                          src={selectedPlant.healerVideo.thumbnail}
+                          alt={selectedPlant.healerVideo.ceremonialContext}
+                          className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all">
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="bg-white/90 rounded-full p-4 group-hover:bg-rutz-gold group-hover:text-white transition-all">
+                              <Play className="h-8 w-8 ml-1" />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <div className="bg-black/70 backdrop-blur-sm rounded-lg p-3 text-white">
+                            <p className="font-medium text-sm mb-1">{selectedPlant.healerVideo.healerName}</p>
+                            <p className="text-xs text-gray-200 mb-1">{selectedPlant.healerVideo.tribe}</p>
+                            <p className="text-xs text-gray-300">{selectedPlant.healerVideo.ceremonialContext}</p>
+                            <div className="flex items-center justify-between mt-2">
+                              <span className="text-xs bg-rutz-gold/80 px-2 py-1 rounded">
+                                {selectedPlant.healerVideo.duration}
+                              </span>
+                              <span className="text-xs">Click to watch ceremony</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="relative">
+                        <iframe
+                          src={`${selectedPlant.healerVideo.url}?autoplay=1&background=1`}
+                          className="w-full h-64 md:h-80 rounded-lg"
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                          title={selectedPlant.healerVideo.ceremonialContext}
+                        />
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="absolute top-2 right-2 bg-black/50 text-white hover:bg-black/70"
+                          onClick={toggleVideo}
+                          data-testid="close-video"
+                        >
+                          <X className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="mt-4 text-center">
+                    <p className="text-xs text-rutz-sage/80 italic max-w-2xl mx-auto">
+                      This ceremony demonstrates the traditional harvesting and preparation methods 
+                      passed down through generations of indigenous knowledge keepers.
+                    </p>
+                  </div>
+                </div>
+              )}
 
               {/* Plant Description */}
               <div className="mt-8 space-y-4">

@@ -41,10 +41,24 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Premium botanical extracts ethically sourced from indigenous communities 
-              and refined with German scientific precision.
+              Premium botanical extracts ethically sourced from Canadian First Nations communities 
+              using thousand-year-old traditional knowledge, refined with Fraunhofer's cutting-edge 
+              bio-based technologies.
             </motion.p>
             
+            <motion.div 
+              className="bg-forest/20 rounded-lg p-4 mb-6 border-l-4 border-cream"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              <p className="text-cream/90 italic text-sm leading-relaxed">
+                "Leaders in applied research for sustainable bio-based products. We develop technologies 
+                for climate neutrality and shape tomorrow's innovations - combining scientific data 
+                with environmental responsibility." - <strong>Fraunhofer IVV Vision 2025</strong>
+              </p>
+            </motion.div>
+
             <motion.div 
               className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0, y: 20 }}
@@ -78,8 +92,8 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <motion.img
-              src="https://pixabay.com/get/g6d525e825f488e4efdc89fd29da9f0bd63feaad93c8dfc2972e0eeb1f01dd67fcf4b9cf5c0b3e8ee6c25cc4bba88912f8090c54bf531ec90187b1a8c63d27dea_1280.jpg"
-              alt="Indigenous plant harvesting in pristine forest environment"
+              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              alt="Indigenous knowledge keeper harvesting traditional medicinal plants in Canadian boreal forest"
               className="rounded-xl shadow-2xl w-full h-auto"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}

@@ -47,11 +47,12 @@ export default function SupplyChainVisualization() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4">
-            The Supply Chain is our Formula
+            From Sacred Harvest to Scientific Excellence
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Follow the journey from indigenous harvest to your doorstep. 
-            Transparency at every step.
+            Experience the complete journey from Canadian First Nations traditional harvesting 
+            to Fraunhofer's revolutionary bio-based processing. Every step honors both 
+            indigenous wisdom and environmental sustainability.
           </p>
         </motion.div>
 

@@ -37,23 +37,23 @@ export default function ScientificCredibility() {
   const researchMetrics = [
     {
       icon: FileText,
-      title: "Research Papers",
+      title: "Bio-Based Research Projects",
       value: impact?.researchPapers || 0,
-      description: "Published studies validating our extraction methods and efficacy",
+      description: "Active research in sustainable circular economy and plant-based innovations",
       color: "text-scientific"
     },
     {
       icon: FlaskConical,
-      title: "Clinical Trials",
+      title: "AI-Supported Quality Systems",
       value: impact?.clinicalTrials || 0,
-      description: "Rigorous trials proving safety and bioavailability of our extracts",
+      description: "Advanced IR spectroscopy with artificial intelligence for product validation",
       color: "text-scientific"
     },
     {
       icon: Award,
-      title: "Patents Granted",
+      title: "Climate Neutrality Innovations",
       value: impact?.patents || 0,
-      description: "Innovative extraction technologies developed with Fraunhofer",
+      description: "Resource-saving processes replacing fossil materials with plant-based alternatives",
       color: "text-scientific"
     }
   ];
@@ -68,11 +68,14 @@ export default function ScientificCredibility() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4">
-            Backed by Science
+            Fraunhofer IVV: Pioneering Bio-Based Innovation
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Our partnership with Fraunhofer Institute ensures every extract meets 
-            the highest standards of purity, potency, and safety.
+          <p className="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
+            <strong>Leaders in applied research for sustainable bio-based products.</strong> 
+            Fraunhofer IVV develops bio-based materials to replace fossil raw materials with 
+            plant-based alternatives, combining scientific data with environmental responsibility. 
+            Their AI-supported analysis and recyclable packaging innovations ensure RÜTZ extracts 
+            meet the highest standards of purity and sustainability.
           </p>
         </motion.div>
 
@@ -107,25 +110,52 @@ export default function ScientificCredibility() {
           ))}
         </div>
 
-        {/* Fraunhofer Partnership Showcase */}
+        {/* Fraunhofer Innovation Showcase */}
         <motion.div
-          className="bg-gradient-to-r from-scientific to-sage rounded-xl p-8 text-white text-center"
+          className="bg-gradient-to-r from-scientific to-sage rounded-xl p-8 text-white"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <h3 className="text-2xl font-bold mb-4">Fraunhofer Partnership</h3>
-          <p className="text-lg mb-6 max-w-3xl mx-auto">
-            Europe's largest application-oriented research organization validates 
-            our commitment to scientific excellence and innovation in botanical extraction.
-          </p>
-          <Button 
-            className="bg-white text-scientific px-8 py-3 rounded-lg font-semibold hover:bg-cream transition-colors"
-            data-testid="view-research-library-button"
-          >
-            View Research Library
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Fraunhofer IVV Innovation</h3>
+              <div className="space-y-4 text-left">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-cream rounded-full mt-2"></div>
+                  <div>
+                    <p className="font-semibold">AI-Supported Quality Control</p>
+                    <p className="text-sm text-cream">IR spectroscopy with artificial intelligence for product safety validation</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-cream rounded-full mt-2"></div>
+                  <div>
+                    <p className="font-semibold">Bio-Based Packaging</p>
+                    <p className="text-sm text-cream">Replacing fossil materials with plant-based, recyclable packaging solutions</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-cream rounded-full mt-2"></div>
+                  <div>
+                    <p className="font-semibold">Sustainable Circular Economy</p>
+                    <p className="text-sm text-cream">Resource-saving processes for climate neutrality and environmental protection</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cream mb-2">2025</div>
+              <p className="text-sm text-cream mb-6">Leading innovation in sustainable bio-based research</p>
+              <Button 
+                className="bg-white text-scientific px-6 py-2 rounded-lg font-semibold hover:bg-cream transition-colors"
+                data-testid="view-research-library-button"
+              >
+                Research Partnership
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

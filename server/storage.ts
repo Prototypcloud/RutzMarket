@@ -234,12 +234,12 @@ export class MemStorage implements IStorage {
       {
         id: "step-1",
         stepNumber: 1,
-        title: "Indigenous Harvest",
-        description: "Traditional knowledge guides sustainable wild-harvesting in pristine environments",
-        imageUrl: "https://pixabay.com/get/g4c0c8a0aec2fbef1592fc473c6b533d368b985d90b81f5a93f830b75c83faddc2f3c7ba45c6a607a460d337b34b65797c5b0a98de1cd640acd132848a4b4e720_1280.jpg",
-        details: "Our indigenous partners use ancestral knowledge to identify optimal harvest times and locations. Each plant is collected with respect for the ecosystem, ensuring sustainable regeneration for future generations.",
-        location: "Various indigenous territories worldwide",
-        certifications: ["Fair Trade", "Indigenous Partnership", "Sustainable Harvest"]
+        title: "Indigenous Knowledge Partnership",
+        description: "Traditional protocols guide sustainable harvesting in Canadian boreal forests",
+        imageUrl: "https://images.unsplash.com/photo-1573160013751-d4e5ceed1b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+        details: "Working directly with First Nations communities in Canada's boreal forest, we follow traditional harvesting protocols including tobacco offerings, prayer ceremonies, and seasonal timing. Over 546 medicinal plant taxa are sustainably gathered using the 'THANKS' and 'NEEDS' principles, ensuring only one-third of available plants are harvested while maintaining root systems for regeneration.",
+        location: "Canadian Boreal Forest, First Nations territories",
+        certifications: ["Fair Trade", "Indigenous Partnership", "Traditional Knowledge Protocol"]
       },
       {
         id: "step-2",

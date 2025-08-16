@@ -442,6 +442,33 @@ export class MemStorage implements IStorage {
         inStock: true
       },
       {
+        id: "sweetgrass-aromatherapy-oil",
+        name: "Sweetgrass Aromatherapy Oil",
+        description: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Sacred sweetgrass essential oil for ceremonial use and aromatherapy. This holy plant, known as 'the hair of Mother Earth,' has been used by Indigenous peoples for purification, prayer, and spiritual healing for thousands of years.",
+        shortDescription: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Sacred ceremonial aromatherapy oil, 30ml bottle",
+        price: "58.99",
+        origin: "Cheslatta Carrier Nation Territory, British Columbia",
+        category: "Essential Oils",
+        sector: "Ceremonial & Aromatherapy",
+        plantMaterial: "Sweetgrass (Hierochloe odorata)",
+        productType: "Pure essential oil for aromatherapy",
+        rating: "4.9",
+        reviewCount: 143,
+        imageUrl: "/assets/sweetgrass-aromatherapy-oil.png",
+        qrCode: "RUTZ-SWG-001",
+        scientificName: "Hierochloe odorata",
+        extractionMethod: "Steam distillation of braided grass",
+        bioactiveCompounds: ["Coumarin", "Vanillin", "Benzoic acid", "Phytol"],
+        certifications: ["Ceremonial grade", "Wild-harvested", "Traditional preparation"],
+        sustainabilityStory: "Sustainably wild-harvested using traditional Indigenous methods with deep respect for this sacred plant. Each harvest includes prayers and ceremonies to honor the plant spirits.",
+        communityImpact: "Direct partnership with traditional knowledge keepers and ceremonial leaders. Portion of proceeds supports Indigenous cultural preservation programs and youth education about traditional plant medicines.",
+        researchPapers: [
+          { title: "Sacred Plants in Indigenous Ceremony: Ethnobotanical Study", url: "#", year: 2023 },
+          { title: "Aromatic Compounds in Traditional Ceremonial Plants", url: "#", year: 2024 }
+        ],
+        inStock: true
+      },
+      {
         id: "ashwagandha-root",
         name: "Ashwagandha Root Extract",
         description: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Adaptogenic herb for stress relief and vitality. Traditional wisdom meets modern extraction techniques for optimal bioactivity.",

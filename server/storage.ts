@@ -744,7 +744,7 @@ export class MemStorage implements IStorage {
         stepNumber: 1,
         title: "Sustainable Sourcing",
         description: "Ethical harvesting with complete transparency from root to extract",
-        imageUrl: "https://images.unsplash.com/photo-1573160013751-d4e5ceed1b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+        imageUrl: "/assets/chaga-product.png",
         details: "Our botanical ingredients are sourced through ethical partnerships that honor traditional knowledge while ensuring environmental sustainability. Each harvest location is carefully selected for optimal growing conditions and sustainable practices that preserve ecosystems for future generations.",
         location: "Certified organic farms and wild-harvest partners worldwide",
         certifications: ["Organic Certified", "Fair Trade", "Sustainable Harvest"]
@@ -754,7 +754,7 @@ export class MemStorage implements IStorage {
         stepNumber: 2,
         title: "Precision Extraction",
         description: "Advanced biotechnology preserves nature's potency with heritage craftsmanship",
-        imageUrl: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
+        imageUrl: "/assets/chaga-product.png",
         details: "Our extraction processes merge heritage craftsmanship with cutting-edge biotechnology. Using supercritical CO₂ extraction, we preserve delicate bioactive compounds while achieving pharmaceutical-grade purity. Every step honors both traditional wisdom and modern innovation.",
         location: "Fraunhofer Institute, Germany",
         certifications: ["GMP Certified", "Fraunhofer Validated", "ISO 9001"]
@@ -764,7 +764,7 @@ export class MemStorage implements IStorage {
         stepNumber: 3,
         title: "Purity Validation",
         description: "Every drop, every gram verified for maximum potency and transparency",
-        imageUrl: "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
+        imageUrl: "/assets/chaga-product.png",
         details: "Every batch undergoes comprehensive testing for purity, potency, heavy metals, pesticides, and microbials. Our state-of-the-art laboratory ensures only the highest quality extracts reach our customers.",
         location: "Certified Testing Laboratory, Germany",
         certifications: ["ISO 17025", "FDA Registered", "European Pharmacopoeia"]
@@ -774,7 +774,7 @@ export class MemStorage implements IStorage {
         stepNumber: 4,
         title: "Sustainable Packaging",
         description: "Biodegradable materials with QR tracking for complete transparency",
-        imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300",
+        imageUrl: "/assets/chaga-product.png",
         details: "Our packaging uses biodegradable materials and minimal plastic. Each product includes a unique QR code linking to its complete supply chain story, from harvest to delivery.",
         location: "Sustainable Packaging Facility, Germany",
         certifications: ["Biodegradable Certified", "Carbon Neutral", "Recyclable"]

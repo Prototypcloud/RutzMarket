@@ -581,7 +581,7 @@ const PersonalizedRecommendationEngine: React.FC = () => {
       {/* Progress Header */}
       <div className="flex items-center justify-center space-x-4 mb-8">
         {[1, 2, 3].map((step) => (
-          <React.Fragment key={step}>
+          <div key={step} className="flex items-center">
             <div className={`flex items-center justify-center w-10 h-10 rounded-full font-bold text-sm ${
               activeStep >= step 
                 ? 'bg-forest text-white' 
@@ -594,7 +594,7 @@ const PersonalizedRecommendationEngine: React.FC = () => {
                 activeStep > step ? 'bg-forest' : 'bg-gray-200'
               }`} />
             )}
-          </React.Fragment>
+          </div>
         ))}
       </div>
 

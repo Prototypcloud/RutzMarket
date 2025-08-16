@@ -3,7 +3,9 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Users, Award, Globe, MapPin, Calendar } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Heart, Users, Award, Globe, MapPin, Calendar, ChevronDown, FileText, Target, Shield, Lightbulb, Building2, DollarSign, TrendingUp } from "lucide-react";
+import { useState } from "react";
 
 const timeline = [
   {
@@ -111,7 +113,118 @@ const awards = [
   }
 ];
 
+const socialEnterpriseContent = [
+  {
+    id: "executive-summary",
+    title: "Executive Summary",
+    icon: <FileText className="w-5 h-5" />,
+    content: `Beyond Nature "Tribe" is a groundbreaking initiative developed by Beyond Change (EU) to establish a globally scalable, fully automated onboarding and governance platform for co-creating social enterprises in partnership with Indigenous tribes. Each venture ensures Indigenous sovereignty by securing a 51% ownership for the partnering tribe, enabling equitable, regenerative, and culturally grounded economic development.`
+  },
+  {
+    id: "problem-statement", 
+    title: "Problem Statement",
+    icon: <Target className="w-5 h-5" />,
+    content: `Indigenous communities face significant barriers to entering equitable business partnerships due to:
+
+• Complex, slow, and costly incorporation processes
+• Lack of access to transparent legal and governance frameworks  
+• Risk of cultural exploitation and sovereignty erosion
+• Traditional partnership models often fail to center Indigenous values, prioritize short-term profits, and lack long-term regenerative impact.`
+  },
+  {
+    id: "vision-objectives",
+    title: "Vision & Objectives", 
+    icon: <Lightbulb className="w-5 h-5" />,
+    content: `Vision: Empower Indigenous tribes worldwide to co-create regenerative social enterprises that honor their sovereignty, culture, and ecological stewardship.
+
+Core Objectives:
+• Enable 51% tribal ownership in every venture
+• Automate incorporation and governance
+• Reduce negotiation time and legal costs
+• Provide transparent, tamper-proof records using blockchain
+• Create DAO-ready governance structures`
+  },
+  {
+    id: "partnership-model",
+    title: "Partnership Model",
+    icon: <Users className="w-5 h-5" />,
+    content: `Each new entity, called Beyond Nature "Tribe", is co-founded by:
+
+Tribe (51%) – holds controlling interest, cultural rights, and strategic influence
+Beyond Change (49%) – provides capital, infrastructure, and global reach
+
+The partnership prioritizes long-term regeneration over short-term profit, with community-defined KPIs.`
+  },
+  {
+    id: "governance-framework",
+    title: "Governance Framework",
+    icon: <Shield className="w-5 h-5" />,
+    content: `Dual Circle Governance Model:
+
+Tribal Sovereign Council: Holds veto power on all cultural, land, and sovereignty matters
+Operational Circle: Jointly managed board (Beyond Change + Tribe) handles daily operations
+
+Smart Governance Layer:
+• Smart contracts automate equity splits, voting, and revenue sharing
+• Blockchain ledger ensures transparency in operations and finances`
+  },
+  {
+    id: "technology-platform",
+    title: "TribeForge Technology Platform",
+    icon: <Building2 className="w-5 h-5" />,
+    content: `TribeForge is the automated onboarding platform with:
+
+• KYC for tribal representatives
+• Auto-generation of legal agreements
+• eSignature and blockchain registration
+• Customizable governance templates
+• Embedded education on rights and responsibilities
+
+User Flow:
+1. Tribe inputs basic information
+2. Platform verifies sovereign status via Indigenous Network
+3. Legal docs are generated and signed
+4. Blockchain records the incorporation
+5. Operational dashboard is activated`
+  },
+  {
+    id: "economic-model",
+    title: "Economic Model",
+    icon: <DollarSign className="w-5 h-5" />,
+    content: `Revenue Distribution:
+• 51% Net Profit: Directly to the tribe
+• 49% Net Profit: Beyond Change
+
+Reinvestment Model:
+• Minimum 10% reinvested in local ecology/culture projects
+• Carbon/nature credits tokenized, 51% returned to the community`
+  },
+  {
+    id: "long-term-strategy",
+    title: "Long-Term Strategy",
+    icon: <TrendingUp className="w-5 h-5" />,
+    content: `Strategic Goals:
+• Onboard 100+ tribes by 2030
+• Launch a global TribeDAO for inter-tribal governance
+• Create a registry of Indigenous-led regenerative ventures
+• Form partnerships with global institutions for climate and cultural resilience
+
+Conclusion: Beyond Nature "Tribe" offers a bold, systemic redesign of how Indigenous communities can lead regenerative enterprises on their terms. With sovereignty, automation, and equity at its core, the initiative aims to become a blueprint for ethical, scalable, and decentralized economic transformation.`
+  }
+];
+
 export default function About() {
+  const [openSections, setOpenSections] = useState<Set<string>>(new Set());
+
+  const toggleSection = (sectionId: string) => {
+    const newOpenSections = new Set(openSections);
+    if (newOpenSections.has(sectionId)) {
+      newOpenSections.delete(sectionId);
+    } else {
+      newOpenSections.add(sectionId);
+    }
+    setOpenSections(newOpenSections);
+  };
   return (
     <div className="font-brand bg-natural min-h-screen">
       <Header />
@@ -182,6 +295,88 @@ export default function About() {
                 By 2030, we envision RÜTZ as the global standard for ethical botanical sourcing, 
                 with a regenerative business model that gives back more than it takes.
               </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Enterprise Model */}
+      <section className="py-16 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4">
+              Social Enterprise Model
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Beyond Nature "Tribe" - Automated Indigenous Partnership Platform for Regenerative Social Enterprises
+            </p>
+            <Badge className="bg-forest text-white mt-4 px-4 py-2 text-sm">
+              Version 1.0 | August 2025
+            </Badge>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-4"
+            >
+              {socialEnterpriseContent.map((section, index) => (
+                <motion.div
+                  key={section.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                >
+                  <Collapsible
+                    open={openSections.has(section.id)}
+                    onOpenChange={() => toggleSection(section.id)}
+                  >
+                    <CollapsibleTrigger className="w-full" data-testid={`button-toggle-${section.id}`}>
+                      <Card className="hover:shadow-md transition-shadow duration-200 cursor-pointer">
+                        <CardHeader className="pb-4">
+                          <div className="flex items-center justify-between w-full">
+                            <div className="flex items-center space-x-3">
+                              <div className="text-forest">
+                                {section.icon}
+                              </div>
+                              <CardTitle className="text-left text-lg text-forest">
+                                {section.title}
+                              </CardTitle>
+                            </div>
+                            <ChevronDown 
+                              className={`w-5 h-5 text-forest transition-transform duration-200 ${
+                                openSections.has(section.id) ? 'rotate-180' : ''
+                              }`}
+                            />
+                          </div>
+                        </CardHeader>
+                      </Card>
+                    </CollapsibleTrigger>
+                    
+                    <CollapsibleContent>
+                      <Card className="mt-2 border-l-4 border-l-forest">
+                        <CardContent className="pt-6">
+                          <div className="prose prose-forest max-w-none">
+                            <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                              {section.content}
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </motion.div>
+              ))}
             </motion.div>
           </div>
         </div>

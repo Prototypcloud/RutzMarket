@@ -469,6 +469,33 @@ export class MemStorage implements IStorage {
         inStock: true
       },
       {
+        id: "eastern-white-cedar-tea",
+        name: "Eastern White Cedar Tea",
+        description: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Traditional Indigenous needle tea made from Eastern White Cedar, historically used by First Nations peoples for vitamin C and immune support. Known as the 'Tree of Life,' this sacred tea helped sustain Indigenous communities through harsh winters.",
+        shortDescription: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Traditional vitamin C-rich needle tea for immune support, 19g pouch",
+        price: "24.99",
+        origin: "Cheslatta Carrier Nation Territory, British Columbia",
+        category: "Herbal Teas",
+        sector: "Traditional Medicine & Wellness",
+        plantMaterial: "Eastern White Cedar Needles",
+        productType: "Loose leaf herbal tea",
+        rating: "4.8",
+        reviewCount: 127,
+        imageUrl: "/assets/eastern-white-cedar-tea.png",
+        qrCode: "RUTZ-EWC-001",
+        scientificName: "Thuja occidentalis",
+        extractionMethod: "Traditional needle preparation",
+        bioactiveCompounds: ["Vitamin C", "Thujone", "Essential oils", "Tannins"],
+        certifications: ["Wild-harvested", "Traditional preparation", "Organic"],
+        sustainabilityStory: "Sustainably harvested using traditional Indigenous methods that only take what is needed and ensure tree health. Cedar is considered sacred and harvesting includes prayers of gratitude.",
+        communityImpact: "Direct partnership with traditional knowledge keepers who have maintained this practice for generations. Supports Indigenous youth programs teaching traditional plant knowledge and sustainable harvesting.",
+        researchPapers: [
+          { title: "Nutritional Analysis of Traditional Indigenous Teas", url: "#", year: 2023 },
+          { title: "Vitamin C Content in Eastern White Cedar Preparations", url: "#", year: 2024 }
+        ],
+        inStock: true
+      },
+      {
         id: "ashwagandha-root",
         name: "Ashwagandha Root Extract",
         description: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Adaptogenic herb for stress relief and vitality. Traditional wisdom meets modern extraction techniques for optimal bioactivity.",

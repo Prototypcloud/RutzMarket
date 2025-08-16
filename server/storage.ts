@@ -496,6 +496,33 @@ export class MemStorage implements IStorage {
         inStock: true
       },
       {
+        id: "wild-rose-hip-powder",
+        name: "Wild Rose Hip Powder",
+        description: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Premium vitamin C-rich superfood powder from wild Canadian rose hips, traditionally gathered by Indigenous communities for immune support and winter nutrition. One of nature's most potent sources of natural vitamin C.",
+        shortDescription: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Vitamin C-rich superfood powder from Canadian wilderness, 150g pouch",
+        price: "32.99",
+        origin: "Cheslatta Carrier Nation Territory, British Columbia",
+        category: "Superfood Powders",
+        sector: "Traditional Medicine & Wellness",
+        plantMaterial: "Wild Rose Hips",
+        productType: "Fine ground superfood powder",
+        rating: "4.9",
+        reviewCount: 156,
+        imageUrl: "/assets/wild-rose-hip-powder.png",
+        qrCode: "RUTZ-WRH-001",
+        scientificName: "Rosa acicularis",
+        extractionMethod: "Traditional drying and fine grinding",
+        bioactiveCompounds: ["Vitamin C", "Lycopene", "Beta-carotene", "Bioflavonoids"],
+        certifications: ["Wild-harvested", "Raw powder", "Organic certified"],
+        sustainabilityStory: "Sustainably wild-harvested from pristine Canadian wilderness using traditional Indigenous methods that ensure plant regeneration. Rose hips are gathered at peak ripeness when vitamin C content is highest.",
+        communityImpact: "Direct partnership with Indigenous harvesters who have maintained traditional gathering practices for generations. Supports community health initiatives and traditional food sovereignty programs.",
+        researchPapers: [
+          { title: "Vitamin C Content Analysis of Wild Canadian Rose Hips", url: "#", year: 2023 },
+          { title: "Traditional Indigenous Superfood Preparations and Nutrition", url: "#", year: 2024 }
+        ],
+        inStock: true
+      },
+      {
         id: "ashwagandha-root",
         name: "Ashwagandha Root Extract",
         description: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Adaptogenic herb for stress relief and vitality. Traditional wisdom meets modern extraction techniques for optimal bioactivity.",

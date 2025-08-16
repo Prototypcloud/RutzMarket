@@ -85,7 +85,10 @@ export default function ProductDetail() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src={product.imageUrl}
+                src={product.imageUrl.startsWith('/assets/') ? 
+                  `/src${product.imageUrl}` :
+                  product.imageUrl
+                }
                 alt={product.name}
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
               />

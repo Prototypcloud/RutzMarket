@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { navigationItems } from "@/lib/data";
 import { useCartStore } from "@/lib/cartStore";
 import { motion, AnimatePresence } from "framer-motion";
+import OnboardingButton from "@/components/OnboardingButton";
 
 export default function Header() {
   const [location] = useLocation();
@@ -52,6 +53,30 @@ export default function Header() {
         data-testid="search-button"
       >
         <Search className="h-5 w-5" />
+      </Button>
+      
+      {!mobile && <OnboardingButton />}
+      
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={openCart}
+        className="text-gray-600 hover:text-forest transition-colors relative"
+        data-testid="cart-button"
+      >
+        <ShoppingCart className="h-5 w-5" />
+        <AnimatePresence>
+          {totalItems > 0 && (
+            <motion.span
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              className="absolute -top-2 -right-2 bg-sage text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-semibold"
+            >
+              {totalItems}
+            </motion.span>
+          )}
+        </AnimatePresence>
       </Button>
       
       <Button

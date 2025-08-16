@@ -13,8 +13,12 @@ import ScientificCredibility from "@/components/ScientificCredibility";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import CartSidebar from "@/components/CartSidebar";
+import OnboardingAnimation from "@/components/OnboardingAnimation";
+import OnboardingWelcomeEffect from "@/components/OnboardingWelcomeEffect";
+import OnboardingTestButton from "@/components/OnboardingTestButton";
 import { trustIndicators } from "@/lib/data";
 import { motion } from "framer-motion";
+import { useOnboarding } from "@/hooks/useOnboarding";
 
 const TrustIndicators = () => (
   <motion.section 
@@ -43,6 +47,7 @@ const TrustIndicators = () => (
 );
 
 export default function Home() {
+  const { isOnboardingOpen, completeOnboarding, hasCompletedOnboarding } = useOnboarding();
   return (
     <div className="font-brand bg-natural min-h-screen">
       <Header />
@@ -69,6 +74,18 @@ export default function Home() {
       <Newsletter />
       <Footer />
       <CartSidebar />
+      
+      {/* Welcome Effect for First-Time Users */}
+      <OnboardingWelcomeEffect isFirstVisit={!hasCompletedOnboarding} />
+      
+      {/* Onboarding Animation for First-Time Users */}
+      <OnboardingAnimation 
+        isOpen={isOnboardingOpen}
+        onComplete={completeOnboarding}
+      />
+      
+      {/* Development Testing Button */}
+      <OnboardingTestButton />
     </div>
   );
 }

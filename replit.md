@@ -6,6 +6,8 @@ RÜTZ is a premium botanical extracts e-commerce platform with the brand essence
 - Enhanced typography system with WCAG AAA compliance (7:1 contrast ratios)
 - Improved color accessibility with high-contrast design
 - Added "Indigenous Wild Harvest" section to About page with comprehensive principles and product pathways
+- Added Strategic Overview section to front page showcasing company's Indigenous wild harvest strategy
+- Created interactive tabbed interface highlighting principles, products, and quality standards
 - Applied color psychology principles for better user engagement
 - Database fully operational with complete 71-plant dataset from global Indigenous communities
 

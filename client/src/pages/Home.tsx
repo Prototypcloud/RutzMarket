@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import StrategicOverview from "@/components/StrategicOverview";
 import ProductCatalog from "@/components/ProductCatalog";
 import PlantExplorerFeature from "@/components/PlantExplorerFeature";
 import IndigenousPartnership from "@/components/IndigenousPartnership";
@@ -47,6 +48,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <TrustIndicators />
+      <StrategicOverview />
       <ProductCatalog showAllProducts={true} />
       <PlantExplorerFeature />
       <IndigenousPartnership />

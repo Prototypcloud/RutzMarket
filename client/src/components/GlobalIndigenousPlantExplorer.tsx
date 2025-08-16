@@ -138,23 +138,23 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
       data-testid={`plant-card-${plant.id}`}
     >
       <Card 
-        className="h-full cursor-pointer card-enhanced hover:shadow-lg transition-all duration-300 border-border hover:border-earth-green/40 hover:bg-accent/50"
+        className="h-full cursor-pointer bg-white hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-green-300 hover:bg-gray-50"
         onClick={() => setSelectedPlant(plant)}
       >
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <CardTitle className="text-lg text-high-contrast mb-1 line-clamp-2 font-serif">
+              <CardTitle className="text-lg text-gray-900 mb-1 line-clamp-2 font-semibold">
                 {plant.plantName}
               </CardTitle>
-              <CardDescription className="text-sm italic text-medium-contrast font-sans">
+              <CardDescription className="text-sm italic text-gray-600 font-sans">
                 {plant.scientificName}
               </CardDescription>
             </div>
-            <Leaf className="h-5 w-5 text-botanical-gold flex-shrink-0 ml-2" />
+            <Leaf className="h-5 w-5 text-amber-600 flex-shrink-0 ml-2" />
           </div>
           <div className="flex flex-wrap gap-1 mt-2">
-            <Badge variant="secondary" className="text-xs bg-earth-green/10 text-earth-green border-earth-green/20">
+            <Badge variant="secondary" className="text-xs bg-green-100 text-green-800 border-green-200">
               {plant.region}
             </Badge>
           </div>
@@ -162,21 +162,21 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
         <CardContent className="pt-0">
           <div className="space-y-2 text-sm">
             <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-earth-green" />
-              <span className="text-medium-contrast line-clamp-1 font-medium">{plant.countryOfOrigin}</span>
+              <MapPin className="h-4 w-4 text-green-600" />
+              <span className="text-gray-700 line-clamp-1 font-medium">{plant.countryOfOrigin}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Users className="h-4 w-4 text-earth-green" />
-              <span className="text-medium-contrast line-clamp-1 font-medium">{plant.indigenousTribesOrGroup}</span>
+              <Users className="h-4 w-4 text-green-600" />
+              <span className="text-gray-700 line-clamp-1 font-medium">{plant.indigenousTribesOrGroup}</span>
             </div>
             {plant.associatedCeremony && (
               <div className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-botanical-gold" />
-                <span className="text-botanical-gold text-xs font-medium">Ceremonial Use</span>
+                <Sparkles className="h-4 w-4 text-amber-600" />
+                <span className="text-amber-700 text-xs font-medium">Ceremonial Use</span>
               </div>
             )}
           </div>
-          <p className="text-sm text-medium-contrast mt-3 line-clamp-2 text-readable">
+          <p className="text-sm text-gray-600 mt-3 line-clamp-2">
             {plant.traditionalUses}
           </p>
         </CardContent>
@@ -188,8 +188,8 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
     return (
       <div className="flex items-center justify-center py-20">
         <div className="text-center space-y-4">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-botanical-gold mx-auto"></div>
-          <p className="text-medium-contrast font-medium">Loading Global Indigenous Plants...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600 mx-auto"></div>
+          <p className="text-gray-600 font-medium">Loading Global Indigenous Plants...</p>
         </div>
       </div>
     );
@@ -205,36 +205,36 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="flex items-center justify-center gap-3 mb-4">
-          <Globe className="h-8 w-8 text-botanical-gold" />
-          <h1 className="text-3xl md:text-4xl font-bold text-high-contrast text-heading">Global Indigenous Plant Explorer</h1>
+          <Globe className="h-8 w-8 text-amber-600" />
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Global Indigenous Plant Explorer</h1>
         </div>
-        <p className="text-medium-contrast max-w-4xl mx-auto text-readable font-medium">
+        <p className="text-gray-600 max-w-4xl mx-auto font-medium">
           Discover traditional botanical knowledge from Indigenous communities worldwide. 
           Filter by region, indigenous tribes, ceremonial uses, and more to explore 
           the rich heritage of plant medicine.
         </p>
-        <div className="flex items-center justify-center gap-2 text-sm text-medium-contrast font-medium">
-          <span className="bg-earth-green/10 px-2 py-1 rounded-md">{plants.length} total plants</span>
+        <div className="flex items-center justify-center gap-2 text-sm text-gray-600 font-medium">
+          <span className="bg-green-100 px-2 py-1 rounded-md text-green-800">{plants.length} total plants</span>
           <span>•</span>
-          <span className="bg-botanical-gold/10 px-2 py-1 rounded-md">{filteredPlants.length} matching filters</span>
+          <span className="bg-amber-100 px-2 py-1 rounded-md text-amber-800">{filteredPlants.length} matching filters</span>
         </div>
       </motion.div>
 
       {/* Filters Section */}
       <motion.div
-        className="card-enhanced p-6"
+        className="bg-white rounded-lg border border-gray-200 shadow-sm p-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <div className="flex items-center gap-2 mb-4">
-          <Filter className="h-5 w-5 text-botanical-gold" />
-          <h2 className="text-lg font-semibold text-high-contrast text-heading">Filter Plants</h2>
+          <Filter className="h-5 w-5 text-amber-600" />
+          <h2 className="text-lg font-semibold text-gray-900">Filter Plants</h2>
           <Button 
             variant="outline" 
             size="sm" 
             onClick={resetFilters}
-            className="ml-auto btn-primary-enhanced hover:bg-earth-green focus-enhanced"
+            className="ml-auto hover:bg-green-50 border-green-200 text-green-700 hover:text-green-800"
             data-testid="reset-filters"
           >
             Reset All

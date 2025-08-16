@@ -454,11 +454,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const { userId, moduleId } = req.params;
       const { progress, status, xpEarned } = req.body;
       
-      const updatedProgress = await storage.updateLearningProgress(userId, moduleId, {
-        progress,
-        status,
-        xpEarned: xpEarned || 0
-      });
+      const updatedProgress = await storage.updateLearningProgress(userId, moduleId, progress, status, xpEarned || 0);
       
       res.json(updatedProgress);
     } catch (error) {
@@ -498,7 +494,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/users/:userId/journey/advance", async (req, res) => {
     try {
       const { userId } = req.params;
-      const result = await storage.advanceJourneyStage(userId);
+      const result = await storage.advanceJourneyStage(userId, "next");
       
       res.json(result);
     } catch (error) {
@@ -512,7 +508,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Get inventory status for products
   app.get("/api/inventory", async (req, res) => {
     try {
-      const inventory = await storage.getInventory();
+      const inventory = await storage.getInventory("all");
       res.json(inventory);
     } catch (error) {
       console.error("Error fetching inventory:", error);

@@ -266,7 +266,7 @@ export class MemStorage implements IStorage {
         productType: "Premium loose-leaf herbal tea blend",
         rating: "4.9",
         reviewCount: 127,
-        imageUrl: "/assets/labrador-tea-premium-blend.png",
+        imageUrl: "/assets/labrador-tea-premium-blend-new.png",
         qrCode: "RUTZ-LAB-001",
         scientificName: "Rhododendron groenlandicum",
         extractionMethod: "Traditional air-drying and careful leaf preparation",

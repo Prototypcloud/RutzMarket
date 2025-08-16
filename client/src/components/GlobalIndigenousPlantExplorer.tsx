@@ -268,7 +268,7 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
 
           {/* Indigenous Tribes Filter */}
           <div className="space-y-2">
-            <label className="text-sm font-medium text-rutz-forest">Indigenous Group</label>
+            <label className="text-sm font-medium text-rutz-forest">Indigenous Tribe</label>
             <Select value={filters.tribe} onValueChange={(value) => setFilters(prev => ({ ...prev, tribe: value }))}>
               <SelectTrigger data-testid="tribe-filter">
                 <SelectValue placeholder="All Tribes" />

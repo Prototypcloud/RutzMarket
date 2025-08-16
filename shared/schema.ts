@@ -463,10 +463,12 @@ export const globalIndigenousPlants = pgTable("global_indigenous_plants", {
   countryOfOrigin: text("country_of_origin").notNull(),
   traditionalUses: text("traditional_uses").notNull(),
   popularProductForm: text("popular_product_form").notNull(),
-  timeframe: text("timeframe").notNull(),
+  timeframe: text("timeframe").notNull().default("Traditional knowledge passed down through generations"),
   associatedCeremony: text("associated_ceremony"),
   veterinaryUse: text("veterinary_use"),
   indigenousTribesOrGroup: text("indigenous_tribes_or_group").notNull(),
+  sustainabilityNotes: text("sustainability_notes"),
+  researchStatus: text("research_status"),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),
 });

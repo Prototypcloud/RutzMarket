@@ -156,6 +156,7 @@ export interface IStorage {
   getGlobalIndigenousPlants(): Promise<GlobalIndigenousPlant[]>;
   getGlobalIndigenousPlant(id: string): Promise<GlobalIndigenousPlant | undefined>;
   createGlobalIndigenousPlants(plants: InsertGlobalIndigenousPlant[]): Promise<GlobalIndigenousPlant[]>;
+  deleteAllGlobalIndigenousPlants(): Promise<void>;
   getPlantsByRegion(region: string): Promise<GlobalIndigenousPlant[]>;
   getPlantsByTribe(tribe: string): Promise<GlobalIndigenousPlant[]>;
   searchPlants(filters: {
@@ -1522,6 +1523,10 @@ export class MemStorage implements IStorage {
   // Global Indigenous Plants Implementation
   async getGlobalIndigenousPlants(): Promise<GlobalIndigenousPlant[]> {
     return Array.from(this.globalIndigenousPlants.values());
+  }
+
+  async deleteAllGlobalIndigenousPlants(): Promise<void> {
+    this.globalIndigenousPlants.clear();
   }
 
   async getGlobalIndigenousPlant(id: string): Promise<GlobalIndigenousPlant | undefined> {

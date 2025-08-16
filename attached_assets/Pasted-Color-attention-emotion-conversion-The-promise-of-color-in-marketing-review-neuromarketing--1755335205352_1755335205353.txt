@@ -1,0 +1,40 @@
+Color (attention, emotion, conversion)
+
+The promise of color in marketing (review + neuromarketing) — synthesizes academic work on how hue/chroma/lightness and audience traits shape behavior; urges testing due to cultural/individual differences. 
+ResearchGate
+
+How color psychology impacts conversion rates (UserTesting) — practical UX guidance, accessibility notes, and the famous red-vs-green CTA test (+ caveats that contrast/context matter more than any “magic” color). 
+UserTesting
+
+Color & psychological functioning (scholarly review) — broad overview of color’s effects on motivation, cognition, and behavior; good theory backbone for neuromarketing claims. 
+PMC
+
+WCAG contrast requirements — the must-follow baseline (4.5:1 for normal text, 3:1 for large) so your palette converts and stays readable. 
+W3C
+WebAIM
+
+Fonts & typography (trust, cognitive load, readability)
+
+Font Matters (2024, open-access study) — in tasks measuring attention/working memory, serif (Times New Roman) produced faster attention on a letter-search task; working memory unchanged. Useful nuance vs. “serif vs sans” myths. 
+PMC
+
+Serif vs sans on e-commerce usability (PeerJ Computer Science, 2022) — no meaningful performance differences between Roboto Serif and Roboto (sans) overall; preference varied by gender. Translation: pick for brand voice, then test. 
+PMC
+
+Legibility, Readability, Comprehension (NN/g) — core heuristics: adequate size, high contrast, clean faces, and plain backgrounds to reduce cognitive load. 
+Nielsen Norman Group
+
+Optimal line length (Baymard) — summarizes evidence for ~50–75 characters per line to aid scanning and comprehension on the web. 
+Baymard Institute
+
+Quick takeaways you can apply today
+
+Prioritize contrast and value differences (not just hue) for CTAs and text; test in your real UI. 
+UserTesting
+
+Choose typefaces for brand signal + legibility, then A/B test on tasks that matter (read speed, completion, trust). The serif/sans split is rarely decisive on its own. 
+PMC
+Nielsen Norman Group
+
+Stay WCAG-compliant from the start; accessibility typically boosts conversions. 
+WebAIM

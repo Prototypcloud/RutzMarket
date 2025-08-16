@@ -10,6 +10,7 @@ import {
   badges,
   journeyStages,
   inventory,
+  globalIndigenousPlants,
   type InsertProduct,
   type InsertSupplyChainStep,
   type InsertCommunityProject,
@@ -17,8 +18,8 @@ import {
   type InsertImpactMilestone,
   type InsertLearningModule,
   type InsertBadge,
-
   type InsertInventory,
+  type InsertGlobalIndigenousPlant,
 } from "@shared/schema";
 
 export async function initializeDatabase() {
@@ -538,6 +539,207 @@ export async function initializeDatabase() {
   }));
 
   await db.insert(inventory).values(inventoryData);
+
+  // Initialize global indigenous plants
+  const globalPlantsData: InsertGlobalIndigenousPlant[] = [
+    {
+      plantName: "Chaga",
+      scientificName: "Inonotus obliquus",
+      region: "North America",
+      countryOfOrigin: "Canada, Alaska",
+      indigenousTribesOrGroup: "Cree, Ojibwe, Inuit",
+      traditionalUses: "Immune support, digestive health, tea preparation for winter wellness",
+      popularProductForm: "Extract powder, tincture, tea",
+      associatedCeremony: "Winter health ceremonies",
+      veterinaryUse: "Traditional animal health support",
+      sustainabilityNotes: "Wild-harvested with sustainable methods ensuring tree survival",
+      researchStatus: "Extensively studied for β-glucans and immune support"
+    },
+    {
+      plantName: "Labrador Tea",
+      scientificName: "Rhododendron groenlandicum",
+      region: "North America",
+      countryOfOrigin: "Canada, Alaska",
+      indigenousTribesOrGroup: "Inuit, Cree, Dene",
+      traditionalUses: "Respiratory wellness, digestive support, ceremonial beverage",
+      popularProductForm: "Dried leaves, tea blend",
+      associatedCeremony: "Seasonal transition rituals",
+      veterinaryUse: null,
+      sustainabilityNotes: "Bog-harvested with careful regeneration practices",
+      researchStatus: "Traditional knowledge documented, antioxidant properties studied"
+    },
+    {
+      plantName: "Wild Rose Hips",
+      scientificName: "Rosa acicularis",
+      region: "North America",
+      countryOfOrigin: "Canada, Northern USA",
+      indigenousTribesOrGroup: "Plains Cree, Blackfoot, Métis",
+      traditionalUses: "Vitamin C source, digestive health, winter nutrition",
+      popularProductForm: "Dried fruit, powder, syrup",
+      associatedCeremony: null,
+      veterinaryUse: "Traditional animal nutrition supplement",
+      sustainabilityNotes: "Wild-harvested following traditional timing and methods",
+      researchStatus: "High vitamin C content confirmed, nutritional profile documented"
+    },
+    {
+      plantName: "Fireweed",
+      scientificName: "Chamaenerion angustifolium",
+      region: "North America",
+      countryOfOrigin: "Canada, Alaska, Northern USA",
+      indigenousTribesOrGroup: "Inuit, Athabascan, Cree",
+      traditionalUses: "Digestive support, women's health, wound healing",
+      popularProductForm: "Dried leaves, tea, extract",
+      associatedCeremony: "Healing ceremonies",
+      veterinaryUse: null,
+      sustainabilityNotes: "Abundant in disturbed soils, regenerative harvesting",
+      researchStatus: "Traditional uses documented, preliminary phytochemical analysis"
+    },
+    {
+      plantName: "Sage",
+      scientificName: "Artemisia tridentata",
+      region: "North America", 
+      countryOfOrigin: "Western Canada, Western USA",
+      indigenousTribesOrGroup: "Lakota, Cherokee, Navajo",
+      traditionalUses: "Ceremonial smudging, respiratory support, spiritual cleansing",
+      popularProductForm: "Dried bundles, loose leaf, essential oil",
+      associatedCeremony: "Smudging ceremonies, purification rituals",
+      veterinaryUse: null,
+      sustainabilityNotes: "Respectful harvesting with tribal permission and guidelines",
+      researchStatus: "Antimicrobial properties studied, cultural significance documented"
+    },
+    {
+      plantName: "Dragon's Blood",
+      scientificName: "Croton lechleri",
+      region: "South America",
+      countryOfOrigin: "Peru, Ecuador, Colombia",
+      indigenousTribesOrGroup: "Shipibo, Ashuar, Achuar",
+      traditionalUses: "Wound healing, digestive support, skin protection",
+      popularProductForm: "Latex resin, extract, topical preparations",
+      associatedCeremony: "Healing rituals",
+      veterinaryUse: "Traditional animal wound treatment",
+      sustainabilityNotes: "Sustainable tapping methods that don't harm trees",
+      researchStatus: "Proven wound healing properties, clinical studies on bioactive compounds"
+    },
+    {
+      plantName: "Cat's Claw",
+      scientificName: "Uncaria tomentosa",
+      region: "South America",
+      countryOfOrigin: "Peru, Brazil, Ecuador",
+      indigenousTribesOrGroup: "Asháninka, Shipibo, Matsés",
+      traditionalUses: "Immune support, joint health, digestive wellness",
+      popularProductForm: "Bark extract, capsules, tea",
+      associatedCeremony: "Healing ceremonies",
+      veterinaryUse: null,
+      sustainabilityNotes: "Sustainable bark harvesting without killing vines",
+      researchStatus: "Extensive research on immune-modulating alkaloids"
+    },
+    {
+      plantName: "Cacao",
+      scientificName: "Theobroma cacao",
+      region: "South America",
+      countryOfOrigin: "Ecuador, Peru, Colombia",
+      indigenousTribesOrGroup: "Maya, Aztec, Quechua",
+      traditionalUses: "Ceremonial beverage, heart health, mood enhancement",
+      popularProductForm: "Raw beans, powder, ceremonial paste",
+      associatedCeremony: "Cacao ceremonies, heart-opening rituals",
+      veterinaryUse: null,
+      sustainabilityNotes: "Agroforestry cultivation preserving rainforest ecosystems",
+      researchStatus: "Cardiovascular benefits well-documented, flavonoid research extensive"
+    },
+    {
+      plantName: "Kangaroo Vine",
+      scientificName: "Cissus antarctica",
+      region: "Australia",
+      countryOfOrigin: "Australia",
+      indigenousTribesOrGroup: "Aboriginal Australians (various tribes)",
+      traditionalUses: "Joint health, wound healing, digestive support",
+      popularProductForm: "Leaf extract, powder, topical preparations",
+      associatedCeremony: null,
+      veterinaryUse: "Traditional animal joint care",
+      sustainabilityNotes: "Cultivated and wild-harvested with Aboriginal guidance",
+      researchStatus: "Joint health benefits studied, traditional knowledge preserved"
+    },
+    {
+      plantName: "Kakadu Plum",
+      scientificName: "Terminalia ferdinandiana",
+      region: "Australia",
+      countryOfOrigin: "Northern Australia",
+      indigenousTribesOrGroup: "Yolŋu, Larrakia, Tiwi",
+      traditionalUses: "Vitamin C source, immune support, skin health",
+      popularProductForm: "Fruit powder, extract, vitamin supplements",
+      associatedCeremony: "Seasonal harvesting ceremonies",
+      veterinaryUse: null,
+      sustainabilityNotes: "Community-managed harvesting with traditional owners",
+      researchStatus: "Highest natural vitamin C content documented"
+    },
+    {
+      plantName: "Kawakawa",
+      scientificName: "Piper excelsum",
+      region: "New Zealand",
+      countryOfOrigin: "New Zealand",
+      indigenousTribesOrGroup: "Māori",
+      traditionalUses: "Digestive health, respiratory support, skin conditions",
+      popularProductForm: "Leaf tea, extract, topical balms",
+      associatedCeremony: "Healing rituals, traditional medicine",
+      veterinaryUse: null,
+      sustainabilityNotes: "Māori-managed cultivation and harvesting",
+      researchStatus: "Anti-inflammatory properties studied, traditional knowledge documented"
+    },
+    {
+      plantName: "Mānuka",
+      scientificName: "Leptospermum scoparium",
+      region: "New Zealand",
+      countryOfOrigin: "New Zealand, Southeast Australia",
+      indigenousTribesOrGroup: "Māori",
+      traditionalUses: "Wound healing, digestive support, respiratory health",
+      popularProductForm: "Honey, leaf extract, essential oil",
+      associatedCeremony: "Traditional healing ceremonies",
+      veterinaryUse: "Animal wound care",
+      sustainabilityNotes: "Sustainable beekeeping and leaf harvesting practices",
+      researchStatus: "Antibacterial properties extensively researched, medical applications proven"
+    },
+    {
+      plantName: "African Potato",
+      scientificName: "Hypoxis hemerocallidea",
+      region: "Africa",
+      countryOfOrigin: "South Africa",
+      indigenousTribesOrGroup: "Zulu, Xhosa, Sotho",
+      traditionalUses: "Immune support, prostate health, general wellness",
+      popularProductForm: "Root extract, capsules, powder",
+      associatedCeremony: "Traditional healing rituals",
+      veterinaryUse: null,
+      sustainabilityNotes: "Cultivation programs to reduce wild harvesting pressure",
+      researchStatus: "Immune-modulating compounds identified, clinical studies ongoing"
+    },
+    {
+      plantName: "Kanna",
+      scientificName: "Sceletium tortuosum",
+      region: "Africa",
+      countryOfOrigin: "South Africa",
+      indigenousTribesOrGroup: "Khoikhoi, San",
+      traditionalUses: "Mood enhancement, stress relief, social ceremonies",
+      popularProductForm: "Dried plant, extract, tea",
+      associatedCeremony: "Social and spiritual ceremonies",
+      veterinaryUse: null,
+      sustainabilityNotes: "Controlled cultivation to preserve wild populations",
+      researchStatus: "Mood-enhancing alkaloids studied, traditional use patterns documented"
+    },
+    {
+      plantName: "Buchu",
+      scientificName: "Agathosma betulina",
+      region: "Africa",
+      countryOfOrigin: "South Africa",
+      indigenousTribesOrGroup: "Khoikhoi, San",
+      traditionalUses: "Urinary tract health, digestive support, respiratory wellness",
+      popularProductForm: "Leaf extract, tea, essential oil",
+      associatedCeremony: "Traditional healing ceremonies",
+      veterinaryUse: "Traditional animal health applications",
+      sustainabilityNotes: "Sustainable wild harvesting and cultivation initiatives",
+      researchStatus: "Antimicrobial properties documented, traditional uses validated"
+    }
+  ];
+
+  await db.insert(globalIndigenousPlants).values(globalPlantsData);
 
   console.log("Database initialization complete!");
 }

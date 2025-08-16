@@ -719,6 +719,10 @@ export class DatabaseStorage implements IStorage {
     return plant;
   }
 
+  async createGlobalIndigenousPlants(plants: InsertGlobalIndigenousPlant[]): Promise<GlobalIndigenousPlant[]> {
+    return await db.insert(globalIndigenousPlants).values(plants).returning();
+  }
+
   async getPlantsByRegion(region: string): Promise<GlobalIndigenousPlant[]> {
     return await db.select().from(globalIndigenousPlants).where(eq(globalIndigenousPlants.region, region));
   }

@@ -155,6 +155,7 @@ export interface IStorage {
   // Global Indigenous Plants
   getGlobalIndigenousPlants(): Promise<GlobalIndigenousPlant[]>;
   getGlobalIndigenousPlant(id: string): Promise<GlobalIndigenousPlant | undefined>;
+  createGlobalIndigenousPlants(plants: InsertGlobalIndigenousPlant[]): Promise<GlobalIndigenousPlant[]>;
   getPlantsByRegion(region: string): Promise<GlobalIndigenousPlant[]>;
   getPlantsByTribe(tribe: string): Promise<GlobalIndigenousPlant[]>;
   searchPlants(filters: {

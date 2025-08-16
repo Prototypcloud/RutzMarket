@@ -40,10 +40,10 @@ interface PlantFilters {
 const GlobalIndigenousPlantExplorer: React.FC = () => {
   const [filters, setFilters] = useState<PlantFilters>({
     searchTerm: '',
-    region: '',
-    country: '',
-    tribe: '',
-    productForm: '',
+    region: 'all',
+    country: 'all',
+    tribe: 'all',
+    productForm: 'all',
     ceremonialUse: false,
     veterinaryUse: false,
   });
@@ -80,10 +80,10 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
         plant.scientificName.toLowerCase().includes(filters.searchTerm.toLowerCase()) ||
         plant.traditionalUses.toLowerCase().includes(filters.searchTerm.toLowerCase());
       
-      const matchesRegion = !filters.region || plant.region === filters.region;
-      const matchesCountry = !filters.country || plant.countryOfOrigin.includes(filters.country);
-      const matchesTribe = !filters.tribe || plant.indigenousTribesOrGroup.includes(filters.tribe);
-      const matchesProductForm = !filters.productForm || plant.popularProductForm.includes(filters.productForm);
+      const matchesRegion = filters.region === 'all' || plant.region === filters.region;
+      const matchesCountry = filters.country === 'all' || plant.countryOfOrigin.includes(filters.country);
+      const matchesTribe = filters.tribe === 'all' || plant.indigenousTribesOrGroup.includes(filters.tribe);
+      const matchesProductForm = filters.productForm === 'all' || plant.popularProductForm.includes(filters.productForm);
       const matchesCeremonial = !filters.ceremonialUse || Boolean(plant.associatedCeremony);
       const matchesVeterinary = !filters.veterinaryUse || Boolean(plant.veterinaryUse);
 
@@ -95,10 +95,10 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
   const resetFilters = () => {
     setFilters({
       searchTerm: '',
-      region: '',
-      country: '',
-      tribe: '',
-      productForm: '',
+      region: 'all',
+      country: 'all',
+      tribe: 'all',
+      productForm: 'all',
       ceremonialUse: false,
       veterinaryUse: false,
     });
@@ -242,7 +242,7 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
                 <SelectValue placeholder="All Regions" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Regions</SelectItem>
+                <SelectItem value="all">All Regions</SelectItem>
                 {filterOptions.regions.map(region => (
                   <SelectItem key={region} value={region}>{region}</SelectItem>
                 ))}
@@ -258,7 +258,7 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
                 <SelectValue placeholder="All Countries" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Countries</SelectItem>
+                <SelectItem value="all">All Countries</SelectItem>
                 {filterOptions.countries.map(country => (
                   <SelectItem key={country} value={country}>{country}</SelectItem>
                 ))}
@@ -274,7 +274,7 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
                 <SelectValue placeholder="All Tribes" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Indigenous Groups</SelectItem>
+                <SelectItem value="all">All Indigenous Groups</SelectItem>
                 {filterOptions.tribes.map(tribe => (
                   <SelectItem key={tribe} value={tribe}>{tribe}</SelectItem>
                 ))}
@@ -292,7 +292,7 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
                 <SelectValue placeholder="All Product Forms" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Product Forms</SelectItem>
+                <SelectItem value="all">All Product Forms</SelectItem>
                 {filterOptions.productForms.map(form => (
                   <SelectItem key={form} value={form}>{form}</SelectItem>
                 ))}

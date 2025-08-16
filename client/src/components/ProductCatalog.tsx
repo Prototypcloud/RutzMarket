@@ -128,7 +128,10 @@ export default function ProductCatalog({ showAllProducts, activeFilter = "all" }
                   <div className="relative overflow-hidden">
                     <Link href={`/products/${product.id}`}>
                       <motion.img
-                        src={product.imageUrl}
+                        src={product.imageUrl === '@assets/chaga-product.png' ? 
+                          '/src/assets/chaga-product.png' :
+                          product.imageUrl
+                        }
                         alt={product.name}
                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
                         whileHover={{ scale: 1.05 }}

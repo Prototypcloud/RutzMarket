@@ -51,8 +51,31 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
   const [selectedPlant, setSelectedPlant] = useState<GlobalIndigenousPlant | null>(null);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const { data: plants = [], isLoading } = useQuery<GlobalIndigenousPlant[]>({
+  const { data: plants = [], isLoading, error } = useQuery<GlobalIndigenousPlant[]>({
     queryKey: ['/api/global-indigenous-plants'],
+  });
+
+  // Debug logging
+  console.log('Plant Explorer Debug:', { 
+    plantsCount: plants?.length, 
+    isLoading, 
+    error: error?.message,
+    filteredCount: plants?.filter(plant => {
+      const matchesSearch = !filters.searchTerm || 
+        plant.plantName.toLowerCase().includes(filters.searchTerm.toLowerCase()) ||
+        plant.scientificName.toLowerCase().includes(filters.searchTerm.toLowerCase()) ||
+        plant.traditionalUses.toLowerCase().includes(filters.searchTerm.toLowerCase());
+      
+      const matchesRegion = filters.region === 'all' || plant.region === filters.region;
+      const matchesCountry = filters.country === 'all' || plant.countryOfOrigin.includes(filters.country);
+      const matchesTribe = filters.tribe === 'all' || plant.indigenousTribesOrGroup.includes(filters.tribe);
+      const matchesProductForm = filters.productForm === 'all' || plant.popularProductForm.includes(filters.productForm);
+      const matchesCeremonial = !filters.ceremonialUse || Boolean(plant.associatedCeremony);
+      const matchesVeterinary = !filters.veterinaryUse || Boolean(plant.veterinaryUse);
+
+      return matchesSearch && matchesRegion && matchesCountry && matchesTribe && 
+             matchesProductForm && matchesCeremonial && matchesVeterinary;
+    }).length
   });
 
   // Extract unique filter options from data
@@ -334,11 +357,24 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        {filteredPlants.length === 0 ? (
+        {error ? (
+          <div className="text-center py-20">
+            <Leaf className="h-16 w-16 text-red-500/50 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-red-600 mb-2">Error Loading Plants</h3>
+            <p className="text-red-500">Failed to load plant data: {error.message}</p>
+          </div>
+        ) : filteredPlants.length === 0 && plants.length > 0 ? (
           <div className="text-center py-20">
             <Leaf className="h-16 w-16 text-rutz-sage/50 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-rutz-forest mb-2">No plants found</h3>
+            <h3 className="text-xl font-semibold text-rutz-forest mb-2">No plants match your filters</h3>
             <p className="text-rutz-sage">Try adjusting your filters to see more results.</p>
+            <Button onClick={resetFilters} className="mt-4">Reset Filters</Button>
+          </div>
+        ) : filteredPlants.length === 0 && plants.length === 0 ? (
+          <div className="text-center py-20">
+            <Leaf className="h-16 w-16 text-rutz-sage/50 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-rutz-forest mb-2">No plants available</h3>
+            <p className="text-rutz-sage">The plant database appears to be empty.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

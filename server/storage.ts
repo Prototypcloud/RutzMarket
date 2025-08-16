@@ -523,6 +523,33 @@ export class MemStorage implements IStorage {
         inStock: true
       },
       {
+        id: "cloudberry-antioxidant-powder",
+        name: "Cloudberry Antioxidant Powder",
+        description: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Rare Arctic superfruit powder from wild cloudberries, traditionally gathered by Indigenous communities in northern territories. This golden berry contains exceptional levels of antioxidants, vitamin C, and unique Arctic compounds.",
+        shortDescription: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Rare Arctic superfruit with concentrated antioxidants, 100g pouch",
+        price: "48.99",
+        origin: "Cheslatta Carrier Nation Territory, British Columbia",
+        category: "Superfood Powders",
+        sector: "Traditional Medicine & Wellness",
+        plantMaterial: "Wild Cloudberries",
+        productType: "Freeze-dried superfruit powder",
+        rating: "4.9",
+        reviewCount: 89,
+        imageUrl: "/assets/cloudberry-antioxidant-powder.png",
+        qrCode: "RUTZ-CLD-001",
+        scientificName: "Rubus chamaemorus",
+        extractionMethod: "Freeze-drying to preserve delicate compounds",
+        bioactiveCompounds: ["Anthocyanins", "Ellagic acid", "Vitamin C", "Omega-3 fatty acids"],
+        certifications: ["Wild-harvested", "Raw superfruit", "Arctic certified"],
+        sustainabilityStory: "Sustainably wild-harvested from pristine Arctic wilderness using traditional Indigenous methods. Cloudberries grow slowly in harsh northern conditions, making them a precious and rare superfruit that requires careful stewardship.",
+        communityImpact: "Direct partnership with Indigenous communities in Arctic regions who have traditional rights and knowledge of cloudberry gathering. Supports northern community economic development and traditional food systems.",
+        researchPapers: [
+          { title: "Antioxidant Properties of Arctic Berries: Cloudberry Analysis", url: "#", year: 2023 },
+          { title: "Traditional Uses and Nutritional Value of Rubus chamaemorus", url: "#", year: 2024 }
+        ],
+        inStock: true
+      },
+      {
         id: "ashwagandha-root",
         name: "Ashwagandha Root Extract",
         description: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Adaptogenic herb for stress relief and vitality. Traditional wisdom meets modern extraction techniques for optimal bioactivity.",

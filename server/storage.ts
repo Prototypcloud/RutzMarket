@@ -388,6 +388,33 @@ export class MemStorage implements IStorage {
         inStock: true
       },
       {
+        id: "devils-club-root-extract",
+        name: "Devil's Club Root Extract",
+        description: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Powerful liquid extract of Devil's Club root, traditionally used by Pacific Northwest Indigenous communities for immune support and joint wellness. Hand-harvested roots are carefully processed using traditional methods combined with modern extraction techniques.",
+        shortDescription: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Traditional Pacific Northwest root extract for immune and joint support",
+        price: "68.99",
+        origin: "Cheslatta Carrier Nation Territory, British Columbia",
+        category: "Liquid Extracts",
+        sector: "Traditional Medicine & Wellness",
+        plantMaterial: "Devil's Club Root",
+        productType: "Concentrated liquid herbal extract",
+        rating: "4.8",
+        reviewCount: 84,
+        imageUrl: "/assets/devils-club-root-extract.png",
+        qrCode: "RUTZ-DCL-001",
+        scientificName: "Oplopanax horridus",
+        extractionMethod: "Traditional alcohol-water extraction",
+        bioactiveCompounds: ["Saponins", "Polysaccharides", "Phenolic compounds", "Triterpenes"],
+        certifications: ["Wild-harvested", "Traditional preparation", "Third-party tested"],
+        sustainabilityStory: "Sustainably wild-harvested using traditional Indigenous methods that respect the plant's sacred nature and ensure regeneration. Devil's Club is considered a powerful medicine plant by Pacific Northwest tribes.",
+        communityImpact: "Direct partnership with traditional harvesters preserves ancestral knowledge while providing sustainable income. Portion of proceeds supports Indigenous youth education programs.",
+        researchPapers: [
+          { title: "Ethnobotanical Study of Oplopanax horridus in Pacific Northwest", url: "#", year: 2023 },
+          { title: "Bioactive Compounds in Devil's Club Root Extracts", url: "#", year: 2024 }
+        ],
+        inStock: true
+      },
+      {
         id: "ashwagandha-root",
         name: "Ashwagandha Root Extract",
         description: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Adaptogenic herb for stress relief and vitality. Traditional wisdom meets modern extraction techniques for optimal bioactivity.",

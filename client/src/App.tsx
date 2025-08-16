@@ -20,6 +20,7 @@ import LearningHub from "@/pages/LearningHub";
 import Journey from "@/pages/Journey";
 import ImpactRewards from "@/pages/ImpactRewards";
 import PlantRecommendations from "@/pages/PlantRecommendations";
+import ChagaPortfolio from "@/pages/ChagaPortfolio";
 
 function Router() {
   return (
@@ -38,6 +39,7 @@ function Router() {
       <Route path="/journey" component={Journey} />
       <Route path="/impact-rewards" component={ImpactRewards} />
       <Route path="/plant-recommendations" component={PlantRecommendations} />
+      <Route path="/chaga-portfolio" component={ChagaPortfolio} />
       <Route path="/account" component={UserAccount} />
       <Route path="/orders" component={OrderHistory} />
       <Route component={NotFound} />

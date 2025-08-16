@@ -415,6 +415,33 @@ export class MemStorage implements IStorage {
         inStock: true
       },
       {
+        id: "bearberry-leaf-capsules",
+        name: "Bearberry Leaf Capsules",
+        description: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Premium bearberry leaf extract in vegetarian capsules, traditionally used by Indigenous communities for urinary tract and kidney health. Rich in arbutin and natural antimicrobial compounds.",
+        shortDescription: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Traditional urinary tract support in vegetarian capsules",
+        price: "42.99",
+        origin: "Cheslatta Carrier Nation Territory, British Columbia",
+        category: "Capsules",
+        sector: "Traditional Medicine & Wellness",
+        plantMaterial: "Bearberry Leaves",
+        productType: "Encapsulated herbal extract",
+        rating: "4.7",
+        reviewCount: 96,
+        imageUrl: "/assets/bearberry-leaf-capsules.png",
+        qrCode: "RUTZ-BEA-001",
+        scientificName: "Arctostaphylos uva-ursi",
+        extractionMethod: "Standardized leaf extraction",
+        bioactiveCompounds: ["Arbutin", "Hydroquinone", "Tannins", "Quercetin"],
+        certifications: ["Wild-harvested", "Vegetarian capsules", "Third-party tested"],
+        sustainabilityStory: "Sustainably wild-harvested using traditional Indigenous methods that ensure plant regeneration. Bearberry has been used by Arctic and subarctic Indigenous peoples for generations.",
+        communityImpact: "Direct partnership with Indigenous harvesters preserves traditional knowledge while providing sustainable income. Supports community health programs in northern territories.",
+        researchPapers: [
+          { title: "Antimicrobial Properties of Arctostaphylos uva-ursi", url: "#", year: 2023 },
+          { title: "Traditional Uses and Modern Applications of Bearberry", url: "#", year: 2024 }
+        ],
+        inStock: true
+      },
+      {
         id: "ashwagandha-root",
         name: "Ashwagandha Root Extract",
         description: "Sourcing: The Cheslatta Carrier Nation's traditional and sacred territory. Adaptogenic herb for stress relief and vitality. Traditional wisdom meets modern extraction techniques for optimal bioactivity.",

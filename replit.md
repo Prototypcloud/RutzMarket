@@ -2,6 +2,13 @@
 
 RÜTZ is a premium botanical extracts e-commerce platform with the brand essence "Rooted in Wisdom. Perfected by Science." The application unites indigenous heritage and German scientific precision to create trusted botanical extracts, featuring ethical sourcing through respectful partnerships with local communities and Fraunhofer research validation. Built with expanded brand identity featuring earth-green colors, botanical gold accents, indigenous partnership seals, and scientific credibility elements that emphasize heritage, scientific excellence, sustainability, fairness, and integrity.
 
+## Recent Updates (August 2025)
+- Enhanced typography system with WCAG AAA compliance (7:1 contrast ratios)
+- Improved color accessibility with high-contrast design
+- Added "Indigenous Wild Harvest" section to About page with comprehensive principles and product pathways
+- Applied color psychology principles for better user engagement
+- Database fully operational with complete 71-plant dataset from global Indigenous communities
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.

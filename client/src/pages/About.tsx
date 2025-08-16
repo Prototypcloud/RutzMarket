@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Heart, Users, Award, Globe, MapPin, Calendar, ChevronDown, FileText, Target, Shield, Lightbulb, Building2, DollarSign, TrendingUp } from "lucide-react";
+import { Heart, Users, Award, Globe, MapPin, Calendar, ChevronDown, FileText, Target, Shield, Lightbulb, Building2, DollarSign, TrendingUp, Leaf, Microscope, Scale, Beaker, Book, CheckCircle } from "lucide-react";
 import { useState } from "react";
 
 const timeline = [
@@ -213,6 +213,72 @@ Conclusion: Beyond Nature "Tribe" offers a bold, systemic redesign of how Indige
   }
 ];
 
+const indigenousWildHarvestContent = [
+  {
+    id: "definition",
+    title: "What is Indigenous Wild Harvest?",
+    icon: <Leaf className="w-5 h-5" />,
+    content: `Indigenous wild harvest is the community-led, place-based collection of non-cultivated species (plants/fungi) from their natural habitats, conducted under Free, Prior and Informed Consent (FPIC) and Access-and-Benefit-Sharing (ABS) with Indigenous rights-holders.
+
+It follows Good Agricultural and Collection Practices (GACP) and sustainable-use standards to protect species, habitats, and culture, and embeds shared governance of knowledge, materials, data, and benefits across the value chain.
+
+Why it matters: Indigenous food systems steward biodiversity and nutrient-dense "wild foods," linking diet, social systems, and ecosystem health; these systems are proven reservoirs of safe foods and pharmacologically rich botanicals.`
+  },
+  {
+    id: "principles",
+    title: "Fundamental Principles for R&D and Commercialization",
+    icon: <Scale className="w-5 h-5" />,
+    content: `Rights & relationships first: Respect UNDRIP (FPIC, self-determination) and the Nagoya Protocol (fair, equitable benefit-sharing) from scoping to post-market. Benefits should combine revenue-sharing, decision seats, and capacity-building.
+
+Two-Eyed Seeing: Integrate Indigenous knowledge and Western science—co-define indications, culturally appropriate uses, and outcomes alongside lab analytics and clinical methods.
+
+Sustainable, traceable collection: Apply WHO GACP and FairWild: resource assessments, no-take zones/rotations, collector safety, habitat protection, and full lot traceability.
+
+Quality & safety by design: Build pharmaco-/nutri-vigilance and EFSA-style botanical risk assessment into development: correct ID (incl. DNA barcoding when needed), validated marker assays (HPLC/LC-MS), contaminant limits, stability, and label accuracy.
+
+Evidence for claims: Follow the WHO TCIM strategy and regional rules: use literature/traditional-use evidence where acceptable; generate new clinical or nutritional data for higher-level claims.`
+  },
+  {
+    id: "characteristics",
+    title: "Characteristics of This Emerging Source of Well-Being",
+    icon: <Microscope className="w-5 h-5" />,
+    content: `Biocultural grounding: Diet-health practices are embedded in land, ceremony, and seasonal cycles—conferring adherence and meaning beyond ingredients alone.
+
+Phytochemical richness with variability: Wild environments can enhance or shift bioactive profiles; rigorous specifications and batch-to-batch controls are essential.
+
+High trust—if transparent: ABS documentation, Indigenous co-branding, third-party wild-collection standards, and open quality data earn patient/consumer trust.
+
+Regulatory pluralism: The same material may be a food supplement in one market, a listed medicine in another, or a traditional herbal medicinal product in the EU—choose the pathway that fits evidence, claims, and intended use.`
+  },
+  {
+    id: "product-categories",
+    title: "From Forest to Finished Goods: Eligible Product Categories",
+    icon: <Beaker className="w-5 h-5" />,
+    content: `A. Dietary / Food Supplements (core nutraceuticals):
+Standardized extract capsules/tablets/softgels; powders/drink mixes; gummies/chews; tinctures (hydroethanolic/glycerites); standardized single-herb or polyherbal blends reflecting traditional formulations.
+
+B. Functional foods & beverages:
+RTD shots (adaptogenic/nootropic/digestive), bars/granolas/fortified snacks, culturally justified ferments, microencapsulated actives for bakery/dairy/alt-protein.
+
+C. Medical foods / Foods for Special Medical Purposes (FSMP):
+For clinician-supervised dietary management of patients with needs unmet by normal diets; must meet EU definitions and be used under medical supervision.
+
+D. Cosmeceuticals / Nutricosmetics:
+"Beauty-from-within" supplements (skin/hair/collagen support) and topical adjuncts where traditional external use exists.
+
+E. Traditional Herbal Medicinal Products / Listed Medicines:
+EU THMPD simplified registration for long-standing traditional use; Australia TGA "Listed medicines"; Canada NHPs under Natural Health Products Regulations.`
+  },
+  {
+    id: "safety-net",
+    title: "Safety Net Across All Categories",
+    icon: <Shield className="w-5 h-5" />,
+    content: `Embed post-market safety monitoring (herbal/nutri-vigilance), adverse-event reporting, and periodic label/spec reviews; WHO provides templates to integrate herbal products into national pharmacovigilance systems.
+
+Bottom line: Indigenous wild-harvested plants are a bioculturally rooted, phytochemically rich, and regulation-ready source of well-being—when and only when programs are co-designed with Indigenous partners (FPIC/ABS), harvested sustainably (GACP/FairWild), and developed with two-eyed evidence standards from identity to clinical use.`
+  }
+];
+
 export default function About() {
   const [openSections, setOpenSections] = useState<Set<string>>(new Set());
 
@@ -368,6 +434,88 @@ export default function About() {
                         <CardContent className="pt-6">
                           <div className="prose prose-forest max-w-none">
                             <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                              {section.content}
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Indigenous Wild Harvest */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-high-contrast text-heading mb-4">
+              Indigenous Wild Harvest
+            </h2>
+            <p className="text-lg text-medium-contrast max-w-3xl mx-auto text-readable">
+              Understanding the principles, proof, and product pathways of Indigenous wild-harvested plants for health
+            </p>
+            <Badge className="bg-earth-green text-white mt-4 px-4 py-2 text-sm">
+              Principles, Proof & Product Pathways
+            </Badge>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-4"
+            >
+              {indigenousWildHarvestContent.map((section, index) => (
+                <motion.div
+                  key={section.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                >
+                  <Collapsible
+                    open={openSections.has(section.id)}
+                    onOpenChange={() => toggleSection(section.id)}
+                  >
+                    <CollapsibleTrigger className="w-full" data-testid={`button-toggle-${section.id}`}>
+                      <Card className="card-enhanced hover:shadow-md transition-shadow duration-200 cursor-pointer">
+                        <CardHeader className="pb-4">
+                          <div className="flex items-center justify-between w-full">
+                            <div className="flex items-center space-x-3">
+                              <div className="text-earth-green">
+                                {section.icon}
+                              </div>
+                              <CardTitle className="text-left text-lg text-high-contrast text-heading">
+                                {section.title}
+                              </CardTitle>
+                            </div>
+                            <ChevronDown 
+                              className={`w-5 h-5 text-earth-green transition-transform duration-200 ${
+                                openSections.has(section.id) ? 'rotate-180' : ''
+                              }`}
+                            />
+                          </div>
+                        </CardHeader>
+                      </Card>
+                    </CollapsibleTrigger>
+                    
+                    <CollapsibleContent>
+                      <Card className="mt-2 border-l-4 border-l-earth-green card-enhanced">
+                        <CardContent className="pt-6">
+                          <div className="prose prose-earth-green max-w-none">
+                            <div className="text-medium-contrast text-readable leading-relaxed whitespace-pre-line">
                               {section.content}
                             </div>
                           </div>

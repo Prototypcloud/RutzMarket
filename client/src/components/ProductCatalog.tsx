@@ -128,8 +128,8 @@ export default function ProductCatalog({ showAllProducts, activeFilter = "all" }
                   <div className="relative overflow-hidden">
                     <Link href={`/products/${product.id}`}>
                       <motion.img
-                        src={product.imageUrl === '@assets/chaga-product.png' ? 
-                          '/src/assets/chaga-product.png' :
+                        src={product.imageUrl.startsWith('/assets/') ? 
+                          `/src${product.imageUrl}` :
                           product.imageUrl
                         }
                         alt={product.name}

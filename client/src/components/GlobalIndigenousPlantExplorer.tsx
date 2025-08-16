@@ -115,23 +115,23 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
       data-testid={`plant-card-${plant.id}`}
     >
       <Card 
-        className="h-full cursor-pointer hover:shadow-lg transition-all duration-300 border-rutz-gold/20 hover:border-rutz-gold/40"
+        className="h-full cursor-pointer card-enhanced hover:shadow-lg transition-all duration-300 border-border hover:border-earth-green/40 hover:bg-accent/50"
         onClick={() => setSelectedPlant(plant)}
       >
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <CardTitle className="text-lg text-rutz-forest mb-1 line-clamp-2">
+              <CardTitle className="text-lg text-high-contrast mb-1 line-clamp-2 font-serif">
                 {plant.plantName}
               </CardTitle>
-              <CardDescription className="text-sm italic text-rutz-sage">
+              <CardDescription className="text-sm italic text-medium-contrast font-sans">
                 {plant.scientificName}
               </CardDescription>
             </div>
-            <Leaf className="h-5 w-5 text-rutz-gold flex-shrink-0 ml-2" />
+            <Leaf className="h-5 w-5 text-botanical-gold flex-shrink-0 ml-2" />
           </div>
           <div className="flex flex-wrap gap-1 mt-2">
-            <Badge variant="secondary" className="text-xs bg-rutz-gold/10 text-rutz-forest">
+            <Badge variant="secondary" className="text-xs bg-earth-green/10 text-earth-green border-earth-green/20">
               {plant.region}
             </Badge>
           </div>
@@ -139,21 +139,21 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
         <CardContent className="pt-0">
           <div className="space-y-2 text-sm">
             <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-rutz-sage" />
-              <span className="text-rutz-sage line-clamp-1">{plant.countryOfOrigin}</span>
+              <MapPin className="h-4 w-4 text-earth-green" />
+              <span className="text-medium-contrast line-clamp-1 font-medium">{plant.countryOfOrigin}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Users className="h-4 w-4 text-rutz-sage" />
-              <span className="text-rutz-sage line-clamp-1">{plant.indigenousTribesOrGroup}</span>
+              <Users className="h-4 w-4 text-earth-green" />
+              <span className="text-medium-contrast line-clamp-1 font-medium">{plant.indigenousTribesOrGroup}</span>
             </div>
             {plant.associatedCeremony && (
               <div className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-rutz-gold" />
-                <span className="text-rutz-gold text-xs">Ceremonial Use</span>
+                <Sparkles className="h-4 w-4 text-botanical-gold" />
+                <span className="text-botanical-gold text-xs font-medium">Ceremonial Use</span>
               </div>
             )}
           </div>
-          <p className="text-sm text-rutz-sage mt-3 line-clamp-2">
+          <p className="text-sm text-medium-contrast mt-3 line-clamp-2 text-readable">
             {plant.traditionalUses}
           </p>
         </CardContent>
@@ -165,8 +165,8 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
     return (
       <div className="flex items-center justify-center py-20">
         <div className="text-center space-y-4">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-rutz-gold mx-auto"></div>
-          <p className="text-rutz-sage">Loading Global Indigenous Plants...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-botanical-gold mx-auto"></div>
+          <p className="text-medium-contrast font-medium">Loading Global Indigenous Plants...</p>
         </div>
       </div>
     );
@@ -182,36 +182,36 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="flex items-center justify-center gap-3 mb-4">
-          <Globe className="h-8 w-8 text-rutz-gold" />
-          <h2 className="text-3xl font-bold text-rutz-forest">Global Indigenous Plant Explorer</h2>
+          <Globe className="h-8 w-8 text-botanical-gold" />
+          <h1 className="text-3xl md:text-4xl font-bold text-high-contrast text-heading">Global Indigenous Plant Explorer</h1>
         </div>
-        <p className="text-rutz-sage max-w-4xl mx-auto leading-relaxed">
+        <p className="text-medium-contrast max-w-4xl mx-auto text-readable font-medium">
           Discover traditional botanical knowledge from Indigenous communities worldwide. 
           Filter by region, indigenous tribes, ceremonial uses, and more to explore 
           the rich heritage of plant medicine.
         </p>
-        <div className="flex items-center justify-center gap-2 text-sm text-rutz-sage">
-          <span>{plants.length} total plants</span>
+        <div className="flex items-center justify-center gap-2 text-sm text-medium-contrast font-medium">
+          <span className="bg-earth-green/10 px-2 py-1 rounded-md">{plants.length} total plants</span>
           <span>•</span>
-          <span>{filteredPlants.length} matching filters</span>
+          <span className="bg-botanical-gold/10 px-2 py-1 rounded-md">{filteredPlants.length} matching filters</span>
         </div>
       </motion.div>
 
       {/* Filters Section */}
       <motion.div
-        className="bg-white rounded-lg border border-rutz-gold/20 p-6 shadow-sm"
+        className="card-enhanced p-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <div className="flex items-center gap-2 mb-4">
-          <Filter className="h-5 w-5 text-rutz-gold" />
-          <h3 className="text-lg font-semibold text-rutz-forest">Filter Plants</h3>
+          <Filter className="h-5 w-5 text-botanical-gold" />
+          <h2 className="text-lg font-semibold text-high-contrast text-heading">Filter Plants</h2>
           <Button 
             variant="outline" 
             size="sm" 
             onClick={resetFilters}
-            className="ml-auto"
+            className="ml-auto btn-primary-enhanced hover:bg-earth-green focus-enhanced"
             data-testid="reset-filters"
           >
             Reset All
@@ -221,14 +221,14 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Search */}
           <div className="space-y-2">
-            <label className="text-sm font-medium text-rutz-forest">Search</label>
+            <label className="text-sm font-medium text-high-contrast">Search</label>
             <div className="relative">
-              <Search className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-rutz-sage" />
+              <Search className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-earth-green" />
               <Input
                 placeholder="Plant name, uses..."
                 value={filters.searchTerm}
                 onChange={(e) => setFilters(prev => ({ ...prev, searchTerm: e.target.value }))}
-                className="pl-9"
+                className="pl-9 focus-enhanced border-border focus:border-earth-green"
                 data-testid="search-input"
               />
             </div>
@@ -236,12 +236,12 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
 
           {/* Region Filter */}
           <div className="space-y-2">
-            <label className="text-sm font-medium text-rutz-forest">Region</label>
+            <label className="text-sm font-medium text-high-contrast">Region</label>
             <Select value={filters.region} onValueChange={(value) => setFilters(prev => ({ ...prev, region: value }))}>
-              <SelectTrigger data-testid="region-filter">
+              <SelectTrigger data-testid="region-filter" className="focus-enhanced border-border focus:border-earth-green">
                 <SelectValue placeholder="All Regions" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="border-border">
                 <SelectItem value="all">All Regions</SelectItem>
                 {filterOptions.regions.map(region => (
                   <SelectItem key={region} value={region}>{region}</SelectItem>
@@ -252,12 +252,12 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
 
           {/* Country Filter */}
           <div className="space-y-2">
-            <label className="text-sm font-medium text-rutz-forest">Country</label>
+            <label className="text-sm font-medium text-high-contrast">Country</label>
             <Select value={filters.country} onValueChange={(value) => setFilters(prev => ({ ...prev, country: value }))}>
-              <SelectTrigger data-testid="country-filter">
+              <SelectTrigger data-testid="country-filter" className="focus-enhanced border-border focus:border-earth-green">
                 <SelectValue placeholder="All Countries" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="border-border">
                 <SelectItem value="all">All Countries</SelectItem>
                 {filterOptions.countries.map(country => (
                   <SelectItem key={country} value={country}>{country}</SelectItem>
@@ -268,9 +268,9 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
 
           {/* Indigenous Tribes Filter */}
           <div className="space-y-2">
-            <label className="text-sm font-medium text-rutz-forest">Indigenous Tribe</label>
+            <label className="text-sm font-medium text-high-contrast">Indigenous Tribe</label>
             <Select value={filters.tribe} onValueChange={(value) => setFilters(prev => ({ ...prev, tribe: value }))}>
-              <SelectTrigger data-testid="tribe-filter">
+              <SelectTrigger data-testid="tribe-filter" className="focus-enhanced border-border focus:border-earth-green">
                 <SelectValue placeholder="All Tribes" />
               </SelectTrigger>
               <SelectContent>

@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { User, Heart, Leaf, Sun, Moon, Ear, BookOpen, MessageCircle, Calendar } from "lucide-react";
+import { User, Heart, Leaf, Sun, Moon, Ear, BookOpen, MessageCircle, Calendar, Play } from "lucide-react";
 
 interface HealerCategory {
   id: string;
@@ -19,6 +19,7 @@ interface HealerCategory {
   color: string;
   practitioners: number;
   availability: string;
+  videoUrl?: string;
 }
 
 const healerCategories: HealerCategory[] = [
@@ -50,7 +51,8 @@ const healerCategories: HealerCategory[] = [
     icon: Calendar,
     color: "bg-purple-600 text-white",
     practitioners: 6,
-    availability: "Available"
+    availability: "Available",
+    videoUrl: "https://youtu.be/P4WubgKEP2Q?feature=shared"
   },
   {
     id: "ritual-specialist",
@@ -180,11 +182,19 @@ export default function Journey() {
                     data-testid={`healer-card-${category.id}`}
                   >
                     <CardHeader className="text-center">
-                      <div className={`w-16 h-16 ${category.color} rounded-full mx-auto mb-4 flex items-center justify-center`}>
+                      <div className={`w-16 h-16 ${category.color} rounded-full mx-auto mb-4 flex items-center justify-center relative`}>
                         <category.icon className="w-8 h-8" />
+                        {category.videoUrl && (
+                          <div className="absolute -top-1 -right-1 w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
+                            <Play className="w-3 h-3 text-white" />
+                          </div>
+                        )}
                       </div>
                       <CardTitle className="text-xl font-bold text-forest">
                         {category.name}
+                        {category.videoUrl && (
+                          <span className="ml-2 text-red-600 text-sm">📹</span>
+                        )}
                       </CardTitle>
                       <div className="flex justify-center space-x-2">
                         <Badge variant={category.availability === "Available" ? "default" : "secondary"}>
@@ -273,6 +283,24 @@ export default function Journey() {
           
           {selectedHealer && (
             <div className="space-y-6">
+              {/* Video Section for Ceremony Leader */}
+              {selectedHealer.videoUrl && (
+                <div>
+                  <h3 className="font-semibold text-forest mb-3">Sacred Ceremony Experience</h3>
+                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                    <iframe
+                      className="absolute top-0 left-0 w-full h-full rounded-lg"
+                      src={selectedHealer.videoUrl.replace('youtu.be/', 'www.youtube.com/embed/').replace('?feature=shared', '')}
+                      title="Sacred Ceremony Video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      data-testid="ceremony-video"
+                    />
+                  </div>
+                </div>
+              )}
+              
               <div>
                 <h3 className="font-semibold text-forest mb-3">Healing Specialties</h3>
                 <div className="grid grid-cols-2 gap-2">

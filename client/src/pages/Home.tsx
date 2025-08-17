@@ -51,7 +51,6 @@ export default function Home() {
       <HeroSection />
       <TrustIndicators />
       <StrategicOverview />
-      <ProductCatalog showAllProducts={true} />
       <PlantExplorerFeature />
       <IndigenousPartnership />
       <BrandPromise />

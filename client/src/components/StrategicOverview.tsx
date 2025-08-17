@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Link } from 'wouter';
 import { 
   Leaf, 
   Users, 
@@ -301,12 +302,62 @@ const StrategicOverview: React.FC = () => {
           </Tabs>
         </motion.div>
 
-        {/* Call to Action */}
+        {/* Featured Chaga Products Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-16"
+        >
+          <Card className="card-enhanced">
+            <CardHeader className="text-center">
+              <CardTitle className="text-3xl font-bold text-high-contrast text-heading mb-4">
+                Premium Chaga Extract Portfolio
+              </CardTitle>
+              <CardDescription className="text-lg text-medium-contrast max-w-3xl mx-auto">
+                Discover our flagship Chaga collection - eight expertly crafted products featuring this legendary "King of Mushrooms" from the pristine Canadian wilderness.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div className="space-y-2">
+                  <div className="text-4xl font-bold text-earth-green">8</div>
+                  <div className="text-sm text-medium-contrast">Chaga Products</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-4xl font-bold text-earth-green">5</div>
+                  <div className="text-sm text-medium-contrast">Product Categories</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-4xl font-bold text-earth-green">100%</div>
+                  <div className="text-sm text-medium-contrast">Wild Harvested</div>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <Button
+                  size="lg"
+                  className="bg-earth-green text-white hover:bg-earth-green/90 px-8 py-3"
+                >
+                  <Link href="/chaga-portfolio">
+                    <span className="flex items-center">
+                      Explore Chaga Portfolio
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </span>
+                  </Link>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
           <Card className="card-enhanced bg-earth-green/5 border-earth-green/20">

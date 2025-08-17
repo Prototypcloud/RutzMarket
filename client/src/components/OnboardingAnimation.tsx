@@ -4,7 +4,7 @@ import { X, Leaf, Sparkles, Heart, Globe, ArrowRight, Star } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Logo } from "@/components/ui/logo";
+
 
 interface OnboardingStep {
   id: string;
@@ -21,7 +21,7 @@ const onboardingSteps: OnboardingStep[] = [
     id: "welcome",
     title: "Welcome to RÜTZ",
     description: "Discover the world's finest botanical extracts, rooted in indigenous wisdom and perfected by science.",
-    icon: <Logo size="lg" />,
+    icon: <div className="text-4xl font-bold text-forest">R<span className="text-sage">Ü</span>TZ</div>,
     animation: "scaleIn",
     color: "text-forest",
     backgroundGradient: "from-green-50 to-cream"

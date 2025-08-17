@@ -2,9 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { ArrowRight, Leaf } from "lucide-react";
+import { useTranslation } from "@/lib/i18n";
 import heroImage from "@assets/image_1755283743930.png";
 
 export default function HeroSection() {
+  const { t } = useTranslation();
+  
   return (
     <section className="relative bg-gradient-to-r from-forest to-sage text-white py-20 overflow-hidden">
       {/* Background pattern representing root & circuit motif */}
@@ -32,9 +35,9 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
               style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700 }}
             >
-              RÜTZ
+              {t('hero.title')}
               <br />
-              <span className="text-cream text-2xl md:text-3xl font-normal tracking-widest">ROOTED IN WISDOM. PERFECTED BY SCIENCE.</span>
+              <span className="text-cream text-2xl md:text-3xl font-normal tracking-widest">{t('hero.tagline')}</span>
             </motion.h1>
             
             <motion.p 
@@ -44,7 +47,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}
             >
-              We unite Indigenous Canadian plant wisdom and German scientific precision to create the world's most trusted botanical extracts—while giving back to the First Nations communities and boreal ecosystems that inspire them.
+              {t('hero.description')}
             </motion.p>
             
             <motion.div 
@@ -54,7 +57,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.5 }}
             >
               <p className="text-cream/90 text-sm leading-relaxed">
-                <em>"From the pristine Canadian wilderness where Indigenous Nations have gathered medicinal plants for millennia, to the advanced research labs of Fraunhofer."</em> - Every extract is ethically sourced through respectful partnerships with Indigenous Canadian communities.
+                <em>{t('hero.quote')}</em>
               </p>
             </motion.div>
 
@@ -69,7 +72,7 @@ export default function HeroSection() {
                 className="bg-white text-forest px-8 py-3 rounded-lg font-semibold hover:bg-cream transition-colors"
                 data-testid="explore-products-button"
               >
-                Explore Products
+                {t('hero.cta')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               

@@ -33,8 +33,10 @@ export const translations = {
     'nav.healthConcerns': 'Health Concerns',
     
     // Hero Section
-    'hero.title': 'Rooted in Wisdom. Perfected by Science.',
-    'hero.subtitle': 'Premium botanical extracts connecting indigenous knowledge with modern wellness through ethical sourcing and scientific validation.',
+    'hero.title': 'RÜTZ',
+    'hero.tagline': 'ROOTED IN WISDOM. PERFECTED BY SCIENCE.',
+    'hero.description': 'We unite Indigenous Canadian plant wisdom and German scientific precision to create the world\'s most trusted botanical extracts—while giving back to the First Nations communities and boreal ecosystems that inspire them.',
+    'hero.quote': '"From the pristine Canadian wilderness where Indigenous Nations have gathered medicinal plants for millennia, to the advanced research labs of Fraunhofer." - Every extract is ethically sourced through respectful partnerships with Indigenous Canadian communities.',
     'hero.cta': 'Explore Products',
     'hero.learnMore': 'Learn More',
     
@@ -42,9 +44,31 @@ export const translations = {
     'products.title': 'Premium Botanical Portfolio',
     'products.subtitle': 'Ethically Sourced • Scientifically Validated',
     'products.description': 'Discover our complete collection of ethically sourced botanical extracts, each with its own story of indigenous wisdom and scientific validation.',
+    'products.allProducts': 'All Products',
+    'products.extractPowders': 'Extract Powders',
+    'products.capsules': 'Capsules',
+    'products.herbalTeas': 'Herbal Teas',
+    'products.latteMixes': 'Latte Mixes',
+    'products.skincare': 'Skincare',
+    'products.extracts': 'Extracts',
+    'products.supplements': 'Supplements',
+    'products.rawMaterials': 'Raw Materials',
     'products.wildHarvested': 'Wild Harvested',
     'products.applications': 'Applications',
     'products.sectors': 'Sectors',
+    'products.gridView': 'Grid View',
+    'products.detailedView': 'Detailed View',
+    'products.loading': 'Loading products...',
+    'products.inStock': 'In Stock',
+    'products.outOfStock': 'Out of Stock',
+    'products.reviews': 'reviews',
+    'products.certifications': 'Certifications',
+    'products.bioactive': 'Bioactive Compounds',
+    'products.sustainability': 'Sustainability Story',
+    'products.communityImpact': 'Community Impact',
+    'products.researchPapers': 'Research Papers',
+    'products.extractionMethod': 'Extraction Method',
+    'products.scientificName': 'Scientific Name',
     
     // Healer Categories
     'healer.title': 'Ask a Healer',
@@ -101,11 +125,15 @@ export const translations = {
     'about.values': 'Our Values',
     
     // Footer
-    'footer.tagline': 'Rooted in Wisdom. Perfected by Science.',
+    'footer.tagline': 'Rooted in Wisdom. Perfected by Science. Every extract gives back to the communities and ecosystems that inspire them.',
     'footer.copyright': '© 2025 RÜTZ. All rights reserved.',
     'footer.contact': 'Contact',
     'footer.privacy': 'Privacy Policy',
-    'footer.terms': 'Terms of Service'
+    'footer.terms': 'Terms of Service',
+    'footer.products': 'Products',
+    'footer.company': 'Company',
+    'footer.support': 'Support',
+    'footer.connect': 'Connect'
   },
   
   de: {
@@ -123,8 +151,10 @@ export const translations = {
     'nav.healthConcerns': 'Gesundheitsprobleme',
     
     // Hero Section
-    'hero.title': 'Verwurzelt in Weisheit. Perfektioniert durch Wissenschaft.',
-    'hero.subtitle': 'Premium botanische Extrakte, die indigenes Wissen mit modernem Wohlbefinden durch ethische Beschaffung und wissenschaftliche Validierung verbinden.',
+    'hero.title': 'RÜTZ',
+    'hero.tagline': 'VERWURZELT IN WEISHEIT. PERFEKTIONIERT DURCH WISSENSCHAFT.',
+    'hero.description': 'Wir vereinen indigene kanadische Pflanzenwweisheit und deutsche wissenschaftliche Präzision, um die vertrauenswürdigsten botanischen Extrakte der Welt zu schaffen—während wir den First Nations-Gemeinschaften und borealen Ökosystemen etwas zurückgeben, die uns inspirieren.',
+    'hero.quote': '"Von der unberührten kanadischen Wildnis, wo indigene Nationen seit Jahrtausenden Heilpflanzen sammeln, bis zu den fortschrittlichen Forschungslabors von Fraunhofer." - Jeder Extrakt wird ethisch durch respektvolle Partnerschaften mit indigenen kanadischen Gemeinschaften bezogen.',
     'hero.cta': 'Produkte erkunden',
     'hero.learnMore': 'Mehr erfahren',
     
@@ -132,9 +162,31 @@ export const translations = {
     'products.title': 'Premium Botanisches Portfolio',
     'products.subtitle': 'Ethisch beschafft • Wissenschaftlich validiert',
     'products.description': 'Entdecken Sie unsere vollständige Sammlung ethisch beschaffter botanischer Extrakte, jeder mit seiner eigenen Geschichte indigener Weisheit und wissenschaftlicher Validierung.',
+    'products.allProducts': 'Alle Produkte',
+    'products.extractPowders': 'Extraktpulver',
+    'products.capsules': 'Kapseln',
+    'products.herbalTeas': 'Kräutertees',
+    'products.latteMixes': 'Latte-Mischungen',
+    'products.skincare': 'Hautpflege',
+    'products.extracts': 'Extrakte',
+    'products.supplements': 'Nahrungsergänzungsmittel',
+    'products.rawMaterials': 'Rohstoffe',
     'products.wildHarvested': 'Wild geerntet',
     'products.applications': 'Anwendungen',
     'products.sectors': 'Sektoren',
+    'products.gridView': 'Rasteransicht',
+    'products.detailedView': 'Detailansicht',
+    'products.loading': 'Produkte werden geladen...',
+    'products.inStock': 'Auf Lager',
+    'products.outOfStock': 'Nicht vorrätig',
+    'products.reviews': 'Bewertungen',
+    'products.certifications': 'Zertifizierungen',
+    'products.bioactive': 'Bioaktive Verbindungen',
+    'products.sustainability': 'Nachhaltigkeitsgeschichte',
+    'products.communityImpact': 'Gemeinschaftsimpact',
+    'products.researchPapers': 'Forschungsarbeiten',
+    'products.extractionMethod': 'Extraktionsmethode',
+    'products.scientificName': 'Wissenschaftlicher Name',
     
     // Healer Categories
     'healer.title': 'Einen Heiler fragen',
@@ -191,11 +243,15 @@ export const translations = {
     'about.values': 'Unsere Werte',
     
     // Footer
-    'footer.tagline': 'Verwurzelt in Weisheit. Perfektioniert durch Wissenschaft.',
+    'footer.tagline': 'Verwurzelt in Weisheit. Perfektioniert durch Wissenschaft. Jeder Extrakt gibt den Gemeinschaften und Ökosystemen etwas zurück, die uns inspirieren.',
     'footer.copyright': '© 2025 RÜTZ. Alle Rechte vorbehalten.',
     'footer.contact': 'Kontakt',
     'footer.privacy': 'Datenschutzrichtlinie',
-    'footer.terms': 'Nutzungsbedingungen'
+    'footer.terms': 'Nutzungsbedingungen',
+    'footer.products': 'Produkte',
+    'footer.company': 'Unternehmen',
+    'footer.support': 'Support',
+    'footer.connect': 'Verbinden'
   },
   
   fr: {
@@ -213,8 +269,10 @@ export const translations = {
     'nav.healthConcerns': 'Préoccupations Santé',
     
     // Hero Section
-    'hero.title': 'Enraciné dans la Sagesse. Perfectionné par la Science.',
-    'hero.subtitle': 'Extraits botaniques premium connectant les connaissances indigènes au bien-être moderne grâce à un approvisionnement éthique et une validation scientifique.',
+    'hero.title': 'RÜTZ',
+    'hero.tagline': 'ENRACINÉ DANS LA SAGESSE. PERFECTIONNÉ PAR LA SCIENCE.',
+    'hero.description': 'Nous unissons la sagesse végétale indigène canadienne et la précision scientifique allemande pour créer les extraits botaniques les plus fiables au monde—tout en redonnant aux communautés des Premières Nations et aux écosystèmes boréaux qui nous inspirent.',
+    'hero.quote': '"De la nature sauvage canadienne immaculée où les Nations indigènes récoltent des plantes médicinales depuis des millénaires, aux laboratoires de recherche avancés de Fraunhofer." - Chaque extrait est obtenu de manière éthique grâce à des partenariats respectueux avec les communautés indigènes canadiennes.',
     'hero.cta': 'Explorer les Produits',
     'hero.learnMore': 'En savoir plus',
     
@@ -222,9 +280,31 @@ export const translations = {
     'products.title': 'Portfolio Botanique Premium',
     'products.subtitle': 'Source Éthique • Validé Scientifiquement',
     'products.description': 'Découvrez notre collection complète d\'extraits botaniques d\'origine éthique, chacun avec sa propre histoire de sagesse indigène et de validation scientifique.',
+    'products.allProducts': 'Tous les Produits',
+    'products.extractPowders': 'Poudres d\'Extrait',
+    'products.capsules': 'Gélules',
+    'products.herbalTeas': 'Tisanes',
+    'products.latteMixes': 'Mélanges Latte',
+    'products.skincare': 'Soins de la Peau',
+    'products.extracts': 'Extraits',
+    'products.supplements': 'Suppléments',
+    'products.rawMaterials': 'Matières Premières',
     'products.wildHarvested': 'Récolté Sauvage',
     'products.applications': 'Applications',
     'products.sectors': 'Secteurs',
+    'products.gridView': 'Vue Grille',
+    'products.detailedView': 'Vue Détaillée',
+    'products.loading': 'Chargement des produits...',
+    'products.inStock': 'En Stock',
+    'products.outOfStock': 'Rupture de Stock',
+    'products.reviews': 'avis',
+    'products.certifications': 'Certifications',
+    'products.bioactive': 'Composés Bioactifs',
+    'products.sustainability': 'Histoire de Durabilité',
+    'products.communityImpact': 'Impact Communautaire',
+    'products.researchPapers': 'Articles de Recherche',
+    'products.extractionMethod': 'Méthode d\'Extraction',
+    'products.scientificName': 'Nom Scientifique',
     
     // Healer Categories
     'healer.title': 'Demander un Guérisseur',
@@ -281,11 +361,15 @@ export const translations = {
     'about.values': 'Nos Valeurs',
     
     // Footer
-    'footer.tagline': 'Enraciné dans la Sagesse. Perfectionné par la Science.',
+    'footer.tagline': 'Enraciné dans la Sagesse. Perfectionné par la Science. Chaque extrait redonne aux communautés et écosystèmes qui nous inspirent.',
     'footer.copyright': '© 2025 RÜTZ. Tous droits réservés.',
     'footer.contact': 'Contact',
     'footer.privacy': 'Politique de Confidentialité',
-    'footer.terms': 'Conditions d\'Utilisation'
+    'footer.terms': 'Conditions d\'Utilisation',
+    'footer.products': 'Produits',
+    'footer.company': 'Entreprise',
+    'footer.support': 'Support',
+    'footer.connect': 'Se Connecter'
   },
   
   es: {
@@ -303,8 +387,10 @@ export const translations = {
     'nav.healthConcerns': 'Preocupaciones de Salud',
     
     // Hero Section
-    'hero.title': 'Arraigado en Sabiduría. Perfeccionado por la Ciencia.',
-    'hero.subtitle': 'Extractos botánicos premium que conectan el conocimiento indígena con el bienestar moderno a través de abastecimiento ético y validación científica.',
+    'hero.title': 'RÜTZ',
+    'hero.tagline': 'ARRAIGADO EN SABIDURÍA. PERFECCIONADO POR LA CIENCIA.',
+    'hero.description': 'Unimos la sabiduría vegetal indígena canadiense y la precisión científica alemana para crear los extractos botánicos más confiables del mundo—mientras devolvemos a las comunidades de las Primeras Naciones y ecosistemas boreales que nos inspiran.',
+    'hero.quote': '"Desde la naturaleza salvaje canadiense prístina donde las Naciones indígenas han recolectado plantas medicinales durante milenios, hasta los laboratorios de investigación avanzados de Fraunhofer." - Cada extracto se obtiene éticamente a través de asociaciones respetuosas con las comunidades indígenas canadienses.',
     'hero.cta': 'Explorar Productos',
     'hero.learnMore': 'Saber más',
     
@@ -312,9 +398,31 @@ export const translations = {
     'products.title': 'Portafolio Botánico Premium',
     'products.subtitle': 'Éticamente Obtenido • Científicamente Validado',
     'products.description': 'Descubra nuestra colección completa de extractos botánicos de origen ético, cada uno con su propia historia de sabiduría indígena y validación científica.',
+    'products.allProducts': 'Todos los Productos',
+    'products.extractPowders': 'Polvos de Extracto',
+    'products.capsules': 'Cápsulas',
+    'products.herbalTeas': 'Tés Herbales',
+    'products.latteMixes': 'Mezclas Latte',
+    'products.skincare': 'Cuidado de la Piel',
+    'products.extracts': 'Extractos',
+    'products.supplements': 'Suplementos',
+    'products.rawMaterials': 'Materias Primas',
     'products.wildHarvested': 'Cosechado Silvestre',
     'products.applications': 'Aplicaciones',
     'products.sectors': 'Sectores',
+    'products.gridView': 'Vista de Cuadrícula',
+    'products.detailedView': 'Vista Detallada',
+    'products.loading': 'Cargando productos...',
+    'products.inStock': 'En Stock',
+    'products.outOfStock': 'Agotado',
+    'products.reviews': 'reseñas',
+    'products.certifications': 'Certificaciones',
+    'products.bioactive': 'Compuestos Bioactivos',
+    'products.sustainability': 'Historia de Sostenibilidad',
+    'products.communityImpact': 'Impacto Comunitario',
+    'products.researchPapers': 'Artículos de Investigación',
+    'products.extractionMethod': 'Método de Extracción',
+    'products.scientificName': 'Nombre Científico',
     
     // Healer Categories
     'healer.title': 'Consultar un Sanador',
@@ -371,11 +479,15 @@ export const translations = {
     'about.values': 'Nuestros Valores',
     
     // Footer
-    'footer.tagline': 'Arraigado en Sabiduría. Perfeccionado por la Ciencia.',
+    'footer.tagline': 'Arraigado en Sabiduría. Perfeccionado por la Ciencia. Cada extracto devuelve a las comunidades y ecosistemas que nos inspiran.',
     'footer.copyright': '© 2025 RÜTZ. Todos los derechos reservados.',
     'footer.contact': 'Contacto',
     'footer.privacy': 'Política de Privacidad',
-    'footer.terms': 'Términos de Servicio'
+    'footer.terms': 'Términos de Servicio',
+    'footer.products': 'Productos',
+    'footer.company': 'Empresa',
+    'footer.support': 'Soporte',
+    'footer.connect': 'Conectar'
   }
 };
 

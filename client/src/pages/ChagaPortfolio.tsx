@@ -8,6 +8,7 @@ import { ShoppingCart, Star, QrCode, Leaf, Award, Users, ArrowRight, CheckCircle
 import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { useCartStore } from "@/lib/cartStore";
+import { useTranslation } from "@/lib/i18n";
 
 interface Product {
   id: string;
@@ -34,16 +35,16 @@ interface Product {
   inStock: boolean;
 }
 
-const productCategories = [
-  { key: "all", label: "All Products", icon: "🌿" },
-  { key: "extract-powders", label: "Extract Powders", icon: "🧪" },
-  { key: "capsules", label: "Capsules", icon: "💊" },
-  { key: "herbal-teas", label: "Herbal Teas", icon: "🍵" },
-  { key: "latte-mixes", label: "Latte Mixes", icon: "☕" },
-  { key: "skincare", label: "Skincare", icon: "✨" },
-  { key: "extracts", label: "Extracts", icon: "🧪" },
-  { key: "supplements", label: "Supplements", icon: "💊" },
-  { key: "raw", label: "Raw Materials", icon: "🌾" },
+const getProductCategories = (t: (key: string) => string) => [
+  { key: "all", label: t("products.allProducts"), icon: "🌿" },
+  { key: "extract-powders", label: t("products.extractPowders"), icon: "🧪" },
+  { key: "capsules", label: t("products.capsules"), icon: "💊" },
+  { key: "herbal-teas", label: t("products.herbalTeas"), icon: "🍵" },
+  { key: "latte-mixes", label: t("products.latteMixes"), icon: "☕" },
+  { key: "skincare", label: t("products.skincare"), icon: "✨" },
+  { key: "extracts", label: t("products.extracts"), icon: "🧪" },
+  { key: "supplements", label: t("products.supplements"), icon: "💊" },
+  { key: "raw", label: t("products.rawMaterials"), icon: "🌾" },
 ];
 
 const sectors = [
@@ -59,6 +60,9 @@ export default function ChagaPortfolio() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedView, setSelectedView] = useState<"grid" | "detailed">("grid");
   const addToCart = useCartStore((state) => state.addItem);
+  const { t } = useTranslation();
+  
+  const productCategories = getProductCategories(t);
 
   const { data: products = [], isLoading } = useQuery<Product[]>({
     queryKey: ["/api/products"],

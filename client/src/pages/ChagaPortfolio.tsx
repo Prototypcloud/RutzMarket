@@ -34,11 +34,15 @@ interface Product {
 }
 
 const productCategories = [
+  { key: "all", label: "All Products", icon: "🌿" },
   { key: "extract-powders", label: "Extract Powders", icon: "🧪" },
   { key: "capsules", label: "Capsules", icon: "💊" },
   { key: "herbal-teas", label: "Herbal Teas", icon: "🍵" },
   { key: "latte-mixes", label: "Latte Mixes", icon: "☕" },
   { key: "skincare", label: "Skincare", icon: "✨" },
+  { key: "extracts", label: "Extracts", icon: "🧪" },
+  { key: "supplements", label: "Supplements", icon: "💊" },
+  { key: "raw", label: "Raw Materials", icon: "🌾" },
 ];
 
 const sectors = [
@@ -59,21 +63,19 @@ export default function ChagaPortfolio() {
     queryKey: ["/api/products"],
   });
 
-  // Filter only Chaga-related products
-  const chagaProducts = products.filter(product => 
-    product.plantMaterial?.toLowerCase().includes("chaga") || 
-    product.name?.toLowerCase().includes("chaga")
-  );
-
+  // Show all products (merged from Products page)
   const filteredProducts = selectedCategory === "all" 
-    ? chagaProducts 
-    : chagaProducts.filter(product => {
+    ? products 
+    : products.filter(product => {
         const categoryMap: { [key: string]: string[] } = {
           "extract-powders": ["Extract Powders"],
           "capsules": ["Capsules"],
           "herbal-teas": ["Herbal Teas"],
           "latte-mixes": ["Latte Mixes"],
           "skincare": ["Skincare"],
+          "extracts": ["Extracts"],
+          "supplements": ["Supplements"],
+          "raw": ["Raw Materials"],
         };
         return categoryMap[selectedCategory]?.includes(product.category);
       });
@@ -118,19 +120,19 @@ export default function ChagaPortfolio() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Chaga
+              Premium Botanical Portfolio
               <span className="block text-3xl md:text-4xl font-light text-cream mt-2">
-                Inonotus obliquus
+                Ethically Sourced • Scientifically Validated
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-cream max-w-3xl mx-auto leading-relaxed">
-              From the pristine Canadian Boreal Forests to your wellness journey
+              Discover our complete collection of ethically sourced botanical extracts, each with its own story of indigenous wisdom and scientific validation.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-botanical-gold">{chagaProducts.length}</div>
+                <div className="text-4xl font-bold text-botanical-gold">{products.length}</div>
                 <div className="text-cream">Products</div>
               </div>
               <div className="text-center">

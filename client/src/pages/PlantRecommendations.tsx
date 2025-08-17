@@ -56,9 +56,7 @@ export default function PlantRecommendations() {
       <main className="pt-8">
         {/* RÜTZ Logo */}
         <div className="flex justify-center pb-6">
-          <Link href="/">
-            <Logo size="lg" />
-          </Link>
+          <Logo size="lg" />
         </div>
 
         {/* Health Concern Header (if accessed via Health Concerns) */}

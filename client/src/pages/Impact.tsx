@@ -135,9 +135,7 @@ export default function Impact() {
       
       {/* RÜTZ Logo */}
       <div className="flex justify-center pt-8 pb-4">
-        <Link href="/">
-          <Logo size="lg" />
-        </Link>
+        <Logo size="lg" />
       </div>
       
       {/* Hero Section */}

@@ -12,9 +12,7 @@ export default function PlantOrbit() {
       <main>
         {/* RÜTZ Logo */}
         <div className="flex justify-center pt-8 pb-4">
-          <Link href="/">
-            <Logo size="lg" />
-          </Link>
+          <Logo size="lg" />
         </div>
         <PlantOrbitVisualization />
       </main>

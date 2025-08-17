@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/ui/logo";
 import { ShoppingCart, Star, QrCode, Leaf, Award, Users, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
@@ -103,6 +104,11 @@ export default function ChagaPortfolio() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-cream to-white">
+      {/* RÜTZ Logo */}
+      <div className="flex justify-center pt-8 pb-4 bg-white">
+        <Logo size="lg" />
+      </div>
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-forest text-white">
         <div className="absolute inset-0 bg-gradient-to-r from-forest via-sage to-forest opacity-90"></div>
@@ -113,11 +119,6 @@ export default function ChagaPortfolio() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex justify-center mb-6">
-              <div className="text-4xl font-bold text-white">
-                R<span className="text-botanical-gold">Ü</span>TZ
-              </div>
-            </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               Premium Botanical Portfolio

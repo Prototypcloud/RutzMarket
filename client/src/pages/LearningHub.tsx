@@ -12,9 +12,7 @@ export default function LearningHub() {
       <main className="pt-8">
         {/* RÜTZ Logo */}
         <div className="flex justify-center pb-6">
-          <Link href="/">
-            <Logo size="lg" />
-          </Link>
+          <Logo size="lg" />
         </div>
         <GamifiedLearningSystem />
       </main>

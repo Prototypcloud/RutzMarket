@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import PlantOrbitVisualization from "@/components/PlantOrbitVisualization";
 import CartSidebar from "@/components/CartSidebar";
 import { Logo } from "@/components/ui/logo";
+import { Link } from "wouter";
 
 export default function PlantOrbit() {
   return (
@@ -11,7 +12,9 @@ export default function PlantOrbit() {
       <main>
         {/* RÜTZ Logo */}
         <div className="flex justify-center pt-8 pb-4">
-          <Logo size="lg" />
+          <Link href="/">
+            <Logo size="lg" />
+          </Link>
         </div>
         <PlantOrbitVisualization />
       </main>

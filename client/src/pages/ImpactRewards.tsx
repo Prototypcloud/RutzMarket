@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import CommunityImpactRewards from "@/components/CommunityImpactRewards";
 import CartSidebar from "@/components/CartSidebar";
 import { Logo } from "@/components/ui/logo";
+import { Link } from "wouter";
 
 export default function ImpactRewards() {
   return (
@@ -11,7 +12,9 @@ export default function ImpactRewards() {
       <main className="pt-8">
         {/* RÜTZ Logo */}
         <div className="flex justify-center pb-6">
-          <Logo size="lg" />
+          <Link href="/">
+            <Logo size="lg" />
+          </Link>
         </div>
         <CommunityImpactRewards />
       </main>

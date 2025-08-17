@@ -17,6 +17,12 @@ RÜTZ is a premium botanical extracts e-commerce platform with the brand essence
   - Elegant premium tin containers for specialty tea blends
   - Complete brand cohesion achieved across entire product catalog
   - All placeholder images replaced with authentic branded packaging photography
+- **COMPLETED: Unified Product Portfolio & Universal RÜTZ Logo Navigation (August 17, 2025)**
+  - Successfully merged Products page content into Chaga Portfolio creating "Premium Botanical Portfolio"
+  - Removed separate Products navigation card and route, consolidating product showcase
+  - Updated navigation to point "Products" to unified portfolio page
+  - Added RÜTZ Logo with homepage hyperlink to all pages across the platform for quick navigation
+  - All subpages now feature clickable RÜTZ Logo enabling instant return to homepage
 
 # User Preferences
 

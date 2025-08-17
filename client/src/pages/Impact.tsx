@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Logo } from "@/components/ui/logo";
+import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -130,6 +132,13 @@ export default function Impact() {
   return (
     <div className="font-brand bg-natural min-h-screen">
       <Header />
+      
+      {/* RÜTZ Logo */}
+      <div className="flex justify-center pt-8 pb-4">
+        <Link href="/">
+          <Logo size="lg" />
+        </Link>
+      </div>
       
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-forest to-sage text-white py-20">

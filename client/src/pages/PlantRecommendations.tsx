@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSearch } from "wouter";
+import { useSearch, Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PersonalizedRecommendationEngine from "@/components/PersonalizedRecommendationEngine";
@@ -9,7 +9,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Heart, Brain, Activity } from "lucide-react";
-import { Link } from "wouter";
 
 // Health concerns data (matching the HealthConcerns page)
 const healthConcernsData = {
@@ -57,7 +56,9 @@ export default function PlantRecommendations() {
       <main className="pt-8">
         {/* RÜTZ Logo */}
         <div className="flex justify-center pb-6">
-          <Logo size="lg" />
+          <Link href="/">
+            <Logo size="lg" />
+          </Link>
         </div>
 
         {/* Health Concern Header (if accessed via Health Concerns) */}

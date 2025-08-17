@@ -27,6 +27,7 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartSidebar from "@/components/CartSidebar";
+import { Logo } from "@/components/ui/logo";
 import { Link } from "wouter";
 
 // Health concerns organized by categories
@@ -242,6 +243,13 @@ export default function HealthConcerns() {
   return (
     <div className="font-brand bg-natural min-h-screen">
       <Header />
+      
+      {/* RÜTZ Logo */}
+      <div className="flex justify-center pt-8 pb-4">
+        <Link href="/">
+          <Logo size="lg" />
+        </Link>
+      </div>
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-forest to-sage text-white py-16">

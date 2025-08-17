@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { navigationItems } from "@/lib/data";
 import { useCartStore } from "@/lib/cartStore";
 import { motion, AnimatePresence } from "framer-motion";
-import OnboardingButton from "@/components/OnboardingButton";
+
 
 export default function Header() {
   const [location] = useLocation();
@@ -55,7 +55,7 @@ export default function Header() {
         <Search className="h-5 w-5" />
       </Button>
       
-      {!mobile && <OnboardingButton />}
+
       
       <Button
         variant="ghost"

@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { User, Heart, Leaf, Sun, Moon, Ear, BookOpen, MessageCircle, Calendar, Play } from "lucide-react";
+import { useTranslation } from "@/lib/i18n";
 
 interface HealerCategory {
   id: string;
@@ -25,8 +26,8 @@ interface HealerCategory {
 const healerCategories: HealerCategory[] = [
   {
     id: "indigenous-healer",
-    name: "Indigenous Healer",
-    description: "Traditional healers preserving ancestral plant medicine knowledge",
+    name: "healer.indigenousHealer",
+    description: "healer.indigenousHealerDesc",
     specialties: ["Plant Medicine", "Energy Healing", "Traditional Diagnostics", "Sacred Rituals"],
     icon: Leaf,
     color: "bg-forest text-white",
@@ -35,8 +36,8 @@ const healerCategories: HealerCategory[] = [
   },
   {
     id: "shaman",
-    name: "Shaman",
-    description: "Spiritual guides bridging physical and spiritual realms",
+    name: "healer.shaman",
+    description: "healer.shamanDesc",
     specialties: ["Soul Retrieval", "Spiritual Cleansing", "Vision Quests", "Power Animal Work"],
     icon: Sun,
     color: "bg-amber-600 text-white",
@@ -45,8 +46,8 @@ const healerCategories: HealerCategory[] = [
   },
   {
     id: "ceremony-leader",
-    name: "Ceremony Leader",
-    description: "Facilitators of sacred healing ceremonies and rituals",
+    name: "healer.ceremonyLeader",
+    description: "healer.ceremonyLeaderDesc",
     specialties: ["Sweat Lodge", "Pipe Ceremony", "Healing Circles", "Moon Ceremonies"],
     icon: Calendar,
     color: "bg-purple-600 text-white",
@@ -56,8 +57,8 @@ const healerCategories: HealerCategory[] = [
   },
   {
     id: "ritual-specialist",
-    name: "Ritual Specialist",
-    description: "Experts in traditional healing rituals and practices",
+    name: "healer.ritualSpecialist",
+    description: "healer.ritualSpecialistDesc",
     specialties: ["Purification Rituals", "Blessing Ceremonies", "Sacred Smudging", "Prayer Rituals"],
     icon: Heart,
     color: "bg-rose-600 text-white",
@@ -66,8 +67,8 @@ const healerCategories: HealerCategory[] = [
   },
   {
     id: "meditation-guide",
-    name: "Meditation Guide",
-    description: "Teachers of indigenous meditation and mindfulness practices",
+    name: "healer.meditationGuide",
+    description: "healer.meditationGuideDesc",
     specialties: ["Nature Meditation", "Walking Meditation", "Breathwork", "Mindful Awareness"],
     icon: Moon,
     color: "bg-indigo-600 text-white",
@@ -76,8 +77,8 @@ const healerCategories: HealerCategory[] = [
   },
   {
     id: "medicine-person",
-    name: "Medicine Person",
-    description: "Keepers of traditional herbal medicine and healing knowledge",
+    name: "healer.medicinePerson",
+    description: "healer.medicinePersonDesc",
     specialties: ["Herbal Medicine", "Plant Preparation", "Healing Protocols", "Wellness Counseling"],
     icon: Leaf,
     color: "bg-emerald-600 text-white",
@@ -86,8 +87,8 @@ const healerCategories: HealerCategory[] = [
   },
   {
     id: "listener",
-    name: "Listener",
-    description: "Compassionate healers who provide deep listening and counsel",
+    name: "healer.listener",
+    description: "healer.listenerDesc",
     specialties: ["Active Listening", "Emotional Support", "Life Guidance", "Conflict Resolution"],
     icon: Ear,
     color: "bg-teal-600 text-white",
@@ -96,8 +97,8 @@ const healerCategories: HealerCategory[] = [
   },
   {
     id: "elder-wisdom",
-    name: "Elder Wisdom",
-    description: "Respected elders sharing lifetime knowledge and guidance",
+    name: "healer.elderWisdom",
+    description: "healer.elderWisdomDesc",
     specialties: ["Life Wisdom", "Cultural Teachings", "Ancestral Stories", "Traditional Values"],
     icon: BookOpen,
     color: "bg-orange-600 text-white",
@@ -108,6 +109,7 @@ const healerCategories: HealerCategory[] = [
 
 export default function Journey() {
   const [selectedHealer, setSelectedHealer] = useState<HealerCategory | null>(null);
+  const { t } = useTranslation();
 
   return (
     <div className="font-brand bg-natural min-h-screen">
@@ -127,23 +129,23 @@ export default function Journey() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Ask a Healer
+                {t('healer.title')}
               </h1>
               <p className="text-xl md:text-2xl text-cream max-w-3xl mx-auto leading-relaxed">
-                Connect with Indigenous healers, shamans, and wisdom keepers who carry generations of plant medicine knowledge and spiritual guidance
+                {t('healer.subtitle')}
               </p>
               <div className="mt-8 flex justify-center space-x-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-botanical-gold">{healerCategories.length}</div>
-                  <div className="text-cream">Healer Types</div>
+                  <div className="text-cream">{t('healer.types')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-botanical-gold">{healerCategories.reduce((sum, cat) => sum + cat.practitioners, 0)}+</div>
-                  <div className="text-cream">Practitioners</div>
+                  <div className="text-cream">{t('healer.practitioners')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-botanical-gold">24/7</div>
-                  <div className="text-cream">Support</div>
+                  <div className="text-cream">{t('healer.support')}</div>
                 </div>
               </div>
             </motion.div>
@@ -160,10 +162,10 @@ export default function Journey() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4">
-                Indigenous Healing Traditions
+                {t('healer.traditions')}
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Each healer brings unique wisdom from their ancestral traditions, offering personalized guidance for your healing journey
+                {t('healer.traditionsDesc')}
               </p>
             </motion.div>
 
@@ -191,26 +193,26 @@ export default function Journey() {
                         )}
                       </div>
                       <CardTitle className="text-xl font-bold text-forest">
-                        {category.name}
+                        {t(category.name)}
                         {category.videoUrl && (
                           <span className="ml-2 text-red-600 text-sm">📹</span>
                         )}
                       </CardTitle>
                       <div className="flex justify-center space-x-2">
                         <Badge variant={category.availability === "Available" ? "default" : "secondary"}>
-                          {category.availability}
+                          {t(category.availability === "Available" ? "common.available" : "common.limited")}
                         </Badge>
                         <Badge variant="outline">
-                          {category.practitioners} practitioners
+                          {category.practitioners} {t('healer.practitioners').toLowerCase()}
                         </Badge>
                       </div>
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-600 mb-4 text-sm">
-                        {category.description}
+                        {t(category.description)}
                       </p>
                       <div className="space-y-2">
-                        <h4 className="font-semibold text-forest text-sm">Specialties:</h4>
+                        <h4 className="font-semibold text-forest text-sm">{t('healer.specialties')}:</h4>
                         <div className="flex flex-wrap gap-1">
                           {category.specialties.slice(0, 2).map((specialty, idx) => (
                             <span
@@ -244,10 +246,10 @@ export default function Journey() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-forest mb-6">
-                Ready to Begin Your Healing Journey?
+                {t('healer.readyTitle')}
               </h2>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Our healers are here to guide you with wisdom passed down through generations. Choose the type of healing that resonates with your spirit.
+                {t('healer.readyDesc')}
               </p>
               <Button
                 size="lg"
@@ -255,7 +257,7 @@ export default function Journey() {
                 data-testid="start-healing-journey"
               >
                 <MessageCircle className="w-6 h-6 mr-2" />
-                Start Your Healing Journey
+                {t('healer.startJourney')}
               </Button>
             </motion.div>
           </div>
@@ -272,12 +274,12 @@ export default function Journey() {
                   <div className={`w-12 h-12 ${selectedHealer.color} rounded-full mr-4 flex items-center justify-center`}>
                     <selectedHealer.icon className="w-6 h-6" />
                   </div>
-                  {selectedHealer.name}
+                  {t(selectedHealer.name)}
                 </>
               )}
             </DialogTitle>
             <DialogDescription className="text-gray-600">
-              {selectedHealer?.description}
+              {selectedHealer && t(selectedHealer.description)}
             </DialogDescription>
           </DialogHeader>
           
@@ -286,7 +288,7 @@ export default function Journey() {
               {/* Video Section for Ceremony Leader */}
               {selectedHealer.videoUrl && (
                 <div>
-                  <h3 className="font-semibold text-forest mb-3">Sacred Ceremony Experience</h3>
+                  <h3 className="font-semibold text-forest mb-3">{t('healer.ceremonyVideo')}</h3>
                   <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                     <iframe
                       className="absolute top-0 left-0 w-full h-full rounded-lg"
@@ -302,7 +304,7 @@ export default function Journey() {
               )}
               
               <div>
-                <h3 className="font-semibold text-forest mb-3">Healing Specialties</h3>
+                <h3 className="font-semibold text-forest mb-3">{t('healer.specialties')}</h3>
                 <div className="grid grid-cols-2 gap-2">
                   {selectedHealer.specialties.map((specialty, idx) => (
                     <div
@@ -317,12 +319,12 @@ export default function Journey() {
               
               <div className="flex justify-between items-center p-4 bg-forest text-white rounded-lg">
                 <div>
-                  <div className="font-semibold">Available Practitioners</div>
+                  <div className="font-semibold">{t('healer.availablePractitioners')}</div>
                   <div className="text-botanical-gold text-2xl font-bold">{selectedHealer.practitioners}</div>
                 </div>
                 <div>
-                  <div className="font-semibold">Status</div>
-                  <div className="text-botanical-gold text-lg">{selectedHealer.availability}</div>
+                  <div className="font-semibold">{t('healer.status')}</div>
+                  <div className="text-botanical-gold text-lg">{t(selectedHealer.availability === "Available" ? "common.available" : "common.limited")}</div>
                 </div>
               </div>
 
@@ -332,7 +334,7 @@ export default function Journey() {
                 data-testid="connect-with-healer"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                Connect with {selectedHealer.name}
+                {t('healer.connectWith')} {t(selectedHealer.name)}
               </Button>
             </div>
           )}

@@ -6,12 +6,15 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { navigationItems } from "@/lib/data";
 import { useCartStore } from "@/lib/cartStore";
 import { motion, AnimatePresence } from "framer-motion";
+import { LanguageSelector } from "@/components/LanguageSelector";
+import { useTranslation } from "@/lib/i18n";
 
 
 export default function Header() {
   const [location] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { openCart, getTotalItems } = useCartStore();
+  const { t } = useTranslation();
   const totalItems = getTotalItems();
 
   const Logo = () => (
@@ -29,18 +32,38 @@ export default function Header() {
 
   const Navigation = ({ mobile = false }) => (
     <nav className={mobile ? "flex flex-col space-y-4" : "hidden md:flex space-x-8"}>
-      {navigationItems.map((item) => (
-        <Link
-          key={item.name}
-          href={item.href}
-          className={`text-gray-700 hover:text-forest transition-colors font-medium ${
-            location === item.href ? "text-forest" : ""
-          }`}
-          onClick={() => mobile && setIsMobileMenuOpen(false)}
-        >
-          {item.name}
-        </Link>
-      ))}
+      {navigationItems.map((item) => {
+        // Map navigation items to translation keys
+        const getTranslationKey = (name: string) => {
+          const keyMap: { [key: string]: string } = {
+            'Home': 'nav.home',
+            'Products': 'nav.products',
+            'Plant Explorer': 'nav.plantExplorer',
+            'Plant Orbit': 'nav.plantOrbit',
+            'AI Recommendations': 'nav.aiRecommendations',
+            'Learning Hub': 'nav.learningHub',
+            'Ask Healer': 'nav.askHealer',
+            'Impact Rewards': 'nav.impactRewards',
+            'Science': 'nav.science',
+            'About': 'nav.about',
+            'Health Concerns': 'nav.healthConcerns'
+          };
+          return keyMap[name] || name;
+        };
+
+        return (
+          <Link
+            key={item.name}
+            href={item.href}
+            className={`text-gray-700 hover:text-forest transition-colors font-medium ${
+              location === item.href ? "text-forest" : ""
+            }`}
+            onClick={() => mobile && setIsMobileMenuOpen(false)}
+          >
+            {t(getTranslationKey(item.name))}
+          </Link>
+        );
+      })}
     </nav>
   );
 
@@ -55,7 +78,7 @@ export default function Header() {
         <Search className="h-5 w-5" />
       </Button>
       
-
+      <LanguageSelector />
       
       <Button
         variant="ghost"

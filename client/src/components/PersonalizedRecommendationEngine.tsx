@@ -114,7 +114,18 @@ const healthGoalIcons = {
   'joint_mobility': Target,
 };
 
-const PersonalizedRecommendationEngine: React.FC = () => {
+interface ConcernContext {
+  name: string;
+  description: string;
+  keywords: string[];
+  color: string;
+}
+
+interface PersonalizedRecommendationEngineProps {
+  concernContext?: ConcernContext | null;
+}
+
+const PersonalizedRecommendationEngine: React.FC<PersonalizedRecommendationEngineProps> = ({ concernContext }) => {
   const [userPreferences, setUserPreferences] = useState<UserPreferences | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [selectedRecommendation, setSelectedRecommendation] = useState<PlantRecommendation | null>(null);

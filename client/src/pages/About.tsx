@@ -44,27 +44,27 @@ const timeline = [
 
 const team = [
   {
-    name: "Dr. Sarah Running Bear",
-    role: "Founder & CEO",
-    background: "Anishinaabe heritage, PhD in Ethnobotany",
+    name: "Michaela",
+    role: "Co Founder & CEO",
+    background: "Art & Education & Business Development",
     focus: "Indigenous partnership development"
   },
   {
-    name: "Dr. Klaus Weber",
+    name: "Dr. Klaus",
     role: "Chief Science Officer",
     background: "Former Fraunhofer researcher, 15+ years botanical extraction",
     focus: "Advanced extraction technologies"
   },
   {
-    name: "Maria Santos",
+    name: "Maria",
     role: "Head of Sustainability",
     background: "Environmental science, carbon management expertise",
     focus: "Environmental impact and sustainability"
   },
   {
-    name: "Tom Blackstone",
+    name: "Alex",
     role: "Head of Community Relations",
-    background: "Métis heritage, community development specialist",
+    background: "Seasoned project Management, community development specialist",
     focus: "Indigenous community partnerships"
   }
 ];

@@ -94,22 +94,22 @@ const values = [
 
 const awards = [
   {
-    year: "2024",
+    year: "2025",
     award: "Indigenous Business Award",
     organization: "Canadian Council for Aboriginal Business"
   },
   {
-    year: "2023",
+    year: "2026 Pending",
     award: "Sustainability Excellence Award",
     organization: "Natural Health Products Association"
   },
   {
-    year: "2023",
+    year: "2025",
     award: "Innovation in Extraction Technology",
     organization: "International Botanical Congress"
   },
   {
-    year: "2022",
+    year: "2025",
     award: "Ethical Business Practices Award",
     organization: "B Corp Certification"
   }

@@ -215,6 +215,66 @@ Conclusion: Beyond Nature "Tribe" offers a bold, systemic redesign of how Indige
   }
 ];
 
+const franchiseModelContent = [
+  {
+    id: "legal-foundation",
+    title: "Legal Foundation",
+    icon: <Scale className="w-5 h-5" />,
+    content: `Under Canadian law, RÜTZ's franchise model is governed by provincial franchise legislation. Our comprehensive legal framework includes:
+
+• Franchise Agreement: Sets out rights, obligations, and brand standards
+• Disclosure Document: Required in regulated provinces; provided 14 days before signing
+• Trademark Licensing: Secure IP rights (logos, processes, trade dress)
+• Operations Manual: Detailed procedures for harvesting, production, sales, and community engagement`
+  },
+  {
+    id: "franchise-structure",
+    title: "Franchise Structure Options",
+    icon: <Building2 className="w-5 h-5" />,
+    content: `We offer three distinct franchise models to accommodate different partnership goals:
+
+• Master Franchise Model: For Indigenous-led or regional operators managing sub-franchisees in a territory
+• Single Unit Franchise: Local operator runs one harvesting and processing location
+• Area Development Agreement: Grants rights to open multiple units in a specific region`
+  },
+  {
+    id: "fee-structure",
+    title: "Investment & Fee Structure",
+    icon: <DollarSign className="w-5 h-5" />,
+    content: `Initial Franchise Fee: CAD $25,000 – $50,000 (depending on territory size and exclusivity)
+
+Ongoing Fees:
+• Royalties: 5–8% of gross revenue (reduced rates for Indigenous-owned franchisees)
+• Marketing Fund: 1–3% of gross sales for national/international marketing
+• Social Impact Contribution: 1–2% earmarked for Indigenous community benefit projects
+• Management Fee: 8–12% if RÜTZ manages operations directly (turnkey model)`
+  },
+  {
+    id: "social-impact",
+    title: "Social Impact Commitment",
+    icon: <Heart className="w-5 h-5" />,
+    content: `Our franchise model prioritizes social responsibility and Indigenous partnership:
+
+• Reduced royalty rates for Indigenous-owned franchisees
+• Mandatory community benefit contributions
+• Cultural IP protection in all agreements
+• Training includes traditional knowledge respect and community engagement
+• Clear dispute resolution through mediation and arbitration`
+  },
+  {
+    id: "compliance-support",
+    title: "Compliance & Support",
+    icon: <Shield className="w-5 h-5" />,
+    content: `Comprehensive support system for all franchisees:
+
+• Full compliance with provincial franchise acts
+• Ongoing training and certification programs
+• Quality control audits and standards maintenance
+• Supply chain management and bulk purchasing benefits
+• Access to specialized equipment and inputs at preferred rates`
+  }
+];
+
 const indigenousWildHarvestContent = [
   {
     id: "definition",
@@ -451,6 +511,75 @@ export default function About() {
                 </motion.div>
               ))}
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Franchise Model */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <Building2 className="w-12 h-12 text-forest mx-auto mb-4" />
+            <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4">
+              Franchise Model
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Expand with RÜTZ through our comprehensive franchise partnership program
+            </p>
+          </motion.div>
+
+          <div className="grid gap-6">
+            {franchiseModelContent.map((section, index) => (
+              <motion.div
+                key={section.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Collapsible
+                  open={openSections.has(section.id)}
+                  onOpenChange={() => toggleSection(section.id)}
+                >
+                  <CollapsibleTrigger className="w-full" data-testid={`button-toggle-${section.id}`}>
+                    <Card className="hover:shadow-lg transition-shadow duration-200 cursor-pointer">
+                      <CardHeader>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-3">
+                            <div className="p-2 bg-forest/10 rounded-lg">
+                              {section.icon}
+                            </div>
+                            <CardTitle className="text-left text-forest">
+                              {section.title}
+                            </CardTitle>
+                          </div>
+                          <ChevronDown
+                            className={`w-5 h-5 text-forest transition-transform duration-200 ${
+                              openSections.has(section.id) ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </div>
+                      </CardHeader>
+                    </Card>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <Card className="mt-2">
+                      <CardContent className="pt-6">
+                        <div className="text-gray-700 whitespace-pre-line leading-relaxed">
+                          {section.content}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CollapsibleContent>
+                </Collapsible>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

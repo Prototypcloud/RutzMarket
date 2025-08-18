@@ -11,32 +11,32 @@ import { useState } from "react";
 
 const timeline = [
   {
-    year: "2019",
+    year: "2024",
     title: "Foundation",
     description: "RÜTZ founded with vision to bridge indigenous wisdom and modern science"
   },
   {
-    year: "2020",
+    year: "2025",
     title: "First Partnerships",
-    description: "Established relationships with 3 indigenous communities in Northern Ontario"
+    description: "Established relationships with 3 indigenous communities in British Columbia"
   },
   {
-    year: "2021",
+    year: "2025",
     title: "Research Collaborations",
     description: "Partnerships with Fraunhofer Institute and University of Toronto"
   },
   {
-    year: "2022",
+    year: "2025",
     title: "Certification Success",
     description: "Achieved ISO certifications and Health Canada NPN approvals"
   },
   {
-    year: "2023",
+    year: "2026 Ongoing",
     title: "Expansion",
     description: "Extended partnerships to 12 communities across Canada"
   },
   {
-    year: "2024",
+    year: "2026 Ongoing",
     title: "Innovation",
     description: "Launched Plant Explorer and AI-powered recommendation system"
   }

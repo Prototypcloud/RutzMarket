@@ -29,6 +29,13 @@ export async function initializeDatabase() {
   const existingProducts = await db.select().from(products).limit(1);
   if (existingProducts.length > 0) {
     console.log("Database already has data, skipping initialization");
+    
+    // But always check if global indigenous plants need to be initialized
+    const existingPlants = await db.select().from(globalIndigenousPlants).limit(1);
+    if (existingPlants.length === 0) {
+      console.log("Initializing missing global indigenous plants...");
+      await initializeGlobalIndigenousPlants();
+    }
     return;
   }
 
@@ -742,4 +749,52 @@ export async function initializeDatabase() {
   await db.insert(globalIndigenousPlants).values(globalPlantsData);
 
   console.log("Database initialization complete!");
+}
+
+async function initializeGlobalIndigenousPlants() {
+  // Initialize global indigenous plants data
+  const globalPlantsData: InsertGlobalIndigenousPlant[] = [
+    {
+      plantName: "Chaga",
+      scientificName: "Inonotus obliquus",
+      region: "North America",
+      countryOfOrigin: "Canada, Alaska",
+      indigenousTribesOrGroup: "Cree, Ojibwe, Inuit",
+      traditionalUses: "Immune support, digestive health, tea preparation for winter wellness",
+      popularProductForm: "Extract powder, tincture, tea",
+      associatedCeremony: "Winter health ceremonies",
+      veterinaryUse: "Traditional animal health support",
+      sustainabilityNotes: "Wild-harvested with sustainable methods ensuring tree survival",
+      researchStatus: "Extensively studied for β-glucans and immune support"
+    },
+    {
+      plantName: "Labrador Tea",
+      scientificName: "Rhododendron groenlandicum",
+      region: "North America",
+      countryOfOrigin: "Canada, Alaska",
+      indigenousTribesOrGroup: "Inuit, Cree, Dene",
+      traditionalUses: "Respiratory wellness, digestive support, ceremonial beverage",
+      popularProductForm: "Dried leaves, tea blend",
+      associatedCeremony: "Seasonal transition rituals",
+      veterinaryUse: null,
+      sustainabilityNotes: "Bog-harvested with careful regeneration practices",
+      researchStatus: "Traditional knowledge documented, antioxidant properties studied"
+    },
+    {
+      plantName: "Wild Rose Hips",
+      scientificName: "Rosa acicularis",
+      region: "North America",
+      countryOfOrigin: "Canada, Northern USA",
+      indigenousTribesOrGroup: "Plains Cree, Blackfoot, Métis",
+      traditionalUses: "Vitamin C source, digestive health, winter nutrition",
+      popularProductForm: "Dried fruit, powder, syrup",
+      associatedCeremony: null,
+      veterinaryUse: "Traditional animal nutrition supplement",
+      sustainabilityNotes: "Wild-harvested following traditional timing and methods",
+      researchStatus: "High vitamin C content confirmed, nutritional profile documented"
+    }
+  ];
+
+  await db.insert(globalIndigenousPlants).values(globalPlantsData);
+  console.log(`Initialized ${globalPlantsData.length} global indigenous plants`);
 }

@@ -81,16 +81,18 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
   // Extract unique filter options from data
   const filterOptions = useMemo(() => {
     const regionSet = new Set(plants.map(p => p.region));
-    const countrySet = new Set(plants.map(p => p.countryOfOrigin));
+    const countrySet = new Set(plants.flatMap(p => 
+      p.countryOfOrigin.split(',').map(c => c.trim())
+    ));
     const tribeSet = new Set(plants.flatMap(p => 
       p.indigenousTribesOrGroup.split(',').map(t => t.trim())
     ));
     const productFormSet = new Set(plants.map(p => p.popularProductForm));
     
-    const regions = Array.from(regionSet);
-    const countries = Array.from(countrySet);
-    const tribes = Array.from(tribeSet);
-    const productForms = Array.from(productFormSet);
+    const regions = Array.from(regionSet).sort();
+    const countries = Array.from(countrySet).sort();
+    const tribes = Array.from(tribeSet).sort();
+    const productForms = Array.from(productFormSet).sort();
     
     return { regions, countries, tribes, productForms };
   }, [plants]);

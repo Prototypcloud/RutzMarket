@@ -136,31 +136,30 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
       data-testid={`plant-card-${plant.id}`}
-      className="h-full"
     >
-      <div 
-        className="h-full cursor-pointer bg-white hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-green-300 hover:bg-gray-50 rounded-lg shadow-sm"
+      <Card 
+        className="h-full cursor-pointer bg-white hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-green-300 hover:bg-gray-50"
         onClick={() => setSelectedPlant(plant)}
       >
-        <div className="p-6 pb-3">
+        <CardHeader className="pb-3">
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <h3 className="text-lg text-gray-900 mb-1 line-clamp-2 font-semibold">
+              <CardTitle className="text-lg text-gray-900 mb-1 line-clamp-2 font-semibold">
                 {plant.plantName}
-              </h3>
-              <p className="text-sm italic text-gray-600 font-sans">
+              </CardTitle>
+              <CardDescription className="text-sm italic text-gray-600 font-sans">
                 {plant.scientificName}
-              </p>
+              </CardDescription>
             </div>
             <Leaf className="h-5 w-5 text-amber-600 flex-shrink-0 ml-2" />
           </div>
           <div className="flex flex-wrap gap-1 mt-2">
-            <span className="inline-flex items-center rounded-md bg-green-100 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-inset ring-green-600/20">
+            <Badge variant="secondary" className="text-xs bg-green-100 text-green-800 border-green-200">
               {plant.region}
-            </span>
+            </Badge>
           </div>
-        </div>
-        <div className="px-6 pt-0 pb-6">
+        </CardHeader>
+        <CardContent className="pt-0">
           <div className="space-y-2 text-sm">
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4 text-green-600" />
@@ -180,8 +179,8 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
           <p className="text-sm text-gray-600 mt-3 line-clamp-2">
             {plant.traditionalUses}
           </p>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
     </motion.div>
   );
 

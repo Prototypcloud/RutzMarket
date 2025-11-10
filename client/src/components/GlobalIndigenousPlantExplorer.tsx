@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, Globe, Leaf, Users, MapPin, Calendar, Sparkles } from 'lucide-react';
@@ -55,6 +55,11 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
     queryKey: ['/api/global-indigenous-plants'],
   });
 
+  // Reset tribe filter when country changes
+  useEffect(() => {
+    setFilters(prev => ({ ...prev, tribe: 'all' }));
+  }, [filters.country]);
+
   // Debug logging
   console.log('Plant Explorer Debug:', { 
     plantsCount: plants?.length, 
@@ -84,7 +89,13 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
     const countrySet = new Set(plants.flatMap(p => 
       p.countryOfOrigin.split(',').map(c => c.trim())
     ));
-    const tribeSet = new Set(plants.flatMap(p => 
+    
+    // Filter plants by selected country for tribe options
+    const plantsForTribes = filters.country === 'all' 
+      ? plants 
+      : plants.filter(p => p.countryOfOrigin.includes(filters.country));
+    
+    const tribeSet = new Set(plantsForTribes.flatMap(p => 
       p.indigenousTribesOrGroup.split(',').map(t => t.trim())
     ));
     const productFormSet = new Set(plants.map(p => p.popularProductForm));
@@ -95,7 +106,7 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
     const productForms = Array.from(productFormSet).sort();
     
     return { regions, countries, tribes, productForms };
-  }, [plants]);
+  }, [plants, filters.country]);
 
   // Filter plants based on current filters
   const filteredPlants = useMemo(() => {

@@ -1,0 +1,4688 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2025-11-11T12:05:21.591019Z",
+  "catalog": [
+    {
+      "id": "14d6c748-48ed-4d28-90a3-9a7d1c1b156b",
+      "commonName": "Balsam fir",
+      "scientificName": "Abies balsamea",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "resin"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Respiratory teas, salves; pitches for waterproofing",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "44c3e48a-14c4-4a7c-a49b-2181da0d4554",
+      "commonName": "Sugar maple",
+      "scientificName": "Acer saccharum",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "sap",
+        "inner bark"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Sap for syrup; bark infusions",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "0480e1d4-9e11-436a-b571-5c9680d55bb8",
+      "commonName": "Manitoba maple (Boxelder)",
+      "scientificName": "Acer negundo",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "sap",
+        "wood"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Sap for syrup; utility wood",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "4e8d116f-6861-45de-b7be-7a47339c864b",
+      "commonName": "Trembling aspen",
+      "scientificName": "Populus tremuloides",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "inner bark"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Poultices; baskets and craft wood",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "56303aa4-2d7e-4595-9b7f-9cd7650c64a9",
+      "commonName": "Balsam poplar",
+      "scientificName": "Populus balsamifera",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "bark"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Balm of Gilead salves; cough remedies",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "ad053b35-b8e7-47c7-89e6-f56cab1b5dff",
+      "commonName": "Eastern cottonwood",
+      "scientificName": "Populus deltoides",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Material/Craft",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "bark",
+        "wood"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Bark infusions; canoe and tool wood",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "383c4f01-ff96-4a81-96ce-6cf8376893ec",
+      "commonName": "Paper birch",
+      "scientificName": "Betula papyrifera",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "sap",
+        "bark",
+        "stems"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Sap for syrup; bark canoes, baskets",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "8b574d85-5ee5-4fff-9ad5-d28947239fdd",
+      "commonName": "Yellow birch",
+      "scientificName": "Betula alleghaniensis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "bark",
+        "stems"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Aromatic teas, antiseptic washes",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "26eb849c-8cdc-4e9f-abdf-f745a811a7cf",
+      "commonName": "American basswood",
+      "scientificName": "Tilia americana",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "flowers",
+        "inner bark"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Calming teas; cordage from bast",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "ff8f7c5e-c834-40a9-8236-ddd2f8c0b55d",
+      "commonName": "Bur oak",
+      "scientificName": "Quercus macrocarpa",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "seeds",
+        "wood"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Acorns leached for meal; durable wood",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "13ce3899-b935-4308-8629-4622537b4963",
+      "commonName": "American elm",
+      "scientificName": "Ulmus americana",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "inner bark"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Soothing mucilage; cordage",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "102ae3cb-2995-4a45-b3b3-07a60961a3a7",
+      "commonName": "Black ash",
+      "scientificName": "Fraxinus nigra",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "wood"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Basketry splints, snowshoes",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "b9011c13-ab90-4a67-96f6-ae77d205329c",
+      "commonName": "Green ash",
+      "scientificName": "Fraxinus pennsylvanica",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "wood"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Tool handles, bows",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "d6da6a5a-e0aa-4530-95ba-d767c2831d50",
+      "commonName": "White spruce",
+      "scientificName": "Picea glauca",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "resin",
+        "roots"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Spruce gum; root cordage; teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "ed3d0016-f068-4f03-9d40-5c31c71aad25",
+      "commonName": "Black spruce",
+      "scientificName": "Picea mariana",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "resin"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Resin salves; aromatic teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "d0721e6d-dfb5-4bd2-b276-99f7376e36ee",
+      "commonName": "Jack pine",
+      "scientificName": "Pinus banksiana",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Material/Craft",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "resin",
+        "wood"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Gum for waterproofing; teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "2d1792fc-032c-4e3a-b414-7fa25b460a3d",
+      "commonName": "Tamarack (Larch)",
+      "scientificName": "Larix laricina",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "inner bark",
+        "resin"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Poultices; snowshoe frames",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "13bee633-a0a6-453a-a733-9757d8ca0fca",
+      "commonName": "White cedar",
+      "scientificName": "Thuja occidentalis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Ceremonial/Cultural",
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves",
+        "bark",
+        "wood"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Sacred medicine; purification; baskets",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "0ca2fcaa-a689-4994-a29a-ae7d17fd3b00",
+      "commonName": "Speckled alder",
+      "scientificName": "Alnus incana",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "bark",
+        "catkins"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Astringent washes; dyes",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "2e3f41fa-3543-4054-b4f9-cbcfd2982864",
+      "commonName": "Willows (basket willows)",
+      "scientificName": "Salix spp.",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "bark",
+        "shoots"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Salicin for pain; baskets; live-stakes",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "e5005c51-d1ea-4471-a487-b34ea6eaffe5",
+      "commonName": "Red-osier dogwood",
+      "scientificName": "Cornus sericea",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "bark",
+        "stems",
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Bark infusions; dye; basketry",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "db3b4737-8448-4225-9dba-851b582a2ad8",
+      "commonName": "Hawthorns",
+      "scientificName": "Crataegus spp.",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries",
+        "flowers"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Jellies; cardiovascular tonics",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "0dc63011-3497-4e76-9343-26aef6e3098a",
+      "commonName": "Pin cherry",
+      "scientificName": "Prunus pensylvanica",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries",
+        "bark"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Jellies; cough syrups",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "35512b72-02af-4e66-bb37-69c18d14c77e",
+      "commonName": "Chokecherry",
+      "scientificName": "Prunus virginiana",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries",
+        "bark"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Pemmican ingredient; cough remedies",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "3d58fae3-1114-4f95-8b9d-84d7186b7aab",
+      "commonName": "Wild plum",
+      "scientificName": "Prunus nigra",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Fresh eating, preserves",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "3f0a5e37-a424-4040-8219-e952bd6135e5",
+      "commonName": "American hazelnut",
+      "scientificName": "Corylus americana",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Nut meal, roasting",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "fefa878d-bef4-4301-97fc-3badd53d157a",
+      "commonName": "Beaked hazelnut",
+      "scientificName": "Corylus cornuta",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Nut butters; flours",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "33af30a9-705d-4bb1-9dd4-27bce0a17da7",
+      "commonName": "Highbush cranberry",
+      "scientificName": "Viburnum opulus var. americanum",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries",
+        "bark"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Sauces; antispasmodic bark",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "4b7ef2a7-af8b-41bd-a35f-8fec92483735",
+      "commonName": "Canada buffaloberry",
+      "scientificName": "Shepherdia canadensis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Foamy 'Indian ice cream'",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "cc3e5d39-398d-4030-8039-640bb51c6288",
+      "commonName": "Wild rose (prickly/wood’s)",
+      "scientificName": "Rosa acicularis / Rosa woodsii",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Vitamin C-rich teas; salves",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "48cc774f-e421-4911-b2ce-15f8952795bb",
+      "commonName": "Common juniper",
+      "scientificName": "Juniperus communis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "stems"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Digestive teas; seasoning",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "813e2f34-6f1a-42af-a1cb-f7886fd26a4e",
+      "commonName": "Sweet gale (bog myrtle)",
+      "scientificName": "Myrica gale",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Ceremonial/Cultural"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves",
+        "stems"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Aromatic teas; insect repellent",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "f3f4e85a-b8d1-4912-a193-8d6a869a0bf6",
+      "commonName": "Saskatoon serviceberry",
+      "scientificName": "Amelanchier alnifolia",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Fresh, dried, pemmican, wine",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "a5d746af-6a30-4c05-91de-8a857cfffe4e",
+      "commonName": "Lowbush blueberry",
+      "scientificName": "Vaccinium angustifolium",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Fresh and dried",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "14036210-ec5e-40d6-8daa-34c6034a73fe",
+      "commonName": "Velvetleaf blueberry",
+      "scientificName": "Vaccinium myrtilloides",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Fresh and dried",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "1440b394-f9c8-4d39-8577-bd224e90fbcf",
+      "commonName": "Bog cranberry",
+      "scientificName": "Vaccinium oxycoccos",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Urinary tract tonics; preserves",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "ae941a59-9c84-4b44-ae0f-a9d98aeeb5dc",
+      "commonName": "Lingonberry (mountain cranberry)",
+      "scientificName": "Vaccinium vitis-idaea",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Jams and sauces",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "42894e52-c275-4919-b830-8267beebf5ef",
+      "commonName": "Black currant",
+      "scientificName": "Ribes hudsonianum",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries",
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Syrups; leaf teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "774a9aeb-4d24-4c39-b107-365b0449ce64",
+      "commonName": "Red currant",
+      "scientificName": "Ribes rubrum (introduced), R. triste (native red)",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Preserves; teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "50ce0548-c0b3-42fe-8a51-42b32dd265bf",
+      "commonName": "Gooseberries",
+      "scientificName": "Ribes oxyacanthoides, R. spp.",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Fresh, pies",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "ee7c9ad2-24cc-45d5-95f0-656f8ae11295",
+      "commonName": "Dewberry",
+      "scientificName": "Rubus pubescens",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Fresh, jams",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "ac9256c4-cb75-41aa-a06f-7194a56dd386",
+      "commonName": "Raspberry",
+      "scientificName": "Rubus idaeus ssp. strigosus",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries",
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Leaves for teas; berries fresh",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "198f668a-e3f8-4131-a291-9b3193820226",
+      "commonName": "Thimbleberry",
+      "scientificName": "Rubus parviflorus",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries",
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Jams; poultices",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "6c5cf37f-7932-4e1e-8f8f-bd43ea23502e",
+      "commonName": "Strawberry (wild)",
+      "scientificName": "Fragaria virginiana",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Ceremonial/Cultural"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries",
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Feasts; teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "8bb5783b-ac81-4257-b818-7c0c1e92b1d4",
+      "commonName": "Bearberry (kinnikinnick)",
+      "scientificName": "Arctostaphylos uva-ursi",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Ceremonial/Cultural",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves",
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Smoking blends; urinary tonics",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "07afa920-7870-4e05-85ed-f23b838fd501",
+      "commonName": "Cattail",
+      "scientificName": "Typha latifolia / T. angustifolia",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "rhizomes",
+        "shoots",
+        "pollen"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Rhizome starch; insulation; weaving",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "a7949e19-179b-4a56-ab81-e87e7a25e56e",
+      "commonName": "Bulrush (tule)",
+      "scientificName": "Schoenoplectus spp.",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Material/Craft",
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "stems",
+        "rhizomes"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Mats; weaving; edible rhizomes",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "aa27d3d1-6182-4c69-8334-7215e4086f6c",
+      "commonName": "Arrowhead (duck potato)",
+      "scientificName": "Sagittaria latifolia",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "tubers"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Starchy tubers roasted",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "ef71f79c-1bdc-46cd-a071-a9f83d7dc732",
+      "commonName": "Sweetflag (calamus)",
+      "scientificName": "Acorus americanus",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "rhizomes"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Digestive; ceremonial uses",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "386a34cb-f252-4cf7-8f29-82d89eaa709d",
+      "commonName": "Wild rice (manoomin)",
+      "scientificName": "Zizania palustris",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Ceremonial/Cultural"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "seeds"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Staple grain; ceremonial harvest",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "f70e4909-b9c3-43be-96bb-486809709133",
+      "commonName": "Marsh marigold",
+      "scientificName": "Caltha palustris",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Boiled in changes of water",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "be7573e2-9422-4cfe-ae2d-a7e4607ea328",
+      "commonName": "Pickerelweed (limited range)",
+      "scientificName": "Pontederia cordata",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "seeds"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Roasted seeds; greens",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "54633ecc-e90d-4901-a707-e5df06e3968a",
+      "commonName": "Yarrow",
+      "scientificName": "Achillea millefolium",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves",
+        "flowers"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Antiseptic washes; wound care",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "717227ad-993d-4fb5-9c33-62bf0ae7895f",
+      "commonName": "Prairie sage / white sage (northern)",
+      "scientificName": "Artemisia ludoviciana",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Ceremonial/Cultural",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Smudging; digestive teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "425382b9-56c9-426c-aa51-de43d9b6d1d3",
+      "commonName": "Pasture sage",
+      "scientificName": "Artemisia frigida",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Teas; aromatic smudge",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "fdc8b389-c7a2-4608-ab4b-87d2345e80c6",
+      "commonName": "Wild mint",
+      "scientificName": "Mentha arvensis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Teas; flavoring",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "d2352cf6-0851-420b-b001-ec20617b0c39",
+      "commonName": "Bergamot (wild monarda)",
+      "scientificName": "Monarda fistulosa",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves",
+        "flowers"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Carminative teas; seasoning",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "c56673a2-e550-4479-a769-eeff1a48701a",
+      "commonName": "Fireweed",
+      "scientificName": "Chamerion angustifolium",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "shoots",
+        "flowers",
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Spring greens; soothing teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "c7e441af-912c-4c39-93c5-26a339576fe3",
+      "commonName": "Goldenrod",
+      "scientificName": "Solidago spp.",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "flowers",
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Urinary and cold teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "52056615-cfe4-4b03-b8bc-026fca9ad674",
+      "commonName": "Asters",
+      "scientificName": "Symphyotrichum spp.",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "flowers",
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Respiratory teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "24ad7598-aa17-47c6-943f-8d24c0f5d23b",
+      "commonName": "Stinging nettle",
+      "scientificName": "Urtica dioica",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "stems"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Nutritive greens; cordage",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "6227c5d1-6c5d-4bb2-a084-eb6fa80cc403",
+      "commonName": "Labrador tea",
+      "scientificName": "Rhododendron groenlandicum",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Aromatic tea; coughs (use moderately)",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "7ea502ac-1a47-41c3-83c1-bf6e7dffb5e7",
+      "commonName": "Wintergreen (teaberry)",
+      "scientificName": "Gaultheria procumbens",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves",
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Analgesic teas; flavoring",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "39e49d71-838e-4a1b-9728-3db52cc59c7c",
+      "commonName": "Goldthread",
+      "scientificName": "Coptis trifolia",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "rhizomes"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Bitter tonic; mouth sores",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "41478908-ba24-4fc2-b15e-cd1e924b143c",
+      "commonName": "Wild ginger",
+      "scientificName": "Asarum canadense",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "rhizomes"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Warming spice; poultices",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "64d6e55c-3933-4051-8575-db30c5a474db",
+      "commonName": "Coltsfoot",
+      "scientificName": "Tussilago farfara",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves",
+        "flowers"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Cough remedies (introduced)",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "1c32f4f3-fd2b-4ef9-9b4c-dcf3ad166986",
+      "commonName": "Plantain (common)",
+      "scientificName": "Plantago major",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Poultices for stings (introduced)",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "3465ec16-befc-4552-8443-e57120668eec",
+      "commonName": "Dandelion",
+      "scientificName": "Taraxacum officinale",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves",
+        "roots",
+        "flowers"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Greens; coffee substitute (introduced)",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "4c039a4a-2e64-46c8-97b2-7aeee4d68ee1",
+      "commonName": "Wild onion",
+      "scientificName": "Allium stellatum",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Condiment; tonic",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "021df939-5e2f-450a-95c6-c2121ca3c932",
+      "commonName": "Wild sarsaparilla",
+      "scientificName": "Aralia nudicaulis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "rhizomes"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Root teas; tonic",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "f17c6147-879b-4044-9bce-13b9b768e3f5",
+      "commonName": "Sweetgrass",
+      "scientificName": "Hierochloë odorata",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Ceremonial/Cultural",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Braids for smudging; weaving",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "5b243e65-8e58-403a-83ea-f38ee720c50a",
+      "commonName": "Horsetails",
+      "scientificName": "Equisetum arvense / E. hyemale",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "stems"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Diuretic teas; scouring rush",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "1edf7fdd-62bf-497b-ae27-1806cb85c909",
+      "commonName": "Cow parsnip",
+      "scientificName": "Heracleum maximum",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves",
+        "stems"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Peeled young stalks; caution raw",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "970967ca-279a-4921-bfc3-364fbd083ff0",
+      "commonName": "Wild bergamot (horsemint)",
+      "scientificName": "Monarda fistulosa",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Antimicrobial teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "224679a7-1bc2-4cd2-8d2d-617d0d831346",
+      "commonName": "Yampah (rare/edge)",
+      "scientificName": "Perideridia gairdneri",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "roots"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Edible root where present (edge of range)",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "9f57cf33-b41f-4a96-9146-4e8e8dae182c",
+      "commonName": "Prairie turnip (Indian breadroot)",
+      "scientificName": "Pediomelum esculentum",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "roots"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Dried flour; prairie sites",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "75df49db-4f22-4187-874b-0450874afb06",
+      "commonName": "Prairie smoke",
+      "scientificName": "Geum triflorum",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "roots"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Astringent teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "b8753d86-013a-431a-92a0-8d921c6af38c",
+      "commonName": "Nodding onion",
+      "scientificName": "Allium cernuum",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Culinary use",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "d18a339d-e291-4195-8742-48b8255c66e0",
+      "commonName": "Sweet clover (white/yellow)",
+      "scientificName": "Melilotus officinalis / M. alba",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "flowers"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Poultices; introduced",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "f624afb7-c58a-4798-8bc6-2b6421c69ba6",
+      "commonName": "Peppergrass / wild mustard",
+      "scientificName": "Lepidium / Sinapis spp.",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves",
+        "seeds"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Condiment greens",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "9c4ff5ed-065b-46c9-96f7-e3b8cd4955ba",
+      "commonName": "Shepherd’s purse",
+      "scientificName": "Capsella bursa-pastoris",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Astringent; introduced",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "8027aebe-6d11-4e5b-b960-e7ec71cf5da4",
+      "commonName": "Juniper (ground)",
+      "scientificName": "Juniperus horizontalis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries",
+        "stems"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Aromatic baths; digestive",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "addcbea2-0f34-44e3-b532-b09c6a74ef13",
+      "commonName": "Bearroot (sweet cicely)",
+      "scientificName": "Osmorhiza claytonii / O. longistylis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "roots",
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Sweet anise flavor; cold remedies",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "3042c6e0-7e87-47a2-820e-73c8eeb7feca",
+      "commonName": "Blue vervain",
+      "scientificName": "Verbena hastata",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Nervine teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "b38608f6-9923-438a-a59b-89a26546127b",
+      "commonName": "Boneset",
+      "scientificName": "Eupatorium perfoliatum",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Fever teas (use cautiously)",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "8e91ba20-6978-4c54-a26d-4c6d4e18d6bc",
+      "commonName": "Marsh Labrador tea (bog rosemary)",
+      "scientificName": "Andromeda polifolia",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Traditional teas (limited range)",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "5ff70911-1b60-479f-9499-51004f9f083a",
+      "commonName": "Bunchberry",
+      "scientificName": "Cornus canadensis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries",
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Edible berries; astringent leaves",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "854b323e-19d6-48b7-9832-8b31ea478d25",
+      "commonName": "Sweetfern",
+      "scientificName": "Comptonia peregrina",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Aromatic teas; limited to sandy sites",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "d3c0844e-19b5-44aa-afcd-62450ff61dac",
+      "commonName": "Mullein",
+      "scientificName": "Verbascum thapsus",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves",
+        "flowers"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Cough teas; introduced",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "b7451046-fe36-4def-9d2b-1a9f04cf1aa9",
+      "commonName": "Gumweed",
+      "scientificName": "Grindelia squarrosa",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "flowers"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Respiratory remedies; prairie edges",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "5a96b1cc-9712-47c0-bf99-9a00026cd99f",
+      "commonName": "Prairie sagewort",
+      "scientificName": "Artemisia campestris",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Aromatic teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "da7e7cd3-f747-498c-8d46-1365b327bd68",
+      "commonName": "Wild strawberry leaf",
+      "scientificName": "Fragaria virginiana",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Astringent teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "2449cc6c-9fec-43d7-8217-198ee1d747d7",
+      "commonName": "Evening primrose",
+      "scientificName": "Oenothera biennis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "roots",
+        "seeds"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Roots cooked; seed oil",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "7f74359d-d849-45b3-b1fd-c46df347fe65",
+      "commonName": "Jerusalem artichoke",
+      "scientificName": "Helianthus tuberosus",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "tubers"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Sunroot patches; tubers roasted",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "62c87789-e48f-44bc-aee8-7cb266ed033a",
+      "commonName": "Sunflower (native species)",
+      "scientificName": "Helianthus annuus (introduced landraces), H. maximiliani (native)",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "seeds",
+        "stems"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Seeds; fiber",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "6d0d81ca-6e00-4f41-8bff-065c68f5c1a0",
+      "commonName": "Cranesbill (wild geranium)",
+      "scientificName": "Geranium maculatum",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "roots"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Astringent",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "6e333904-14c2-44f1-82fa-5a91f574f632",
+      "commonName": "Red clover",
+      "scientificName": "Trifolium pratense",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "flowers"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Infusions; introduced",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "4cafa2e3-60d8-44b1-804f-e667deac6b4e",
+      "commonName": "Sweet cicely (Osmorhiza spp.)",
+      "scientificName": "Osmorhiza claytonii / O. longistylis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "roots"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Sweet anise roots",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "24c908cd-900e-424f-aa49-2587b56870ed",
+      "commonName": "Hazel (leaf and catkins)",
+      "scientificName": "Corylus spp.",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic",
+        "Food/Culinary"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Nutritive; astringent",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "ee43e1bc-606f-44a1-a70c-c5dd03d2717b",
+      "commonName": "Black chokeberry",
+      "scientificName": "Aronia melanocarpa",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Antioxidant-rich preserves",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "3b29e0a7-754f-4bef-a275-12984780b039",
+      "commonName": "Serviceberry (leaves & bark)",
+      "scientificName": "Amelanchier spp.",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "bark",
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Astringent teas",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "f617c882-d59a-4346-a219-058df56ff4c6",
+      "commonName": "Switchgrass",
+      "scientificName": "Panicum virgatum",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "stems"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Weaving, thatch",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "4039d66c-3e87-4769-813b-041ed740e345",
+      "commonName": "Big bluestem",
+      "scientificName": "Andropogon gerardii",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "stems"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Thatching, bedding",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "4afd6a5a-b10d-4e00-8262-d6b922d4fa18",
+      "commonName": "Prairie dropseed",
+      "scientificName": "Sporobolus heterolepis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Material/Craft"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "stems"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Bedding; craft grass",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "a4b3beab-b8d0-42f7-8486-5a404cfd4e33",
+      "commonName": "Alder buckthorn (glossy buckthorn)*",
+      "scientificName": "Frangula alnus",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Dye/Tannin"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "bark",
+        "leaves"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Yellow/green dyes; invasive management",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "b5a45884-0bbc-4aba-88d0-c49a77ed24e4",
+      "commonName": "Bloodroot",
+      "scientificName": "Sanguinaria canadensis",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Dye/Tannin",
+        "Medicinal/Therapeutic"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "rhizomes"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Red-orange dye; cautions apply",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "2027e0dc-caf8-4d22-b884-d690b25bca9c",
+      "commonName": "Staghorn sumac",
+      "scientificName": "Rhus typhina",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Food/Culinary",
+        "Dye/Tannin"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [
+        "berries",
+        "bark"
+      ],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Tart ‘sumac-ade’; tannins for dye",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    },
+    {
+      "id": "ad45d9df-3b76-49ee-94b3-7c6e1fbf1731",
+      "commonName": "Oak galls",
+      "scientificName": "Quercus spp.",
+      "indigenousNames": [],
+      "habitat": [],
+      "useCategory": [
+        "Dye/Tannin"
+      ],
+      "productOpportunityType": [],
+      "novelFoodRegulatoryFlag": "Likely Conventional",
+      "nutraceuticalPotential": "Moderate",
+      "harvestCultivationStatus": "Wild & Cultivated",
+      "timeToMarket": "Short (<1y)",
+      "culturalConsent": "Open Documentation",
+      "restorationServiceRole": "Moderate",
+      "valueChainComplexity": "Low",
+      "partsUsed": [],
+      "seasonality": {
+        "harvestWindow": "",
+        "notes": ""
+      },
+      "respectfulHarvestProtocol": "",
+      "regulatoryNotes": "",
+      "geofences": [],
+      "skuIdeas": [],
+      "processingNotes": "Iron-gall inks; tannins",
+      "sustainabilityFlags": {
+        "populationStatus": "",
+        "harvestRotationYears": 0,
+        "replantingRecommended": false
+      },
+      "images": [],
+      "sources": [],
+      "attribution": {
+        "knowledgeKeeperReview": false,
+        "reviewNotes": ""
+      }
+    }
+  ],
+  "filters": [
+    {
+      "field": "useCategory",
+      "label": "Use Category",
+      "type": "multiselect",
+      "enum": [
+        "Food/Culinary",
+        "Medicinal/Therapeutic",
+        "Ceremonial/Cultural",
+        "Material/Craft",
+        "Restoration/Ecological",
+        "Dye/Tannin"
+      ],
+      "iconMap": {
+        "Food/Culinary": "🍲",
+        "Medicinal/Therapeutic": "🧪",
+        "Ceremonial/Cultural": "🪶",
+        "Material/Craft": "🧺",
+        "Restoration/Ecological": "🌱",
+        "Dye/Tannin": "🎨"
+      },
+      "tooltip": "Primary traditional or commercial use."
+    },
+    {
+      "field": "productOpportunityType",
+      "label": "Product Opportunity",
+      "type": "multiselect",
+      "enum": [
+        "Fresh/Raw",
+        "Frozen/IQF",
+        "Dried Herb/Tea",
+        "Extract/Concentrate",
+        "Value-Added Food",
+        "Fiber/Insulation/Material",
+        "Ecological Service"
+      ],
+      "tooltip": "Downstream formats that make business sense."
+    },
+    {
+      "field": "novelFoodRegulatoryFlag",
+      "label": "Novel Food Status",
+      "type": "select",
+      "enum": [
+        "Likely Conventional",
+        "Novel Food Risk",
+        "Requires Pre-market Authorization"
+      ],
+      "tooltip": "Regulatory risk for new foods."
+    },
+    {
+      "field": "nutraceuticalPotential",
+      "label": "Nutraceutical Potential",
+      "type": "select",
+      "enum": [
+        "Low",
+        "Moderate",
+        "High"
+      ],
+      "tooltip": "Relative potential for bioactive/health products."
+    },
+    {
+      "field": "harvestCultivationStatus",
+      "label": "Harvest/Cultivation",
+      "type": "select",
+      "enum": [
+        "Wild-harvest only",
+        "Wild & Cultivated",
+        "Primarily Cultivated/Farmed",
+        "Nursery Propagated"
+      ],
+      "tooltip": "Supply mode and production feasibility."
+    },
+    {
+      "field": "habitat",
+      "label": "Habitat / Site",
+      "type": "multiselect",
+      "enum": [
+        "Wetland/Bog",
+        "Riparian/Lakeshore",
+        "Forest/Mixed-wood",
+        "Grassland/Aspen-Parkland",
+        "Orchard/Field",
+        "Disturbed/Edge"
+      ],
+      "tooltip": "Match plants to land parcels."
+    },
+    {
+      "field": "timeToMarket",
+      "label": "Time to Market",
+      "type": "select",
+      "enum": [
+        "Short (<1y)",
+        "Medium (1–3y)",
+        "Long (3+y)"
+      ],
+      "tooltip": "How fast a venture can produce product."
+    },
+    {
+      "field": "culturalConsent",
+      "label": "Cultural Consent / IP",
+      "type": "select",
+      "enum": [
+        "Open Documentation",
+        "Restricted—Indigenous Knowledge Only",
+        "Shared with Benefit-sharing"
+      ],
+      "tooltip": "Respectful data governance for knowledge and uses."
+    },
+    {
+      "field": "restorationServiceRole",
+      "label": "Restoration Value",
+      "type": "select",
+      "enum": [
+        "Low",
+        "Moderate",
+        "High"
+      ],
+      "tooltip": "Ecosystem service role for restoration projects."
+    },
+    {
+      "field": "valueChainComplexity",
+      "label": "Value Chain Complexity",
+      "type": "select",
+      "enum": [
+        "Low",
+        "Moderate",
+        "High"
+      ],
+      "tooltip": "Processing/Capex complexity to reach market."
+    },
+    {
+      "field": "partsUsed",
+      "label": "Parts Used",
+      "type": "multiselect",
+      "enum": [
+        "roots",
+        "rhizomes",
+        "tubers",
+        "bark",
+        "inner bark",
+        "wood",
+        "shoots",
+        "leaves",
+        "flowers",
+        "berries",
+        "seeds",
+        "cones",
+        "resin",
+        "sap",
+        "pollen",
+        "stems",
+        "catkins"
+      ],
+      "tooltip": "Botanical parts commonly used."
+    }
+  ],
+  "ui": {
+    "defaultSort": "name",
+    "presets": []
+  }
+}

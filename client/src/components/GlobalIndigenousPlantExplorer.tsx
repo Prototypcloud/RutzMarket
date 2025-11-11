@@ -58,6 +58,10 @@ interface PlantFilters {
   productForm: string;
   ceremonialUse: boolean;
   veterinaryUse: boolean;
+  useCategory: string;
+  regulatoryFlag: string;
+  cultivationStatus: string;
+  timeToMarket: string;
 }
 
 const GlobalIndigenousPlantExplorer: React.FC = () => {
@@ -69,6 +73,10 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
     productForm: 'all',
     ceremonialUse: false,
     veterinaryUse: false,
+    useCategory: 'all',
+    regulatoryFlag: 'all',
+    cultivationStatus: 'all',
+    timeToMarket: 'all',
   });
   
   const [selectedPlant, setSelectedPlant] = useState<GlobalIndigenousPlant | null>(null);
@@ -123,12 +131,36 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
     ));
     const productFormSet = new Set(plants.map(p => p.popularProductForm));
     
+    // Enhanced filter options
+    const useCategorySet = new Set(plants.flatMap(p => 
+      p.useCategory && p.useCategory.length > 0 ? p.useCategory : []
+    ));
+    const regulatoryFlagSet = new Set(plants
+      .map(p => p.novelFoodRegulatoryFlag)
+      .filter(Boolean)
+    );
+    const cultivationStatusSet = new Set(plants
+      .map(p => p.harvestCultivationStatus)
+      .filter(Boolean)
+    );
+    const timeToMarketSet = new Set(plants
+      .map(p => p.timeToMarket)
+      .filter(Boolean)
+    );
+    
     const regions = Array.from(regionSet).sort();
     const countries = Array.from(countrySet).sort();
     const tribes = Array.from(tribeSet).sort();
     const productForms = Array.from(productFormSet).sort();
+    const useCategories = Array.from(useCategorySet).sort();
+    const regulatoryFlags = Array.from(regulatoryFlagSet).sort();
+    const cultivationStatuses = Array.from(cultivationStatusSet).sort();
+    const timeToMarkets = Array.from(timeToMarketSet).sort();
     
-    return { regions, countries, tribes, productForms };
+    return { 
+      regions, countries, tribes, productForms, 
+      useCategories, regulatoryFlags, cultivationStatuses, timeToMarkets 
+    };
   }, [plants, filters.country]);
 
   // Filter plants based on current filters
@@ -145,9 +177,20 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
       const matchesProductForm = filters.productForm === 'all' || plant.popularProductForm.includes(filters.productForm);
       const matchesCeremonial = !filters.ceremonialUse || Boolean(plant.associatedCeremony);
       const matchesVeterinary = !filters.veterinaryUse || Boolean(plant.veterinaryUse);
+      
+      // Enhanced filters
+      const matchesUseCategory = filters.useCategory === 'all' || 
+        (plant.useCategory && plant.useCategory.includes(filters.useCategory));
+      const matchesRegulatory = filters.regulatoryFlag === 'all' || 
+        plant.novelFoodRegulatoryFlag === filters.regulatoryFlag;
+      const matchesCultivation = filters.cultivationStatus === 'all' || 
+        plant.harvestCultivationStatus === filters.cultivationStatus;
+      const matchesTimeToMarket = filters.timeToMarket === 'all' || 
+        plant.timeToMarket === filters.timeToMarket;
 
       return matchesSearch && matchesRegion && matchesCountry && matchesTribe && 
-             matchesProductForm && matchesCeremonial && matchesVeterinary;
+             matchesProductForm && matchesCeremonial && matchesVeterinary &&
+             matchesUseCategory && matchesRegulatory && matchesCultivation && matchesTimeToMarket;
     });
   }, [plants, filters]);
 
@@ -160,6 +203,10 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
       productForm: 'all',
       ceremonialUse: false,
       veterinaryUse: false,
+      useCategory: 'all',
+      regulatoryFlag: 'all',
+      cultivationStatus: 'all',
+      timeToMarket: 'all',
     });
   };
 
@@ -343,7 +390,7 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
         </div>
 
         {/* Secondary Filters */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
           <div className="space-y-2">
             <label className="text-sm font-medium text-rutz-forest">Product Form</label>
             <Select value={filters.productForm} onValueChange={(value) => setFilters(prev => ({ ...prev, productForm: value }))}>
@@ -354,6 +401,69 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
                 <SelectItem value="all">All Product Forms</SelectItem>
                 {filterOptions.productForms.map(form => (
                   <SelectItem key={form} value={form}>{form}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-rutz-forest">Use Category</label>
+            <Select value={filters.useCategory} onValueChange={(value) => setFilters(prev => ({ ...prev, useCategory: value }))}>
+              <SelectTrigger data-testid="use-category-filter">
+                <SelectValue placeholder="All Categories" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Categories</SelectItem>
+                {filterOptions.useCategories.map(cat => (
+                  <SelectItem key={cat} value={cat}>{cat}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-rutz-forest">Regulatory Status</label>
+            <Select value={filters.regulatoryFlag} onValueChange={(value) => setFilters(prev => ({ ...prev, regulatoryFlag: value }))}>
+              <SelectTrigger data-testid="regulatory-filter">
+                <SelectValue placeholder="All Statuses" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Statuses</SelectItem>
+                {filterOptions.regulatoryFlags.map(flag => (
+                  <SelectItem key={flag} value={flag || ''}>{flag}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-rutz-forest">Harvest Status</label>
+            <Select value={filters.cultivationStatus} onValueChange={(value) => setFilters(prev => ({ ...prev, cultivationStatus: value }))}>
+              <SelectTrigger data-testid="cultivation-filter">
+                <SelectValue placeholder="All Statuses" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Statuses</SelectItem>
+                {filterOptions.cultivationStatuses.map(status => (
+                  <SelectItem key={status} value={status || ''}>{status}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+
+        {/* Additional Filters Row */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-rutz-forest">Time to Market</label>
+            <Select value={filters.timeToMarket} onValueChange={(value) => setFilters(prev => ({ ...prev, timeToMarket: value }))}>
+              <SelectTrigger data-testid="time-to-market-filter">
+                <SelectValue placeholder="All Timeframes" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Timeframes</SelectItem>
+                {filterOptions.timeToMarkets.map(time => (
+                  <SelectItem key={time} value={time || ''}>{time}</SelectItem>
                 ))}
               </SelectContent>
             </Select>

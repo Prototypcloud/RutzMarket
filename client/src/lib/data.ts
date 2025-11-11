@@ -5,7 +5,6 @@ export const navigationItems = [
   { name: 'Plant Explorer', href: '/plant-explorer' },
   { name: 'Plant Orbit', href: '/plant-orbit' },
   { name: 'AI Recommendations', href: '/plant-recommendations' },
-  { name: 'Learning Hub', href: '/learning-hub' },
   { name: 'Ask Healer', href: '/journey' },
   { name: 'Impact Rewards', href: '/impact-rewards' },
   { name: 'Science', href: '/science' },

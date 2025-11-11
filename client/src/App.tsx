@@ -15,7 +15,6 @@ import Impact from "@/pages/Impact";
 import About from "@/pages/About";
 import PlantPairing from "@/pages/PlantPairing";
 import PlantOrbit from "@/pages/PlantOrbit";
-import LearningHub from "@/pages/LearningHub";
 import Journey from "@/pages/Journey";
 import ImpactRewards from "@/pages/ImpactRewards";
 import PlantRecommendations from "@/pages/PlantRecommendations";
@@ -34,7 +33,6 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/plant-pairing" component={PlantPairing} />
       <Route path="/plant-orbit" component={PlantOrbit} />
-      <Route path="/learning-hub" component={LearningHub} />
       <Route path="/journey" component={Journey} />
       <Route path="/impact-rewards" component={ImpactRewards} />
       <Route path="/plant-recommendations" component={PlantRecommendations} />

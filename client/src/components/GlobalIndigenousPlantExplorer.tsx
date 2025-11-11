@@ -355,11 +355,6 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
         <p className="text-gray-600 max-w-4xl mx-auto font-medium">
           {content?.hero?.subheadline ?? "From Indigenous knowledge to modern science - trace the botanical stories that shaped medicine, ceremony, and culture."}
         </p>
-        <div className="flex items-center justify-center gap-2 text-sm text-gray-600 font-medium">
-          <span className="bg-green-100 px-2 py-1 rounded-md text-green-800">{plants.length} total plants</span>
-          <span>•</span>
-          <span className="bg-amber-100 px-2 py-1 rounded-md text-amber-800">{filteredPlants.length} matching filters</span>
-        </div>
         <p className="text-sm text-rutz-sage italic">
           {content?.interactive_layer?.micro_stats_line ?? `${plants.length} total plants • 10 cultural regions • 70+ healing traditions`}
         </p>

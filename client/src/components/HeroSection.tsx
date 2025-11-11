@@ -78,15 +78,6 @@ export default function HeroSection() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              
-              <Button 
-                variant="outline"
-                size="lg"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-forest transition-colors"
-                data-testid="our-impact-button"
-              >
-                Our Impact
-              </Button>
             </motion.div>
           </motion.div>
           

@@ -1,12 +1,12 @@
 // Static data and utility functions for the RÜTZ application
 export const navigationItems = [
-  { name: 'Health Concerns', href: '/health-concerns' },
-  { name: 'Products', href: '/chaga-portfolio' },
+  { name: 'Healing Path', href: '/health-concerns' },
+  { name: 'Apotheca', href: '/chaga-portfolio' },
   { name: 'Plant Explorer', href: '/plant-explorer' },
   { name: 'Plant Orbit', href: '/plant-orbit' },
-  { name: 'AI Recommendations', href: '/plant-recommendations' },
-  { name: 'Ask Healer', href: '/journey' },
-  { name: 'Impact Rewards', href: '/impact-rewards' },
+  { name: 'Guided Remedy', href: '/plant-recommendations' },
+  { name: "Healer's Council", href: '/journey' },
+  { name: 'Earth Ledger', href: '/impact-rewards' },
   { name: 'Science', href: '/science' },
   { name: 'About', href: '/about' }
 ];

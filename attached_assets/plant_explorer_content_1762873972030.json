@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "version": "1.0",
+    "updated_at_iso": "2025-11-11T00:00:00Z",
+    "project": "Plant Explorer",
+    "description": "Structured content for Plant Explorer webpage, ready for programmatic update."
+  },
+  "hero": {
+    "title": "Plant Explorer",
+    "headline": "Discover the world’s living library of plants",
+    "subheadline": "From Indigenous knowledge to modern science — trace the botanical stories that shaped medicine, ceremony, and culture. Explore, filter, and visualize 175 plants across continents.",
+    "ctas": [
+      {
+        "label": "Start Exploring",
+        "href": "/explore",
+        "priority": "primary"
+      },
+      {
+        "label": "Open Database",
+        "href": "/database",
+        "priority": "secondary"
+      }
+    ],
+    "visual": {
+      "type": "globe_markers",
+      "alt": "Interactive world map showing botanical markers"
+    }
+  },
+  "intro": {
+    "headline": "Where Knowledge and Nature Intertwine",
+    "body": [
+      "For millennia, Indigenous communities have cultivated deep relationships with plants — observing, naming, and transforming them into food, healing, and ritual.",
+      "Plant Explorer merges this wisdom with botanical research, creating a unified view of how ecosystems and human knowledge co‑evolve."
+    ],
+    "visual": {
+      "type": "panoramic_biomes",
+      "alt": "Panoramic transition across rainforest, savanna, and desert flora"
+    }
+  },
+  "interactive_layer": {
+    "headline": "Global Indigenous Plant Grid",
+    "subheadline": "An Interactive Map of Ancestral Knowledge",
+    "body": [
+      "Navigate a data‑rich visualization of over 170 species.",
+      "Filter by region, tribe, ceremonial use, or active compound to uncover patterns that connect traditional knowledge and modern discovery."
+    ],
+    "micro_stats_line": "175 total plants • 10 cultural regions • 70+ healing traditions",
+    "demo": {
+      "type": "grid_animation",
+      "alt": "Looping animation of filters applied to plant grid"
+    }
+  },
+  "features": [
+    {
+      "title": "Cultural Context",
+      "text": "Each plant entry honors the voices and traditions of its original custodians. Verified ethnobotanical data ensures authenticity and respect.",
+      "icon": "culture"
+    },
+    {
+      "title": "Scientific Insight",
+      "text": "Cross‑referenced compounds and documented effects connect traditional remedies with current biomedical research.",
+      "icon": "science"
+    },
+    {
+      "title": "Interactive Learning",
+      "text": "Explore visual relationships between plants, regions, and uses — making Indigenous science accessible through intuitive design.",
+      "icon": "interactive"
+    }
+  ],
+  "database_block": {
+    "headline": "Global Indigenous Plant Database",
+    "body": [
+      "A searchable catalog that bridges storytelling and data.",
+      "Browse by plant name, use, or community of origin to explore the intertwined legacies of culture and biology."
+    ],
+    "cta": {
+      "label": "Open Full Database →",
+      "href": "/database"
+    },
+    "preview": {
+      "items": [
+        {
+          "name": "Banisteriopsis caapi",
+          "alias": "Ayahuasca vine"
+        },
+        {
+          "name": "Salix alba",
+          "alias": "Willow bark"
+        },
+        {
+          "name": "Calendula officinalis",
+          "alias": "Calendula"
+        }
+      ]
+    }
+  },
+  "closing": {
+    "headline": "From Ancient Roots to Future Growth",
+    "body": [
+      "Plant Explorer is more than a reference — it’s a bridge between worlds.",
+      "By combining Indigenous wisdom with modern science, we rediscover the planet’s oldest knowledge system and reimagine sustainability through respect, reciprocity, and curiosity."
+    ],
+    "subtext": "Knowledge grows when it’s shared."
+  },
+  "stats": {
+    "total_plants": 175,
+    "cultural_regions": 10,
+    "healing_traditions_over": 70
+  },
+  "microcopy": {
+    "filters_hint": "Filter by region, tribe, ceremonial use, compound, or habitat.",
+    "search_placeholder": "Search plants, uses, or communities…",
+    "empty_state_title": "No matches yet",
+    "empty_state_body": "Try removing a filter or broadening your search terms.",
+    "badge_disclaimer": "Cultural information is shared with respect for originating communities.",
+    "cta_secondary_hint": "Prefer structured data? Open the full database."
+  },
+  "accessibility": {
+    "pronunciation_tooltips": true,
+    "latin_common_names": true,
+    "contrast_minimum": "WCAG AA",
+    "aria_labels": {
+      "map": "Global Indigenous Plant Map",
+      "grid": "Interactive plant grid",
+      "filters": "Plant filters"
+    }
+  },
+  "ui_guidelines": {
+    "typography": {
+      "headings": "serif",
+      "body": "sans-serif"
+    },
+    "palette": {
+      "primary": "earth_green",
+      "accent": "muted_gold",
+      "background": "sand"
+    },
+    "interactions": {
+      "hover_reveal": true,
+      "region_pulse": true,
+      "scroll_fade": true
+    }
+  }
+}

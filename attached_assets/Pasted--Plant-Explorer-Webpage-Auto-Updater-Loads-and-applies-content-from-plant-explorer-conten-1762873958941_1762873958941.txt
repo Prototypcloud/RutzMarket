@@ -1,0 +1,65 @@
+/**
+ * Plant Explorer Webpage Auto-Updater
+ * Loads and applies content from plant_explorer_content.json to live DOM
+ * Works with vanilla JS or React hydration
+ */
+
+async function updatePlantExplorerContent() {
+  try {
+    const response = await fetch('/plant_explorer_content.json');
+    const data = await response.json();
+
+    // --- Hero Section ---
+    document.querySelector('#hero-title').innerText = data.hero.title;
+    document.querySelector('#hero-headline').innerText = data.hero.headline;
+    document.querySelector('#hero-subheadline').innerText = data.hero.subheadline;
+    document.querySelector('#cta-primary').innerText = data.hero.ctas[0].label;
+    document.querySelector('#cta-secondary').innerText = data.hero.ctas[1].label;
+
+    // --- Intro Section ---
+    document.querySelector('#intro-headline').innerText = data.intro.headline;
+    document.querySelector('#intro-body').innerHTML = data.intro.body.join('<br><br>');
+
+    // --- Interactive Grid Section ---
+    document.querySelector('#grid-headline').innerText = data.interactive_layer.headline;
+    document.querySelector('#grid-subheadline').innerText = data.interactive_layer.subheadline;
+    document.querySelector('#grid-body').innerHTML = data.interactive_layer.body.join('<br>');
+    document.querySelector('#grid-stats').innerText = data.interactive_layer.micro_stats_line;
+
+    // --- Feature Cards ---
+    const featuresContainer = document.querySelector('#features');
+    featuresContainer.innerHTML = '';
+    data.features.forEach(f => {
+      const card = document.createElement('div');
+      card.classList.add('feature-card');
+      card.innerHTML = `<h3>${f.title}</h3><p>${f.text}</p>`;
+      featuresContainer.appendChild(card);
+    });
+
+    // --- Database Block ---
+    document.querySelector('#db-headline').innerText = data.database_block.headline;
+    document.querySelector('#db-body').innerHTML = data.database_block.body.join('<br><br>');
+    document.querySelector('#db-cta').innerText = data.database_block.cta.label;
+    
+    // Sample entries preview
+    const dbPreview = document.querySelector('#db-preview');
+    dbPreview.innerHTML = '';
+    data.database_block.preview.items.forEach(p => {
+      const item = document.createElement('li');
+      item.innerText = `${p.name} — ${p.alias}`;
+      dbPreview.appendChild(item);
+    });
+
+    // --- Closing Section ---
+    document.querySelector('#closing-headline').innerText = data.closing.headline;
+    document.querySelector('#closing-body').innerHTML = data.closing.body.join('<br>');
+    document.querySelector('#closing-subtext').innerText = data.closing.subtext;
+
+    console.log('✅ Plant Explorer content updated successfully.');
+  } catch (err) {
+    console.error('❌ Failed to update content:', err);
+  }
+}
+
+// Auto-run when DOM is ready
+document.addEventListener('DOMContentLoaded', updatePlantExplorerContent);

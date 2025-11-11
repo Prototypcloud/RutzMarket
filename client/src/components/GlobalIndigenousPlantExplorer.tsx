@@ -11,6 +11,51 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 
+interface PlantExplorerContent {
+  meta: {
+    version: string;
+    updated_at_iso: string;
+    project: string;
+    description: string;
+  };
+  hero: {
+    title: string;
+    headline: string;
+    subheadline: string;
+    ctas: Array<{
+      label: string;
+      href: string;
+      priority: string;
+    }>;
+  };
+  intro: {
+    headline: string;
+    body: string[];
+  };
+  interactive_layer: {
+    headline: string;
+    subheadline: string;
+    body: string[];
+    micro_stats_line: string;
+  };
+  features: Array<{
+    title: string;
+    text: string;
+    icon: string;
+  }>;
+  stats: {
+    total_plants: number;
+    cultural_regions: number;
+    healing_traditions_over: number;
+  };
+  microcopy: {
+    filters_hint: string;
+    search_placeholder: string;
+    empty_state_title: string;
+    empty_state_body: string;
+  };
+}
+
 interface GlobalIndigenousPlant {
   id: string;
   plantName: string;
@@ -82,8 +127,19 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
   const [selectedPlant, setSelectedPlant] = useState<GlobalIndigenousPlant | null>(null);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
+  // Load plants data
   const { data: plants = [], isLoading, error } = useQuery<GlobalIndigenousPlant[]>({
     queryKey: ['/api/global-indigenous-plants'],
+  });
+
+  // Load dynamic content
+  const { data: content } = useQuery<PlantExplorerContent>({
+    queryKey: ['plant-explorer-content'],
+    queryFn: async () => {
+      const response = await fetch('/plant_explorer_content.json');
+      if (!response.ok) throw new Error('Failed to load content');
+      return response.json();
+    },
   });
 
   // Reset tribe filter when country changes
@@ -280,7 +336,7 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
 
   return (
     <div className="w-full max-w-7xl mx-auto p-6 space-y-6">
-      {/* Header */}
+      {/* Hero Section - Dynamic Content */}
       <motion.div 
         className="text-center space-y-4"
         initial={{ opacity: 0, y: -20 }}
@@ -289,19 +345,44 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
       >
         <div className="flex items-center justify-center gap-3 mb-4">
           <Globe className="h-8 w-8 text-amber-600" />
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Global Indigenous Plant Explorer</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+            {content?.hero.title || 'Plant Explorer'}
+          </h1>
         </div>
+        <h2 className="text-2xl font-semibold text-rutz-forest max-w-4xl mx-auto">
+          {content?.hero.headline || "Discover the world's living library of plants"}
+        </h2>
         <p className="text-gray-600 max-w-4xl mx-auto font-medium">
-          Discover traditional botanical knowledge from Indigenous communities worldwide. 
-          Filter by region, indigenous tribes, ceremonial uses, and more to explore 
-          the rich heritage of plant medicine.
+          {content?.hero.subheadline || "From Indigenous knowledge to modern science - trace the botanical stories that shaped medicine, ceremony, and culture."}
         </p>
         <div className="flex items-center justify-center gap-2 text-sm text-gray-600 font-medium">
           <span className="bg-green-100 px-2 py-1 rounded-md text-green-800">{plants.length} total plants</span>
           <span>•</span>
           <span className="bg-amber-100 px-2 py-1 rounded-md text-amber-800">{filteredPlants.length} matching filters</span>
         </div>
+        <p className="text-sm text-rutz-sage italic">
+          {content?.interactive_layer.micro_stats_line || `${plants.length} total plants • 10 cultural regions • 70+ healing traditions`}
+        </p>
       </motion.div>
+
+      {/* Intro Section - Dynamic Content */}
+      {content?.intro && (
+        <motion.div
+          className="bg-gradient-to-r from-green-50 to-amber-50 rounded-lg p-6 border border-green-200"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <h3 className="text-2xl font-semibold text-rutz-forest mb-3">
+            {content.intro.headline}
+          </h3>
+          <div className="space-y-3 text-gray-700">
+            {content.intro.body.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+        </motion.div>
+      )}
 
       {/* Filters Section */}
       <motion.div
@@ -331,7 +412,7 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
             <div className="relative">
               <Search className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-earth-green" />
               <Input
-                placeholder="Plant name, uses..."
+                placeholder={content?.microcopy.search_placeholder || "Search plants, uses, or communities..."}
                 value={filters.searchTerm}
                 onChange={(e) => setFilters(prev => ({ ...prev, searchTerm: e.target.value }))}
                 className="pl-9 focus-enhanced border-border focus:border-earth-green"
@@ -512,8 +593,12 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
         ) : filteredPlants.length === 0 && plants.length > 0 ? (
           <div className="text-center py-20">
             <Leaf className="h-16 w-16 text-rutz-sage/50 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-rutz-forest mb-2">No plants match your filters</h3>
-            <p className="text-rutz-sage">Try adjusting your filters to see more results.</p>
+            <h3 className="text-xl font-semibold text-rutz-forest mb-2">
+              {content?.microcopy.empty_state_title || "No matches yet"}
+            </h3>
+            <p className="text-rutz-sage">
+              {content?.microcopy.empty_state_body || "Try removing a filter or broadening your search terms."}
+            </p>
             <Button onClick={resetFilters} className="mt-4">Reset Filters</Button>
           </div>
         ) : filteredPlants.length === 0 && plants.length === 0 ? (

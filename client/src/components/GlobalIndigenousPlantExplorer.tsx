@@ -12,47 +12,47 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 
 interface PlantExplorerContent {
-  meta: {
+  meta?: {
     version: string;
     updated_at_iso: string;
     project: string;
     description: string;
   };
-  hero: {
+  hero?: {
     title: string;
     headline: string;
     subheadline: string;
-    ctas: Array<{
+    ctas?: Array<{
       label: string;
       href: string;
       priority: string;
     }>;
   };
-  intro: {
+  intro?: {
     headline: string;
     body: string[];
   };
-  interactive_layer: {
+  interactive_layer?: {
     headline: string;
     subheadline: string;
     body: string[];
     micro_stats_line: string;
   };
-  features: Array<{
+  features?: Array<{
     title: string;
     text: string;
     icon: string;
   }>;
-  stats: {
+  stats?: {
     total_plants: number;
     cultural_regions: number;
     healing_traditions_over: number;
   };
-  microcopy: {
-    filters_hint: string;
-    search_placeholder: string;
-    empty_state_title: string;
-    empty_state_body: string;
+  microcopy?: {
+    filters_hint?: string;
+    search_placeholder?: string;
+    empty_state_title?: string;
+    empty_state_body?: string;
   };
 }
 
@@ -346,14 +346,14 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
         <div className="flex items-center justify-center gap-3 mb-4">
           <Globe className="h-8 w-8 text-amber-600" />
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-            {content?.hero.title || 'Plant Explorer'}
+            {content?.hero?.title ?? 'Plant Explorer'}
           </h1>
         </div>
         <h2 className="text-2xl font-semibold text-rutz-forest max-w-4xl mx-auto">
-          {content?.hero.headline || "Discover the world's living library of plants"}
+          {content?.hero?.headline ?? "Discover the world's living library of plants"}
         </h2>
         <p className="text-gray-600 max-w-4xl mx-auto font-medium">
-          {content?.hero.subheadline || "From Indigenous knowledge to modern science - trace the botanical stories that shaped medicine, ceremony, and culture."}
+          {content?.hero?.subheadline ?? "From Indigenous knowledge to modern science - trace the botanical stories that shaped medicine, ceremony, and culture."}
         </p>
         <div className="flex items-center justify-center gap-2 text-sm text-gray-600 font-medium">
           <span className="bg-green-100 px-2 py-1 rounded-md text-green-800">{plants.length} total plants</span>
@@ -361,7 +361,7 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
           <span className="bg-amber-100 px-2 py-1 rounded-md text-amber-800">{filteredPlants.length} matching filters</span>
         </div>
         <p className="text-sm text-rutz-sage italic">
-          {content?.interactive_layer.micro_stats_line || `${plants.length} total plants • 10 cultural regions • 70+ healing traditions`}
+          {content?.interactive_layer?.micro_stats_line ?? `${plants.length} total plants • 10 cultural regions • 70+ healing traditions`}
         </p>
       </motion.div>
 
@@ -412,7 +412,7 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
             <div className="relative">
               <Search className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-earth-green" />
               <Input
-                placeholder={content?.microcopy.search_placeholder || "Search plants, uses, or communities..."}
+                placeholder={content?.microcopy?.search_placeholder ?? "Search plants, uses, or communities..."}
                 value={filters.searchTerm}
                 onChange={(e) => setFilters(prev => ({ ...prev, searchTerm: e.target.value }))}
                 className="pl-9 focus-enhanced border-border focus:border-earth-green"
@@ -594,10 +594,10 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
           <div className="text-center py-20">
             <Leaf className="h-16 w-16 text-rutz-sage/50 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-rutz-forest mb-2">
-              {content?.microcopy.empty_state_title || "No matches yet"}
+              {content?.microcopy?.empty_state_title ?? "No matches yet"}
             </h3>
             <p className="text-rutz-sage">
-              {content?.microcopy.empty_state_body || "Try removing a filter or broadening your search terms."}
+              {content?.microcopy?.empty_state_body ?? "Try removing a filter or broadening your search terms."}
             </p>
             <Button onClick={resetFilters} className="mt-4">Reset Filters</Button>
           </div>

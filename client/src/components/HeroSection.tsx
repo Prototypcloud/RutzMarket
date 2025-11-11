@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { ArrowRight, Leaf } from "lucide-react";
 import { useTranslation } from "@/lib/i18n";
+import { Link } from "wouter";
 import heroImage from "@assets/image_1755283743930.png";
 
 export default function HeroSection() {
@@ -67,14 +68,16 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Button 
-                size="lg"
-                className="bg-white text-forest px-8 py-3 rounded-lg font-semibold hover:bg-cream transition-colors"
-                data-testid="explore-products-button"
-              >
-                {t('hero.cta')}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="/plant-explorer">
+                <Button 
+                  size="lg"
+                  className="bg-white text-forest px-8 py-3 rounded-lg font-semibold hover:bg-cream transition-colors w-full sm:w-auto"
+                  data-testid="explore-products-button"
+                >
+                  Living Roots
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
               
               <Button 
                 variant="outline"

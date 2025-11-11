@@ -23,6 +23,29 @@ interface GlobalIndigenousPlant {
   associatedCeremony?: string;
   veterinaryUse?: string;
   indigenousTribesOrGroup: string;
+  // Enhanced fields
+  indigenousNames?: string[];
+  habitat?: string[];
+  useCategory?: string[];
+  productOpportunityType?: string[];
+  novelFoodRegulatoryFlag?: string;
+  nutraceuticalPotential?: string;
+  harvestCultivationStatus?: string;
+  timeToMarket?: string;
+  culturalConsent?: string;
+  restorationServiceRole?: string;
+  valueChainComplexity?: string;
+  partsUsed?: string[];
+  seasonalityHarvestWindow?: string;
+  seasonalityNotes?: string;
+  respectfulHarvestProtocol?: string;
+  regulatoryNotes?: string;
+  processingNotes?: string;
+  populationStatus?: string;
+  harvestRotationYears?: number;
+  replantingRecommended?: boolean;
+  knowledgeKeeperReview?: boolean;
+  reviewNotes?: string;
   createdAt?: Date;
   updatedAt?: Date;
 }
@@ -436,43 +459,193 @@ const GlobalIndigenousPlantExplorer: React.FC = () => {
 
               <ScrollArea className="h-96">
                 <div className="p-6 space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <h4 className="font-semibold text-rutz-forest mb-2">Origin</h4>
-                      <p className="text-sm text-rutz-sage">{selectedPlant.region}</p>
-                      <p className="text-sm text-rutz-sage">{selectedPlant.countryOfOrigin}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-rutz-forest mb-2">Indigenous Groups</h4>
-                      <p className="text-sm text-rutz-sage">{selectedPlant.indigenousTribesOrGroup}</p>
-                    </div>
-                  </div>
+                  <Tabs defaultValue="overview" className="w-full">
+                    <TabsList className="grid w-full grid-cols-3">
+                      <TabsTrigger value="overview">Overview</TabsTrigger>
+                      <TabsTrigger value="commercial">Commercial</TabsTrigger>
+                      <TabsTrigger value="sustainability">Sustainability</TabsTrigger>
+                    </TabsList>
+                    
+                    <TabsContent value="overview" className="space-y-4 mt-4">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Origin</h4>
+                          <p className="text-sm text-rutz-sage">{selectedPlant.region}</p>
+                          <p className="text-sm text-rutz-sage">{selectedPlant.countryOfOrigin}</p>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Indigenous Groups</h4>
+                          <p className="text-sm text-rutz-sage">{selectedPlant.indigenousTribesOrGroup}</p>
+                        </div>
+                      </div>
 
-                  <Separator />
+                      {selectedPlant.indigenousNames && selectedPlant.indigenousNames.length > 0 && (
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Indigenous Names</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {selectedPlant.indigenousNames.map((name, i) => (
+                              <Badge key={i} variant="outline" className="bg-amber-50">{name}</Badge>
+                            ))}
+                          </div>
+                        </div>
+                      )}
 
-                  <div>
-                    <h4 className="font-semibold text-rutz-forest mb-2">Traditional Uses</h4>
-                    <p className="text-sm text-rutz-sage">{selectedPlant.traditionalUses}</p>
-                  </div>
+                      {selectedPlant.useCategory && selectedPlant.useCategory.length > 0 && (
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Use Categories</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {selectedPlant.useCategory.map((cat, i) => (
+                              <Badge key={i} className="bg-green-100 text-green-800">{cat}</Badge>
+                            ))}
+                          </div>
+                        </div>
+                      )}
 
-                  <div>
-                    <h4 className="font-semibold text-rutz-forest mb-2">Popular Product Forms</h4>
-                    <p className="text-sm text-rutz-sage">{selectedPlant.popularProductForm}</p>
-                  </div>
+                      <div>
+                        <h4 className="font-semibold text-rutz-forest mb-2">Traditional Uses</h4>
+                        <p className="text-sm text-rutz-sage">{selectedPlant.traditionalUses}</p>
+                      </div>
 
-                  {selectedPlant.associatedCeremony && (
-                    <div>
-                      <h4 className="font-semibold text-rutz-forest mb-2">Associated Ceremonies</h4>
-                      <p className="text-sm text-rutz-sage">{selectedPlant.associatedCeremony}</p>
-                    </div>
-                  )}
+                      {selectedPlant.partsUsed && selectedPlant.partsUsed.length > 0 && (
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Parts Used</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {selectedPlant.partsUsed.map((part, i) => (
+                              <Badge key={i} variant="secondary">{part}</Badge>
+                            ))}
+                          </div>
+                        </div>
+                      )}
 
-                  {selectedPlant.veterinaryUse && (
-                    <div>
-                      <h4 className="font-semibold text-rutz-forest mb-2">Veterinary Applications</h4>
-                      <p className="text-sm text-rutz-sage">{selectedPlant.veterinaryUse}</p>
-                    </div>
-                  )}
+                      {selectedPlant.associatedCeremony && (
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Associated Ceremonies</h4>
+                          <p className="text-sm text-rutz-sage">{selectedPlant.associatedCeremony}</p>
+                        </div>
+                      )}
+
+                      {selectedPlant.veterinaryUse && (
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Veterinary Applications</h4>
+                          <p className="text-sm text-rutz-sage">{selectedPlant.veterinaryUse}</p>
+                        </div>
+                      )}
+                    </TabsContent>
+
+                    <TabsContent value="commercial" className="space-y-4 mt-4">
+                      <div className="grid grid-cols-2 gap-4">
+                        {selectedPlant.novelFoodRegulatoryFlag && (
+                          <div>
+                            <h4 className="font-semibold text-rutz-forest mb-2">Regulatory Status</h4>
+                            <Badge className="bg-blue-100 text-blue-800">{selectedPlant.novelFoodRegulatoryFlag}</Badge>
+                          </div>
+                        )}
+                        
+                        {selectedPlant.nutraceuticalPotential && (
+                          <div>
+                            <h4 className="font-semibold text-rutz-forest mb-2">Nutraceutical Potential</h4>
+                            <Badge className="bg-purple-100 text-purple-800">{selectedPlant.nutraceuticalPotential}</Badge>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-4">
+                        {selectedPlant.timeToMarket && (
+                          <div>
+                            <h4 className="font-semibold text-rutz-forest mb-2">Time to Market</h4>
+                            <p className="text-sm text-rutz-sage">{selectedPlant.timeToMarket}</p>
+                          </div>
+                        )}
+                        
+                        {selectedPlant.valueChainComplexity && (
+                          <div>
+                            <h4 className="font-semibold text-rutz-forest mb-2">Value Chain Complexity</h4>
+                            <Badge variant="outline">{selectedPlant.valueChainComplexity}</Badge>
+                          </div>
+                        )}
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-rutz-forest mb-2">Product Forms</h4>
+                        <p className="text-sm text-rutz-sage">{selectedPlant.popularProductForm}</p>
+                      </div>
+
+                      {selectedPlant.processingNotes && (
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Processing Notes</h4>
+                          <p className="text-sm text-rutz-sage">{selectedPlant.processingNotes}</p>
+                        </div>
+                      )}
+
+                      {selectedPlant.regulatoryNotes && (
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Regulatory Notes</h4>
+                          <p className="text-sm text-rutz-sage">{selectedPlant.regulatoryNotes}</p>
+                        </div>
+                      )}
+                    </TabsContent>
+
+                    <TabsContent value="sustainability" className="space-y-4 mt-4">
+                      <div className="grid grid-cols-2 gap-4">
+                        {selectedPlant.harvestCultivationStatus && (
+                          <div>
+                            <h4 className="font-semibold text-rutz-forest mb-2">Harvest Status</h4>
+                            <Badge className="bg-green-100 text-green-800">{selectedPlant.harvestCultivationStatus}</Badge>
+                          </div>
+                        )}
+                        
+                        {selectedPlant.culturalConsent && (
+                          <div>
+                            <h4 className="font-semibold text-rutz-forest mb-2">Cultural Consent</h4>
+                            <Badge className="bg-amber-100 text-amber-800">{selectedPlant.culturalConsent}</Badge>
+                          </div>
+                        )}
+                      </div>
+
+                      {selectedPlant.populationStatus && (
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Population Status</h4>
+                          <p className="text-sm text-rutz-sage">{selectedPlant.populationStatus}</p>
+                        </div>
+                      )}
+
+                      {selectedPlant.harvestRotationYears !== undefined && selectedPlant.harvestRotationYears > 0 && (
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Harvest Rotation</h4>
+                          <p className="text-sm text-rutz-sage">{selectedPlant.harvestRotationYears} years</p>
+                        </div>
+                      )}
+
+                      {selectedPlant.replantingRecommended && (
+                        <div>
+                          <Badge className="bg-green-100 text-green-800">Replanting Recommended</Badge>
+                        </div>
+                      )}
+
+                      {selectedPlant.respectfulHarvestProtocol && (
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Respectful Harvest Protocol</h4>
+                          <p className="text-sm text-rutz-sage">{selectedPlant.respectfulHarvestProtocol}</p>
+                        </div>
+                      )}
+
+                      {selectedPlant.restorationServiceRole && (
+                        <div>
+                          <h4 className="font-semibold text-rutz-forest mb-2">Restoration Service Role</h4>
+                          <Badge variant="secondary">{selectedPlant.restorationServiceRole}</Badge>
+                        </div>
+                      )}
+
+                      {selectedPlant.knowledgeKeeperReview && (
+                        <div className="mt-4 p-3 bg-amber-50 rounded border border-amber-200">
+                          <p className="text-sm text-amber-800 font-medium">✓ Reviewed by Knowledge Keeper</p>
+                          {selectedPlant.reviewNotes && (
+                            <p className="text-xs text-amber-700 mt-1">{selectedPlant.reviewNotes}</p>
+                          )}
+                        </div>
+                      )}
+                    </TabsContent>
+                  </Tabs>
                 </div>
               </ScrollArea>
             </motion.div>

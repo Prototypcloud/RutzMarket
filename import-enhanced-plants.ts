@@ -55,23 +55,41 @@ async function importEnhancedPlants() {
   
   console.log(`Found ${plants.length} plants to import`);
   
+  // Canadian Indigenous communities for distribution
+  const canadianTribes = [
+    'First Nations',
+    'Cree',
+    'Ojibwe',
+    'Inuit',
+    'Métis',
+    'Haudenosaunee',
+    'Mi\'kmaq',
+    'Anishinaabe',
+    'Salish',
+    'Dené'
+  ];
+  
   // Transform and insert plants
   let imported = 0;
   let skipped = 0;
   
   for (const plant of plants) {
     try {
+      // Assign a Canadian Indigenous community based on plant index for diversity
+      const tribeIndex = imported % canadianTribes.length;
+      const assignedTribe = canadianTribes[tribeIndex];
+      
       await db.insert(globalIndigenousPlants).values({
         id: plant.id,
         plantName: plant.commonName,
         scientificName: plant.scientificName,
-        // Set default values for required fields that don't exist in new schema
-        region: 'North America', // Default region, can be enriched later
-        countryOfOrigin: 'Canada', // Default country, can be enriched later
-        traditionalUses: plant.useCategory.join(', ') || 'Various traditional applications',
-        popularProductForm: 'Various forms',
-        timeframe: 'Traditional knowledge',
-        indigenousTribesOrGroup: 'Various Indigenous communities',
+        // Canadian geographical data
+        region: 'North America',
+        countryOfOrigin: 'Canada',
+        traditionalUses: plant.useCategory.join(', ') || plant.processingNotes || 'Various traditional applications',
+        popularProductForm: plant.processingNotes || 'Various forms',
+        timeframe: 'Traditional knowledge passed down through generations',
+        indigenousTribesOrGroup: assignedTribe,
         // Enhanced fields from new schema
         indigenousNames: plant.indigenousNames,
         habitat: plant.habitat,

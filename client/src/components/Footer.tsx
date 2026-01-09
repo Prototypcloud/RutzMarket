@@ -122,7 +122,7 @@ export default function Footer() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <p className="text-cream text-sm">© 2024 RÜTZ. All rights reserved.</p>
+          <p className="text-cream text-sm">© 2026 RÜTZ. All rights reserved.</p>
           <div className="flex space-x-6 text-cream text-sm mt-4 md:mt-0">
             {legalLinks.map((link) => (
               <a

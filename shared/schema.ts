@@ -176,6 +176,65 @@ export const insertRecommendationResultsSchema = createInsertSchema(recommendati
   createdAt: true,
 });
 
+// Gamified Plant Care Challenges
+export const plantChallenges = pgTable("plant_challenges", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  title: text("title").notNull(),
+  description: text("description").notNull(),
+  difficulty: text("difficulty").notNull(), // easy, medium, hard
+  xpReward: integer("xp_reward").notNull().default(100),
+  loyaltyPointsReward: integer("loyalty_points_reward").notNull().default(50),
+  durationDays: integer("duration_days").notNull(),
+  type: text("type").notNull(), // daily, weekly, monthly
+  category: text("category").notNull(), // care, knowledge, community
+  isActive: boolean("is_active").notNull().default(true),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export const userChallengeProgress = pgTable("user_challenge_progress", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  userId: varchar("user_id").notNull().references(() => users.id),
+  challengeId: varchar("challenge_id").notNull().references(() => plantChallenges.id),
+  status: text("status").notNull().default("in_progress"), // in_progress, completed, failed
+  currentProgress: integer("current_progress").notNull().default(0),
+  targetProgress: integer("target_progress").notNull(),
+  startedAt: timestamp("started_at").notNull().defaultNow(),
+  completedAt: timestamp("completed_at"),
+  lastUpdated: timestamp("last_updated").notNull().defaultNow(),
+});
+
+export const leaderboard = pgTable("leaderboard", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  userId: varchar("user_id").notNull().references(() => users.id),
+  score: integer("score").notNull().default(0),
+  rank: integer("rank"),
+  category: text("category").notNull(), // global, seasonal, monthly
+  lastUpdated: timestamp("last_updated").notNull().defaultNow(),
+});
+
+export const insertPlantChallengeSchema = createInsertSchema(plantChallenges).omit({
+  id: true,
+  createdAt: true,
+});
+
+export const insertUserChallengeProgressSchema = createInsertSchema(userChallengeProgress).omit({
+  id: true,
+  startedAt: true,
+  lastUpdated: true,
+});
+
+export const insertLeaderboardSchema = createInsertSchema(leaderboard).omit({
+  id: true,
+  lastUpdated: true,
+});
+
+export type PlantChallenge = typeof plantChallenges.$inferSelect;
+export type InsertPlantChallenge = z.infer<typeof insertPlantChallengeSchema>;
+export type UserChallengeProgress = typeof userChallengeProgress.$inferSelect;
+export type InsertUserChallengeProgress = z.infer<typeof insertUserChallengeProgressSchema>;
+export type LeaderboardEntry = typeof leaderboard.$inferSelect;
+export type InsertLeaderboard = z.infer<typeof insertLeaderboardSchema>;
+
 export type Product = typeof products.$inferSelect;
 export type InsertProduct = z.infer<typeof insertProductSchema>;
 export type SupplyChainStep = typeof supplyChainSteps.$inferSelect;
